@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.sass-cache/*
+Thumbs.db
+node_modules/*
+Grunt_package_install.bat
+Bundle_install.bat
+Grunt_start.bat
+vendor/*
+Bundle_install.bat
+

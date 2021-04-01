@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+// ==================================================
+// Mixin
+// ==================================================
+
+
+// --------------------------------------------------
+// スプライトを生成
+// --------------------------------------------------
+// スプライト生成
+@mixin x-sprite($sprite,$name){
+	display: inline-block;
+	vertical-align: middle;
+	background:sprite($sprite, $name);
+	@include sprite-dimensions($sprite, $name);
+}
+
+// スプライト生成（デフォルト：２倍）
+@mixin x-sprite-retina($sprite, $name, $ratio:2) {
+		display: inline-block;
+		vertical-align: middle;
+		width: image-width(sprite-file($sprite, $name)) / $ratio;
+		height: image-height(sprite-file($sprite, $name)) / $ratio;
+		background-image: sprite-url($sprite);
+		background-repeat: no-repeat;
+		$pos: sprite-position($sprite, $name);
+		background-position: (nth($pos, 1) / $ratio) (nth($pos, $ratio) / $ratio);
+		@include background-size(ceil(image-width(sprite-path($sprite)) / $ratio) auto);
+}
+
+//スプライト切り替え対応（retina）
+@mixin x-sprite-chage($sprite-x1, $sprite-x2, $name){
+	@include x-sprite-retina($sprite-x2,$name);
+	@media(min-width:$screen-md-min){
+		@include x-sprite($sprite-x1,$name);
+	}
+}
+
+
+
+
+// --------------------------------------------------
+// 値計算
+// --------------------------------------------------
+//ピクセル→パーセント変換
+@function x-pxper($size,$parent-size){
+	@return x-round-decimal($size / $parent-size * 100, 2)#{'%'};
+}
+
+// Round (四捨五入)
+@function x-round-decimal ($number, $digits: 0) {
+	@return x-to-fixed($number, $digits, 'round');
+}
+
+// Ceil (切り上げ)
+@function x-ceil-decimal ($number, $digits: 0) {
+	@return x-to-fixed($number, $digits, 'ceil');
+}
+
+// Floor (切り捨て)
+@function x-floor-decimal ($number, $digits: 0) {
+	@return x-to-fixed($number, $digits, 'floor');
+}
+
+@function x-to-fixed ($number, $digits: 0, $round: 'round') {
+	$n: 1;
+	// $number must be a number
+	@if type-of($number) != number {
+		@warn '#{ $number } is not a number.';
+		@return $number;
+	}
+	// $digits must be a unitless number
+	@if type-of($digits) != number {
+		@warn '#{ $digits } is not a number.';
+		@return $number;
+	} @else if not unitless($digits) {
+		@warn '#{ $digits } has a unit.';
+		@return $number;
+	}
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+	@if $round == 'round' {
+		@return round($number * $n) / $n;
+	} @else if $round == 'ceil' {
+		@return ceil($number * $n) / $n;
+	} @else if $round == 'floor' {
+		@return floor($number * $n) / $n;
+	} @else {
+		@warn '#{ $round } is undefined keyword.';
+		@return $number;
+	}
+}
+
+// --------------------------------------------------
+// レイアウト
+// --------------------------------------------------
+// absolute中央寄せ
+@mixin x-image-absolute-center($image, $retio:1) {
+	position: absolute;
+	width: image-width($image) * $retio;
+	height: image-height($image) * $retio;
+	top: 50%;
+	left: 50%;
+	margin-top: image-height($image) * $retio / 2 * -1;
+	margin-left: image-width($image) * $retio / 2 * -1;
+}

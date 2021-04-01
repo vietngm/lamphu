@@ -1,0 +1,29 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.about {
+  background-image: url(/common/images/floral-bg-parallax.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin-top: 50px;
+  p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .full-bg {
+    background-color: rgba(43, 43, 43, 0.77);
+    display: block;
+    color: $color-white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    @media(min-width: $screen-sm-min) {
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+  }
+  .heading {
+    color: $color-white;
+  }
+}

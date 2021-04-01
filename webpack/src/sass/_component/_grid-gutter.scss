@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+//
+// グリッドシステム余白用スタイル
+//
+// クラス名：.gutter-xs-0
+
+// --------------------------------------------------
+// グリッドシステムの余白
+// --------------------------------------------------
+
+// BootStrapのcolクラスに対応させる
+@mixin x-gutter($int){
+	margin-left: -#{$int / 2}px;
+	margin-right: -#{$int / 2}px;
+	> [class^="col-"], > [class*=" col-"] {
+		padding-left: #{$int / 2}px;
+		padding-right: #{$int / 2}px;
+	}
+}
+
+@each $n in $gutter-array{
+
+	.gutter-#{$n} {@include x-gutter($n);}
+
+	@media(min-width:$screen-xs-min){
+		.gutter-xs-#{$n}-xs {@include x-gutter($n);}
+	}
+	@media(min-width:$screen-sm-min){
+		.gutter-sm-#{$n}-sm {@include x-gutter($n);}
+	}
+	@media(min-width:$screen-md-min){
+		.gutter-md-#{$n}-md {@include x-gutter($n);}
+	}
+	@media(min-width:$screen-lg-min){
+		.gutter-lg-#{$n}-lg {@include x-gutter($n);}
+	}
+
+}
+
+

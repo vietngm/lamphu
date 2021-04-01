@@ -1,0 +1,69 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+
+@import "compass";
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+$experimental-support-for-mozilla: true;
+$experimental-support-for-webkit: true;
+$support-for-original-webkit-gradients: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: false;
+$experimental-support-for-svg: true;
+$legacy-support-for-mozilla: true;
+
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// $sprite-1x:sprite-map("sprite-1x/*.png", $spacing:1px, $position: 0, $layout: smart);
+// $sprite-2x:sprite-map("sprite-2x/*.png", $spacing:1px, $position: 0, $layout: smart);
+
+// $sprite-icon-back:sprite-map("sprite-1x/*.png", $spacing:2px, $position: 0, $layout: horizontal);
+
+// color,border,background-color
+$color-array: #ffffff #000000 #cccccc #b5142c #f2f2f2 #d8d8d8 #f824cc #a94442;
+$link-color-main: #333333;
+$color-main: #333333;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-red: #b5142c;
+$color-blue: #004486;
+
+// width,height
+$scale-px-array: 100 200 300 400 500 600 700 900;
+$scale-per-array: 10 20 30 40 50 60 70 80 90 100;
+
+// margin,padding
+//
+$margin-px-array: 0 5 10 15 20 25 30 40 50 60 70 80 90 100;
+$margin-per-array: 10 20 30 40 50 60 70 80 90 100;
+
+$padding-px-array: 0 5 10 15 20 25 30 40 50 60 70 80 90 100;
+$padding-per-array: 10 20 30 40 50 60 70 80 90 100;
+
+$font-size-array: 32 40;
+
+$border-px-array: 1 2 3 4 5 10;
+$border-radius-array: 4 8 10;
+
+$gutter-array: 10 15 20 30;
+
+// @import "mixins";
+@import "default";
+// @import "fonts";
+@import "component";
+@import "base-layout";
+@import "pages-layout";
+@import "bootstrap";
+@import "fontawesome";
+@import "owl-carousel";
+// @import 'lightgallery';
+// @import "fonts-web";
+// @import "_tinymce/tinymce";

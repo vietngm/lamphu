@@ -1,0 +1,109 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+
+.support {
+  background-color: nth($color-array, 5);
+  margin-bottom: 15px;
+  &-title {
+    background-color: $color-main;
+    padding: 10px 15px;
+    color: $color-white;
+    font-size: 14px;
+    margin: 0px;
+    @media(min-width: $screen-md-min) {
+      font-size: 14px;
+    }
+  }
+  &-list {
+    padding: 0px;
+    list-style: none;
+  }
+  &-item {
+    font-size: 14px;
+    color: $color-main;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-top: solid 1px nth($color-array, 6);
+    &:first-child {
+      border: none;
+    }
+    img {
+      float: left;
+      margin-right: 10px;
+    }
+    a {
+      font-size: 16px;
+      color: $link-color-main;
+    }
+    span {
+      display: block;
+      font-size: 16px;
+      @media(min-width: $screen-md-min) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.list-cat{
+  margin-bottom: 15px;
+  margin-top: 0px;
+  &-title{
+    background-color: $color-main;
+    padding: 10px 15px;
+    color: $color-white;
+    font-size: 14px;
+    margin: 15px 0px 0px;
+    @media(min-width: $screen-md-min) {
+      font-size: 14px;
+      margin: 0px;
+    }
+  }
+  .sub-list-cat {
+    display: none;
+    padding: 0px;
+  }
+  .list-item {
+    list-style: none;
+    position: relative;
+  }
+
+  .list-link {
+    color: #797979;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+    background-color: #ededed;
+    border-bottom: 1px solid #d8d8d8;
+    display: block;
+    position: relative;
+    padding: 5px 10px 5px 15px;
+    font: bold 12px/32px Arial, sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+
+.list-cat
+
+.list-cat .list-link.active .plus:after {
+  content: none;
+}
+
+.list-cat .list-link.sub-list-link {
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.list-cat .list-link:hover,
+.list-link:focus {
+  color: #b5142c;
+}
+
+.list-cat .list-link em {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  margin-left: 11px;
+  color: #a6a6a6;
+  font: normal 10px/32px Arial, sans-serif;
+}

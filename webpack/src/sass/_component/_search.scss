@@ -1,0 +1,33 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.f-search {
+    position: absolute;
+    right: 60px;
+    top: 26px;
+    &:hover {
+        cursor: pointer;
+    }
+    .fa {
+        color: $color-black;
+        @media(min-width: $screen-sm-min) {
+            color: $color-white;
+        }
+    }
+}
+
+#searchModal {
+    h4 {
+        color: $color-black;
+    }
+    .form-control {
+        border-color: nth($color-array,5);
+    }
+    form {
+        margin-bottom: 0px;
+    }
+    .form-group {
+        margin-bottom: 0px;
+    }
+}

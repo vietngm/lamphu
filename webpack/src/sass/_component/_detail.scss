@@ -1,0 +1,48 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.detail {
+  &-body {
+    border-bottom: 5px solid nth($color-array, 7);
+    padding-bottom: 20px;
+    p {
+      .size-full {
+        width: 100%;
+        height: auto;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        @media(min-width: $screen-sm-min) {
+          width: inherit;
+        }
+      }
+    }
+    .size-full {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-title {
+    background: $color-white url("/common/images/share/logo-title.png") 0px 0px no-repeat;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-color: nth($color-array, 5);
+    @media(min-width: $screen-sm-min) {
+      margin-top: 0px;
+    }
+    h2 {
+      line-height: normal;
+      color: $link-color-main;
+      text-align: left;
+      font-size: 20px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      @include text-shadow(1px 1px 1px rgba(0, 0, 0, 0.09));
+      margin: 0px;
+      margin-left: 45px;
+    }
+  }
+}

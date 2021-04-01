@@ -1,0 +1,30 @@
+@charset "utf-8";
+/*GENERAL*/
+.clear{clear:both}
+.bimge_div{margin-right: 20px;text-align:center;overflow:hidden;height:168px;}
+.bimge_div .bimge_content img{max-height:160px;vertical-align: middle;max-width:272px;}
+.bimge_div .abs{position:absolute;width:276px;height:164px;z-index:99}
+.timge_div{position:relative;width:276px;height:94px;text-align:center;overflow:hidden}
+.timge_div .abs{position:absolute;width:276px;height:94px;z-index:99}
+a.bimge_content{display:table-cell;width:272px;height:160px;vertical-align:middle}
+div.bimge_content{width:272px;height:160px}
+.b_dashed{border:2px dashed #d7d7d7;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}
+.b_dashed:hover{border-color:#000}
+.ls-cont-uploadphoto{background:url("../images/icon_uploadphoto.png") 50% 50% no-repeat}
+.ls-cont-uploadphoto:hover{background:url("../images/icon_uploadphoto_a.png") 50% 50% no-repeat}
+.fancybox-close{display:none}
+.slideshow_popup_image{float:left;margin:5px;}
+.slideshow_order{width:100px;margin:0px;box-shadow: none !important;font:12px/18px Arial, Helvetica, sans-serif}
+.slideshow_popup_image .content_image{vertical-align:middle;display:table-cell;height:100px;width:100px;overflow:hidden}
+.slideshow_popup_image .content_image img{max-width:100px;max-height:100px}
+.del_banner_gallery{background:url("../images/del.png") 0px 0px no-repeat;cursor:pointer;width:15px;height:15px;position: absolute;margin-left: 85px; }
+.bottom-bar{font-size:12px;margin-bottom: 10px;}
+.bottom-bar input[type="radio"]{margin:0px 5px 0px 5px !important;}
+.bottom-bar select{font-size:12px;margin-right:10px;margin-left:5px}
+.show_banner{/*min-height:300px*/margin-left: -5px;margin-right: -5px;display: inline-block;}
+.title-fancybox{font-size:18px;line-height: normal;}
+.banner-fancybox{display:none;height:auto;overflow-x: hidden;min-width: 500px;}
+.ls_input{width:100%;}
+.button-popup a.button{display: inline-block !important;margin: 0px !important;}
+.button-popup a.apply-button{margin: 0px 1px 0px 2px !important;}
+.gallery_datas{display: none;}
