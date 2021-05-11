@@ -63,10 +63,10 @@ module.exports = {
   },
   plugins: [
     new BrowserSyncPlugin({
-      host: "http://inlengoc",
+      host: "http://lamphu:8888",
       port: 3000,
       // server: { baseDir: ['/lengoc/dist/'] },
-      proxy: "http://inlengoc",
+      proxy: "http://lamphu:8888",
       // open: true,
     }, {
       reload: true

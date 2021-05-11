@@ -1,0 +1,47 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.pro-thumb {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	.overlay {
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
+		opacity: 0;
+		transition: (0.4s all ease);
+		backface-visibility: (hidden);
+		&:before {
+			content: "";
+			background: #000000;
+			position: absolute;
+			opacity: 0.3;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+		}
+	}
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: (translate(-50%, -50%));
+		font-size: 30px;
+		color: $color-white;
+	}
+	&:hover {
+		.overlay {
+			opacity: 1;
+		}
+	}
+}
+
+.pro-title {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}

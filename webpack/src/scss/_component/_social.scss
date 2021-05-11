@@ -1,0 +1,33 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.socials {
+	&-footer {
+		display: inline-block;
+	}
+
+	&-footer {
+		width: 35px;
+		height: 35px;
+		font-size: 15px;
+		line-height: 35px;
+		text-align: center;
+		text-decoration: none;
+		background-color: $color-white;
+		border-radius: (50%);
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-red;
+
+			.fa {
+				color: $color-white;
+			}
+		}
+	}
+
+	.fa {
+		color: $color-black;
+	}
+}

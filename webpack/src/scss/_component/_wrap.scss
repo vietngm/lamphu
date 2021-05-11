@@ -3,22 +3,22 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.wrap-xs{
+.wrap-xs {
 	max-width: $screen-xs-min;
 	margin-left: auto;
 	margin-right: auto;
 }
-.wrap-sm{
+.wrap-sm {
 	max-width: $screen-sm-min;
 	margin-left: auto;
 	margin-right: auto;
 }
-.wrap-md{
+.wrap-md {
 	max-width: $screen-md-min;
 	margin-left: auto;
 	margin-right: auto;
 }
-.wrap-lg{
+.wrap-lg {
 	max-width: $screen-lg-min;
 	margin-left: auto;
 	margin-right: auto;
@@ -30,9 +30,9 @@
 	margin-right: auto;
 	padding-left: 10px;
 	padding-right: 10px;
-	@include box-sizing(border-box);
+	box-sizing: (border-box);
 	position: relative;
-	@media(min-width:$screen-sm-min){
+	@media (min-width: $screen-sm-min) {
 		padding-left: 0px;
 		padding-right: 0px;
 		max-width: 1190px;

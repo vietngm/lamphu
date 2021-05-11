@@ -1,0 +1,31 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.box {
+	display: inline-block;
+	width: 100%;
+	&-heading {
+		padding-bottom: 5px;
+		margin-top: 15px;
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 20px;
+			margin-top: 20px;
+		}
+	}
+	&-title {
+		color: $link-color-main;
+		text-align: center;
+		font-size: 20px;
+		margin-top: 0px;
+		text-shadow: (1px 1px 1px rgba(0, 0, 0, 0.09));
+		font-weight: bold;
+		font-family: "Playfair Display", serif;
+		@media (min-width: $screen-md-min) {
+			font-size: 30px;
+		}
+	}
+	&-title-white {
+		color: $color-white;
+	}
+}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.ico-border {
+	display: inline-block;
+	position: relative;
+	width: 265px;
+	margin-bottom: 10px;
+	&:before {
+		left: 0;
+	}
+	&:before,
+	&:after {
+		content: "";
+		background: nth($color-array, 2);
+		display: inline-block;
+		height: 4px;
+		position: absolute;
+		top: 8px;
+		width: 42px;
+	}
+	&:after {
+		right: 0;
+	}
+	.ico-bg {
+		background-position: left top;
+		background-repeat: no-repeat;
+		content: "";
+		display: block;
+		height: 20px;
+		margin: 0 auto;
+		position: relative;
+		width: 20px;
+		&.flower {
+			background-image: url(/common/images/ico-flower.png);
+		}
+	}
+}
+.icon {
+	&-heading {
+		margin-top: 5px;
+		@media (min-width: $screen-md-min) {
+			margin-top: 15px;
+		}
+		.flower {
+			background-image: url(/common/images/ico-heading.png);
+			background-size: contain;
+			width: 60px;
+			height: 25px;
+			display: block;
+			background-repeat: no-repeat;
+			background-position-x: center;
+			@media (min-width: $screen-md-min) {
+				width: 80px;
+			}
+		}
+	}
+	&-about {
+		width: 40px;
+		height: 40px;
+		border-radius: (50%);
+		background-color: nth($color-array, 7);
+		display: table-cell;
+		vertical-align: middle;
+		@media (min-width: $screen-md-min) {
+			width: 80px;
+			height: 80px;
+		}
+		img {
+			width: 25px;
+			@media (min-width: $screen-md-min) {
+				width: 50px;
+			}
+		}
+	}
+}
