@@ -16,16 +16,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'db_bichngoan');
+define('DB_NAME', 'lamphu');
 
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'mysql');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:8889');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -84,6 +84,16 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+define('WP_MEMORY_LIMIT', '96M');
+define('WP_ALLOW_REPAIR', true);
+define('ENABLE_CACHE', true);
+define('WP_POST_REVISIONS', false );
+define ('WP_CONTENT_FOLDERNAME', 'resource');
+define ('WP_CONTENT_DIR', ABSPATH.WP_CONTENT_FOLDERNAME) ;
+define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/');
+define('WP_CONTENT_URL',WP_SITEURL.WP_CONTENT_FOLDERNAME);
+define('WP_ADMIN_DIR', 'admin');
+define( 'ADMIN_COOKIE_PATH', SITECOOKIEPATH . WP_ADMIN_DIR);
 
 /* That's all, stop editing! Happy blogging. */
 

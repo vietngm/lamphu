@@ -4,7 +4,7 @@ global $mobile_browser; ?>
   <div class="wrap-content">
     <div class="navbar-header">
       <a class="navbar-logo" href="<?php echo home_url(); ?>">
-        <img src="/common/images/bichngoan-logo.png?15012019" align="bich ngoan ceramic">
+        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" align="May cat day">
       </a>
       <div class="wrap-hamburger">
         <div class="hamburger">
@@ -19,23 +19,23 @@ global $mobile_browser; ?>
         <ul class="main-list">
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo get_the_title(2); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo get_the_title(2); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="#" class="main-link js-main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo get_the_title(3); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo get_the_title(3); ?>
               <span class="plus"></span>
             </a>
             <ul class="sub-list">
-                <?php
-                $taxonomy = 'cat-san-pham';
+              <?php
+                $taxonomy = 'danh-muc';
                 $terms = get_terms($taxonomy, array(
                     'hide_empty' => 0,
                     'parent' => 0,
@@ -49,50 +49,50 @@ global $mobile_browser; ?>
 
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Tin tức', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Tin tức', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('xu-huong')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Xu hướng', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Xu hướng', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('hinh-anh')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Hình ảnh', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Hình ảnh', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('du-an')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Dự án', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Dự án', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('cach-su-dung')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Cách sử dụng', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Cách sử dụng', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="main-link">
-                <?php if ($mobile_browser > 0) { ?>
-                  <span class="arrow left"></span>
-                <?php } ?>
-                <?php echo __('Liên hệ', 'theme'); ?>
+              <?php if ($mobile_browser > 0) { ?>
+              <span class="arrow left"></span>
+              <?php } ?>
+              <?php echo __('Liên hệ', 'theme'); ?>
             </a>
           </li>
         </ul>
