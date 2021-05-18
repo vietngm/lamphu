@@ -13,13 +13,14 @@ global $lienhe; ?>
       </div>
       <div class="col-lg-5 col-md-5 col-sm-4 col-xs-7">
         <div class="fa-top">
-          <a class="fa fa-facebook" href="<?php echo $lienhe['facebook'];?>" target="_blank"></a>
-          <a class="fa fa-twitter" href="<?php echo $lienhe['twitter'];?>" target="_blank"></a>
-          <a class="fa fa-google-plus" href="<?php echo $lienhe['gplus'];?>" target="_blank"></a>
-          <i class="fa fa-search" aria-hidden="true" data-toggle="modal" data-target="#searchModal"></i>
+          <a class="fab-link" href="<?php echo $lienhe['facebook'];?>" target="_blank">
+            <i class="fab fa-facebook-f"></i></a>
+          <a class="fab-link" href="<?php echo $lienhe['twitter'];?>" target="_blank">
+            <i class="fab fa-twitter"></i></a>
+          <i class="fab fa-search" aria-hidden="true" data-toggle="modal" data-target="#searchModal"></i>
         </div>
       </div>
     </div>
   </div>
-    <?php include("sidebar-main-menu.php"); ?>
+  <?php include("sidebar-main-menu.php"); ?>
 </header>

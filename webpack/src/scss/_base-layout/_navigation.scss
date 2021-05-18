@@ -149,13 +149,13 @@
 
 	&-logo {
 		display: table-cell;
-		width: 60%;
+		width: 86px;
 		vertical-align: middle;
 		padding: 5px 15px;
 		@media (min-width: $screen-sm-min) {
 			display: inline-block;
-			width: 60%;
-			padding: 0px;
+			width: 66px;
+			padding: 0;
 		}
 
 		img {

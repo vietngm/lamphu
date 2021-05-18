@@ -6,7 +6,7 @@
       <div class="row gutter-10 gutter-md-30-md">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
           <div class="logo-footer">
-            <img src="/common/images/bichngoan-logo-footer.png?15012019" alt="">
+            <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" alt="">
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -51,9 +51,10 @@
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
           <h3>Find Us</h3>
           <div class="socials">
-            <a class="fa fa-facebook socials-footer" href="<?php echo $lienhe['facebook']; ?>" target="_blank"></a>
-            <a class="fa fa-twitter socials-footer" href="<?php echo $lienhe['twitter']; ?>" target="_blank"></a>
-            <a class="fa fa-google-plus socials-footer" href="<?php echo $lienhe['gplus']; ?>" target="_blank"></a>
+            <a class="socials-footer" href="<?php echo $lienhe['facebook']; ?>" target="_blank">
+              <i class="fab fa-facebook-f"></i></a>
+            <a class="socials-footer" href="<?php echo $lienhe['twitter']; ?>" target="_blank">
+              <i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
