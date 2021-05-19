@@ -60,7 +60,7 @@
     aria-labelledby="myModalLabel"><?php echo alertDialog(0); ?></div>
   <?php include("search-tool.php"); ?>
 </footer>
-<script src="/common/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo get_site_url(); ?>/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 jQuery(function($) {
   $(".regular").slick({
@@ -90,7 +90,6 @@ jQuery(function($) {
 </script>
 
 <?php if (is_singular('san-pham')) { ?>
-<script src="/common/js/modernizr.min.js"></script>
 <script src="/common/js/lightgallery.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -99,7 +98,8 @@ $(document).ready(function() {
 </script>
 
 <?php } ?>
-<script type="text/javascript" src="/common/js/validator.min.js" defer></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/owlcarousel/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
 <script src="<?php echo get_site_url(); ?>/assets/js/main.js?04112020"></script>
 <?php wp_footer(); ?>
 </body>

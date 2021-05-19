@@ -224,14 +224,25 @@
 .main-list {
 	margin: 0;
 	padding: 0;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	justify-content: end;
+	grid-column-gap: 16px;
 }
 
 .main-menu {
 	margin: auto;
 	width: 100%;
 	.main-item {
-		position: relative;
-		display: inline-block;
+		border-bottom: solid 1px #e7e7e7;
+		background-color: $color-white;
+		display: block;
+		@media (min-width: $screen-sm-min) {
+			position: relative;
+			display: inline-block;
+			border: none;
+		}
 
 		&:last-child {
 			border-right: none;
@@ -261,13 +272,16 @@
 	}
 
 	.main-link {
+		display: block;
 		color: $color-black;
-		padding: 0px 10px;
+		line-height: 35px;
+		position: relative;
+		font-size: 12px;
 		text-transform: uppercase;
-		line-height: 71px;
-		display: inline-block;
+		@media (min-width: $screen-sm-min) {
+			line-height: 71px;
+		}
 	}
-
 	.sub-list {
 		padding: 0px;
 		margin: 0px;
@@ -326,19 +340,7 @@
 			display: none;
 		}
 	}
-	.main-item {
-		border-bottom: solid 1px #e7e7e7;
-		background-color: $color-white;
-		display: block;
-	}
-	.main-link {
-		display: block;
-		padding: 0 0 0 40px;
-		color: $color-black;
-		line-height: 35px;
-		position: relative;
-		font-size: 12px;
-	}
+
 	.sub-list,
 	.children {
 		border-top: solid 1px #e7e7e7;
@@ -375,9 +377,6 @@
 	}
 	.children .sub-list-link {
 		padding: 0px 0px 0px 50px;
-	}
-	.plus {
-		display: inline-block;
 	}
 }
 
