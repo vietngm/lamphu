@@ -21,7 +21,7 @@
 		height: 150px;
 		top: 50%;
 		left: 50%;
-		transform: (translateY(-50%) translateX(-50%));
+		transform: translate(-50%, -50%);
 		border-bottom: solid 1px nth($color-array, 5);
 	}
 	&-progress {
@@ -36,28 +36,12 @@
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: (translateY(-50%) translateX(-50%));
+		transform: translate(-50%, -50%);
 		width: 150px;
 		height: auto;
 	}
 }
-@-webkit-keyframes mymove {
-	0% {
-		right: 0px;
-		left: 0px;
-		background-color: $link-color-main;
-	}
-	50% {
-		right: 100px;
-		left: 100px;
-		background-color: $link-color-main;
-	}
-	100% {
-		right: 0px;
-		left: 0px;
-		background-color: $link-color-main;
-	}
-}
+
 @keyframes mymove {
 	0% {
 		right: 0px;

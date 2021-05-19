@@ -2,51 +2,51 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-#cfacebook{
-	position:fixed;
-	bottom:0px;
-	right:15px;
-	z-index:999999999999999;
+#cfacebook {
+	position: fixed;
+	bottom: 0px;
+	right: 15px;
+	z-index: 999999999999999;
 	width: 250px;
-	height:auto;
-	box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.2);
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
-	overflow:hidden;
-	.fchat{
-		float:left;
-		width:100%;
-		overflow:hidden;
-		display:none;
-		background-color:#fff;
-		span{
+	height: auto;
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+	.fchat {
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		display: none;
+		background-color: #fff;
+		span {
 			position: relative;
 		}
 	}
-	a.chat_fb{
-		float:left;
-		padding:0 25px;
+	a.chat_fb {
+		float: left;
+		padding: 0 25px;
 		width: 250px;
-		color:#fff;
-		text-decoration:none;
-		height:40px;
-		line-height:40px;
-		text-shadow:0 1px 0 rgba(0,0,0,0.1);
-		background-repeat:repeat-x;
-		background-size:auto;
-		background-position:0 0;
-		background-color:#3a5795;
-		border:0;
-		border-bottom:1px solid #133783;
-		z-index:9999999;
-		margin-right:12px;
+		color: #fff;
+		text-decoration: none;
+		height: 40px;
+		line-height: 40px;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		background-repeat: repeat-x;
+		background-size: auto;
+		background-position: 0 0;
+		background-color: #3a5795;
+		border: 0;
+		border-bottom: 1px solid #133783;
+		z-index: 9999999;
+		margin-right: 12px;
 		font-size: 16px;
-		&:hover{
-			color:#ffffff;
-			text-decoration:none;
+		&:hover {
+			color: #ffffff;
+			text-decoration: none;
 		}
 	}
-	.material-icons{
+	.material-icons {
 		display: inline-block;
 		position: relative;
 		top: 8px;
@@ -60,7 +60,7 @@
 			position: relative;
 			padding-right: 10px;
 		}
-		&.md-32{
+		&.md-32 {
 			font-size: 32px;
 		}
 	}

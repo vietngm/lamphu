@@ -4,97 +4,75 @@
 // --------------------------------------------------
 
 .doc-footer {
-  background: url("../images/wood-texture.png") repeat #1f1f1f;
+	background: url("../images/wood-texture.png") repeat #1f1f1f;
 
-  padding: 20px 0px 20px 0px;
-  @media (min-width: $screen-sm-min) {
-    padding: 40px 0 40px 0;
-  }
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: $color-white;
-  address {
-    margin-bottom: 0px;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.32);
-  }
-  h3 {
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    color: $color-white;
-    margin-top: 0;
-    line-height: normal;
-    font-weight: bold;
-    font-size: 16px;
-  }
-}
-
-.footer-list li a {
-  color: $color-white;
-  line-height: 24px;
-}
-
-.footer-list .mobile {
-  margin-bottom: 15px;
+	padding: 20px 0px 20px 0px;
+	@media (min-width: $screen-sm-min) {
+		padding: 40px 0 40px 0;
+	}
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: $color-white;
+	address {
+		text-align: left;
+		margin-bottom: 15px;
+		color: rgba(255, 255, 255, 0.32);
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 0;
+			text-align: right;
+		}
+	}
+	h3 {
+		margin-top: 15px;
+		margin-bottom: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $color-white;
+		line-height: normal;
+		font-weight: bold;
+		font-size: 16px;
+		@media (min-width: $screen-sm-min) {
+			margin-bottom: 15px;
+			padding-bottom: 5px;
+			margin-top: 0;
+		}
+	}
 }
 
 .footer-list {
-  padding: 0px;
-  list-style: none;
-  .diachi {
-    line-height: 26px;
-  }
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+	@media (min-width: $screen-sm-min) {
+		text-align: left;
+	}
+	.diachi {
+		line-height: 26px;
+	}
+	li a {
+		color: $color-white;
+		line-height: 24px;
+	}
+	.mobile {
+		margin-bottom: 15px;
+	}
 }
 
 .logo-footer {
-  margin-bottom: 15px;
-  img {
-    width: 100%;
-    max-width: 60%;
-  }
-}
-
-@media (max-width: 767px) {
-  .doc-footer address {
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  .doc-footer .visitor {
-    text-align: left;
-  }
-  .doc-footer .visit-label {
-    margin-left: 0px;
-  }
-  .doc-footer h3 {
-    margin-top: 15px;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .footer-list {
-    text-align: center;
-  }
-  .footer-list .footer-item {
-    display: inline-block;
-    margin: 0px 5px;
-  }
-  .logo-footer,
-  .socials {
-    text-align: center;
-  }
-  .logo-footer {
-    margin-bottom: 0px;
-  }
-  .logo-footer img {
-    width: 65%;
-    height: auto;
-  }
-  .socials a {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-    line-height: 30px;
-  }
+	margin-bottom: 0;
+	text-align: center;
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 15px;
+	}
+	img {
+		width: 65%;
+		height: auto;
+		object-fit: contain;
+		@media (min-width: $screen-sm-min) {
+			width: 100%;
+			max-width: 60%;
+		}
+	}
 }

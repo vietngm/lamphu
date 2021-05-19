@@ -18,7 +18,7 @@
           </ul>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-          <h3>Bich Ngoan</h3>
+          <h3>Lâm Phú</h3>
           <ul class="footer-list">
             <li class="footer-item">
               <a href="<?php echo home_url(); ?>"><?php echo __('Trang chủ', 'theme'); ?></a>
@@ -28,19 +28,13 @@
                 href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>"><?php echo __('Giới thiệu', 'theme'); ?></a>
             </li>
             <li class="footer-item">
+              <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>">Tài liệu</a>
+            </li>
+            <li class="footer-item">
               <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>">Tin tức</a>
             </li>
             <li class="footer-item">
-              <a href="<?php echo get_permalink(get_page_by_path('xu-huong')); ?>">Xu hướng</a>
-            </li>
-            <li class="footer-item">
-              <a href="<?php echo get_permalink(get_page_by_path('hinh-anh')); ?>">Hình ảnh</a>
-            </li>
-            <li class="footer-item">
-              <a href="<?php echo get_permalink(get_page_by_path('du-an')); ?>">Dự án</a>
-            </li>
-            <li class="footer-item">
-              <a href="<?php echo get_permalink(get_page_by_path('cach-su-dung')); ?>">Cách sử dụng</a>
+              <a href="<?php echo get_permalink(get_page_by_path('khach-hang')); ?>">Khách hàng</a>
             </li>
             <li class="footer-item">
               <a
@@ -95,7 +89,7 @@ jQuery(function($) {
 });
 </script>
 
-<?php if (is_singular('hinh-anh') || is_singular('san-pham') || is_singular('du-an')) { ?>
+<?php if (is_singular('san-pham')) { ?>
 <script src="/common/js/modernizr.min.js"></script>
 <script src="/common/js/lightgallery.js"></script>
 <script type="text/javascript">
@@ -105,10 +99,7 @@ $(document).ready(function() {
 </script>
 
 <?php } ?>
-
 <script type="text/javascript" src="/common/js/validator.min.js" defer></script>
-<!-- <script src="/common/js/jquery.matchHeight.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="/common/js/common.js" defer></script> -->
 <script src="<?php echo get_site_url(); ?>/assets/js/main.js?04112020"></script>
 <?php wp_footer(); ?>
 </body>

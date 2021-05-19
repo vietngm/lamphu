@@ -39,6 +39,6 @@ if(is_tax()){
 <meta name="keywords" content="<?php echo $metakeyword; ?>" />
 <meta name="robots" content="index, follow" />
 <?php echo $extraFiled; ?>
-<link rel="alternate" href="http://www.bichngoan.com" hreflang="vi-vn" />
+<link rel="alternate" href="http://www.maycatdayedm.com" hreflang="vi-vn" />
 <link rel="shortcut icon" href="/common/images/share/meta/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/common/images/share/meta/favicon.png" type="image/x-icon" />

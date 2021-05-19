@@ -11,7 +11,7 @@
 	@media (min-width: $screen-sm-min) {
 		padding-bottom: 80%;
 	}
-	background: transparent url("/common/images/lazy-loader.gif") no-repeat center
+	background: transparent url("../images/lazy-loader.gif") no-repeat center
 		center;
 	.lazy-loaded {
 		background: none;

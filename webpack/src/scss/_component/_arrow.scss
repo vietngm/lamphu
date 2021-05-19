@@ -4,7 +4,7 @@
 // --------------------------------------------------
 .arrow {
 	border: solid #ababab;
-	border-width: 0px 2px 2px 0px;
+	border-width: 0 2px 2px 0;
 	display: inline-block;
 	padding: 3px;
 	position: absolute;
@@ -13,6 +13,9 @@
 
 	&.right {
 		right: 16px;
+	}
+	&.left {
+		left: 16px;
 	}
 }
 
@@ -25,8 +28,8 @@
 }
 
 .plus {
-	width: 43px;
-	height: 43px;
+	width: 35px;
+	height: 35px;
 	position: absolute;
 	background-color: #e2e2e2;
 	right: 0px;
@@ -43,13 +46,13 @@
 		width: 16px;
 		height: 2px;
 		top: 45%;
-		left: 30%;
+		left: 25%;
 	}
 
 	&:after {
 		width: 2px;
 		height: 16px;
-		left: 47%;
-		top: 27%;
+		left: 45%;
+		top: 25%;
 	}
 }

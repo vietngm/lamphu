@@ -1,19 +1,8 @@
 @charset "utf-8";
 
 // ==================================================
-// Webフォント
+// Web Font
 // ==================================================
-
-// --------------------------------------------------
-// Webフォント
-// --------------------------------------------------
-// Webフォントの生成は以下サービスを利用
-// IcoMoon（http://icomoon.io/）
-// フォント生成先→http://icomoon.io/app/#/select
-// ※生成されたCSSを以下に貼付してください。
-// ※フォントの保存先は「/common/fonts/」に変更してください。
-//
-// 以下は参考例ですので削除して実際のソースで上書きしてください。
 
 // @font-face {
 // 	font-family: 'icon-top';
@@ -53,18 +42,21 @@
 // 	content: "\e605";
 // }
 @font-face {
-	font-family:'TeXGyreAdventor';
-	src:url('/common/fonts/TeXGyreAdventor-Regular.eot');
-	src:local('☺'),url('/common/fonts/TeXGyreAdventor-Regular.eot?#iefix') format('embedded-opentype'),
-	url('/common/fonts/TeXGyreAdventor-Regular.woff') format('woff'),
-	url('/common/fonts/TeXGyreAdventor-Regular.ttf') format('truetype');
+	font-family: "TeXGyreAdventor";
+	src: url("../fonts/TeXGyreAdventor-Regular.eot");
+	src: local("☺"),
+		url("../fonts/TeXGyreAdventor-Regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("../fonts/TeXGyreAdventor-Regular.woff") format("woff"),
+		url("../fonts/TeXGyreAdventor-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family:'TeXGyreAdventor';
-	src:url('/common/fonts/TeXGyreAdventor-Bold.eot');
-	src:local('☺'),url('/common/fonts/TeXGyreAdventor-Bold.eot?#iefix') format('embedded-opentype'),
-	url('/common/fonts/TeXGyreAdventor-Bold.woff') format('woff'),
-	url('/common/fonts/TeXGyreAdventor-Bold.ttf') format('truetype');
-	font-weight:700;
+	font-family: "TeXGyreAdventor";
+	src: url("../fonts/TeXGyreAdventor-Bold.eot");
+	src: local("☺"),
+		url("../fonts/TeXGyreAdventor-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/TeXGyreAdventor-Bold.woff") format("woff"),
+		url("../fonts/TeXGyreAdventor-Bold.ttf") format("truetype");
+	font-weight: 700;
 }

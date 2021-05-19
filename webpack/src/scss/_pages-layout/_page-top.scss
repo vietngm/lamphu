@@ -2,97 +2,102 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.is-home {
-}
 
 .banner {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  position: relative;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	position: relative;
 }
 
-
 .caption h5 {
-  margin-top: 0px;
-  max-height: 50px;
-  display: block;
-  overflow: hidden;
+	margin-top: 0px;
+	max-height: 50px;
+	display: block;
+	overflow: hidden;
 }
 
 .caption a {
-  color: $color-black;
+	color: $color-black;
 }
 
-
 .form-group {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 form {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 hr {
-  border-top: dotted 1px #c8c8c8;
+	border-top: dotted 1px #c8c8c8;
 }
 
 .f-search {
-  position: absolute;
-  right: 60px;
-  top: 26px;
+	position: absolute;
+	right: 60px;
+	top: 26px;
 }
 
 .fa-search:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
-
 .images {
-  display: block;
-  position: relative;
+	display: block;
+	position: relative;
 }
 
 .collapse {
-  padding: 0px;
+	padding: 0px;
 }
 
 .panel-contact-page {
-  margin-top: 25px;
+	margin-top: 15px;
+	@media (min-width: $screen-sm-min) {
+		margin-top: 25px;
+	}
 }
 
-.panel-dai-ly-page .panel-heading {
-  text-transform: uppercase;
-  font-weight: bold;
+.panel-dai-ly-page {
+	.panel-heading {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
 }
 
-.article-detail p {
-  text-align: justify;
+.article-detail {
+	p {
+		text-align: justify;
+		.size-full {
+			width: 100%;
+			height: auto;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			@media (min-width: $screen-sm-min) {
+				width: auto;
+			}
+		}
+	}
 }
-
-.article-detail p .size-full {
-  width: 100%;
-  height: auto;
-}
-
-
 
 .title-sp {
-  margin-bottom: 20px;
-  font-size: 12px;
-  color: #666;
-  display: block;
+	margin-bottom: 20px;
+	font-size: 12px;
+	color: #666;
+	display: block;
 }
 
 .description-title {
-  color: #cc1e2a;
+	color: #cc1e2a;
 }
 
 .cat-title {
-  text-align: left;
-  height: 36px;
-  margin: 5px 0px 15px 0px;
-  display: block;
-  color: $color-black;
+	text-align: left;
+	height: 36px;
+	margin: 5px 0px 15px 0px;
+	display: block;
+	color: $color-black;
 }
-

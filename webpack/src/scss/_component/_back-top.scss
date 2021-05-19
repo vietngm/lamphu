@@ -2,23 +2,23 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.back-top{
-    position: fixed;
-    right: 15px;
-    z-index: 99;
-    bottom: 40px;
-    display: none !important;
-    @media(min-width: $screen-sm-min) {
-        bottom: 90px;
-        display: block;
-    }
-    a {
-        font-size: 35px;
-        color: nth($color-array,7);
-        background: none;
-        position: relative;
-        @media(min-width: $screen-sm-min) {
-            font-size:55px;
-        }
-    }
+.back-top {
+	position: fixed;
+	right: 15px;
+	z-index: 99;
+	bottom: 40px;
+	display: none !important;
+	@media (min-width: $screen-sm-min) {
+		bottom: 90px;
+		display: block;
+	}
+	a {
+		font-size: 35px;
+		color: nth($color-array, 7);
+		background: none;
+		position: relative;
+		@media (min-width: $screen-sm-min) {
+			font-size: 55px;
+		}
+	}
 }

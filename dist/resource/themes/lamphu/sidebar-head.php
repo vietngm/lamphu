@@ -12,7 +12,7 @@ global $lienhe; ?>
         </div>
       </div>
       <div class="col-lg-5 col-md-5 col-sm-4 col-xs-7">
-        <div class="fa-top">
+        <div class="fab-top">
           <a class="fab-link" href="<?php echo $lienhe['facebook'];?>" target="_blank">
             <i class="fab fa-facebook-f"></i></a>
           <a class="fab-link" href="<?php echo $lienhe['twitter'];?>" target="_blank">
