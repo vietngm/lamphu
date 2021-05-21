@@ -22,7 +22,7 @@ global $mobile_browser; ?>
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
               <?php } ?>
-              <?php echo get_the_title(2); ?>
+              <?php echo get_the_title(3); ?>
             </a>
           </li>
           <li class="main-item">
@@ -30,7 +30,7 @@ global $mobile_browser; ?>
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
               <?php } ?>
-              <?php echo get_the_title(3); ?>
+              <?php echo get_the_title(32); ?>
               <span class="plus"></span>
             </a>
             <ul class="sub-list">
@@ -56,35 +56,11 @@ global $mobile_browser; ?>
             </a>
           </li>
           <li class="main-item">
-            <a href="<?php echo get_permalink(get_page_by_path('xu-huong')); ?>" class="main-link">
+            <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="main-link">
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
               <?php } ?>
-              <?php echo __('Xu hướng', 'theme'); ?>
-            </a>
-          </li>
-          <li class="main-item">
-            <a href="<?php echo get_permalink(get_page_by_path('hinh-anh')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
-              <?php echo __('Hình ảnh', 'theme'); ?>
-            </a>
-          </li>
-          <li class="main-item">
-            <a href="<?php echo get_permalink(get_page_by_path('du-an')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
-              <?php echo __('Dự án', 'theme'); ?>
-            </a>
-          </li>
-          <li class="main-item">
-            <a href="<?php echo get_permalink(get_page_by_path('cach-su-dung')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
-              <?php echo __('Cách sử dụng', 'theme'); ?>
+              <?php echo __('Tài liệu', 'theme'); ?>
             </a>
           </li>
           <li class="main-item">

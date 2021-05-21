@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.partner {
+  display: grid;
+
+  .wrap-content {
+    overflow: hidden;
+  }
+
+  &-list {
+    display: grid;
+    margin-top: 32px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 64px;
+    }
+
+    img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+  }
+}

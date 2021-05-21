@@ -12,6 +12,8 @@ global $mobile_browser, $tablet_browser; ?>
   <link href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png" rel="shortcut icon"
     type="image/x-icon">
   <link rel="apple-touch-icon" href="<?php echo get_site_url(); ?>/assets/images/apple-touch.png">
+  <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo get_site_url(); ?>/assets/owlcarousel/assets/owl.theme.green.min.css">
   </script>
   <?php wp_head(); ?>
 </head>
