@@ -40,5 +40,6 @@ if(is_tax()){
 <meta name="robots" content="index, follow" />
 <?php echo $extraFiled; ?>
 <link rel="alternate" href="http://www.maycatdayedm.com" hreflang="vi-vn" />
-<link rel="shortcut icon" href="/common/images/share/meta/favicon.png" type="image/x-icon" />
-<link rel="icon" href="/common/images/share/meta/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png"
+  type="image/x-icon" />
+<link rel="icon" href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png" type="image/x-icon" />

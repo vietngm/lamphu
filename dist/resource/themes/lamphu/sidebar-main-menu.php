@@ -1,10 +1,10 @@
-<?php $terms = wp_get_object_terms($post->ID, 'danh-muc-bai-viet');
+<?php $terms = wp_get_object_terms($post->ID, 'danh-muc');
 global $mobile_browser; ?>
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <div class="wrap-content">
     <div class="navbar-header">
       <a class="navbar-logo" href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" align="May cat day">
+        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" alt="May cat day">
       </a>
       <div class="wrap-hamburger">
         <div class="hamburger">

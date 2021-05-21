@@ -7,7 +7,7 @@ get_header();
 get_sidebar('head');
 ?>
 <main>
-  <div align="center">
+  <div>
     <?php get_sidebar("banner"); ?>
   </div>
   <div class="wrap-content">
