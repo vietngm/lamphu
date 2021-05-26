@@ -1,16 +1,16 @@
 <div class="partner-list owl-carousel owl-theme">
-    <?php
-    $_list = mcpGallery(59);
-    if (!empty($_list) && $_list > 0) {
-        foreach ($_list as $key) {
-            $_key = json_decode($key);
-            $key = $_key->key;
-            $o = $_key->attach_id;
-            $order = $_key->order;
-            $image_full = wp_get_attachment_image_src($o, 'full');
-            $image_thumb = wp_get_attachment_image_src($o, 'thumbnail');
-            ?>
-          <div><img src="<?php echo $image_full[0]; ?>"></div>
-        <?php }
-    } ?>
+  <?php
+$arg = array(
+    'post_type' => 'doi-tac',
+    'orderby' => 'date',
+    'order' => 'asc',
+    'posts_per_page' => -1,
+    'taxonomy' => $tax,
+    'term' => $terms->slug,
+    'status' => array('publish', 'private')
+);
+$the_query = new WP_Query($arg); while ($the_query->have_posts()) : $the_query->the_post(); ?>
+  <div><?php the_post_thumbnail('featured_medium', array('class' => 'img-responsive')); ?></div>
+  <?php endwhile;
+    wp_reset_query(); ?>
 </div>

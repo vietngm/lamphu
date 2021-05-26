@@ -4925,7 +4925,7 @@ textarea:focus:-moz-placeholder {
 .arrow {
   border: solid #ababab;
   border-width: 0 2px 2px 0;
-  display: inline-block;
+  display: grid;
   padding: 3px;
   position: absolute;
   top: 36%;
@@ -4946,8 +4946,8 @@ textarea:focus:-moz-placeholder {
   height: 35px;
   position: absolute;
   background-color: #e2e2e2;
-  right: 0px;
-  top: 0px; }
+  right: 0;
+  top: 0; }
   .plus:before, .plus:after {
     position: absolute;
     content: "";
@@ -5861,86 +5861,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .navbar {
   margin: 0;
-  border: none;
   border-radius: 0;
   border: none;
   display: block; }
   @media (min-width: 768px) {
     .navbar {
       display: block; } }
-  .navbar-main {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%; }
-    @media (min-width: 768px) {
-      .navbar-main {
-        background-color: #333333;
-        height: 50px;
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        position: relative; } }
-    .navbar-main.active {
-      opacity: 1;
-      visibility: visible;
-      height: auto;
-      padding-top: 10px;
-      height: auto;
-      border-top: solid 1px #f2f2f2; }
-  .navbar-menu {
-    margin: 0;
-    font-size: 0;
-    list-style: none;
-    padding: 0; }
-    @media (min-width: 768px) {
-      .navbar-menu {
-        margin: auto; } }
-    .navbar-menu .menu-item {
-      position: relative;
-      z-index: 99;
-      transition: all 0.4s ease;
-      display: block; }
-      @media (min-width: 768px) {
-        .navbar-menu .menu-item {
-          display: inline-block;
-          padding: 0 3px; } }
-      .navbar-menu .menu-item:last-child {
-        border-right: none; }
-      .navbar-menu .menu-item:hover {
-        background-color: #ffffff; }
-        .navbar-menu .menu-item:hover a {
-          color: #333333; }
-      .navbar-menu .menu-item a {
-        color: #000000;
-        font-size: 16px;
-        display: block;
-        text-align: center;
-        line-height: 30px; }
-        @media (min-width: 768px) {
-          .navbar-menu .menu-item a {
-            font-size: 14px;
-            line-height: normal;
-            padding: 0 15px;
-            display: block;
-            color: #ffffff;
-            line-height: 50px; } }
-      .navbar-menu .menu-item.active {
-        background-color: #ffffff; }
-        .navbar-menu .menu-item.active a {
-          color: #333333; }
-  .navbar-time {
-    float: right;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-    .navbar-time .time-item {
-      font-size: 14px;
-      line-height: 50px;
-      color: #ffffff; }
   .navbar-header {
     display: table;
     float: none;
@@ -5978,176 +5904,129 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     .navbar-logo img {
       width: 100%;
       height: auto; }
-  .navbar-toggle {
-    margin-top: 12px;
-    padding: 0; }
-    .navbar-toggle .icon-bar {
-      background-color: #ffffff;
-      width: 25px;
-      position: absolute; }
-      .navbar-toggle .icon-bar:nth-child(1) {
-        transform: rotate(-45deg);
-        top: 9px; }
-      .navbar-toggle .icon-bar:nth-child(2) {
-        display: none; }
-      .navbar-toggle .icon-bar:nth-child(3) {
-        transform: rotate(45deg);
-        top: 5px; }
-    .navbar-toggle.collapsed .icon-bar:nth-child(1) {
-      transform: rotate(0deg);
-      top: 0px; }
-    .navbar-toggle.collapsed .icon-bar:nth-child(2) {
-      display: block;
-      top: 4px; }
-    .navbar-toggle.collapsed .icon-bar:nth-child(3) {
-      transform: rotate(0deg);
-      top: 12px; }
-  .navbar-collapse {
-    padding: 0; }
-  .navbar-default {
-    background-color: #ffffff;
-    border-top: solid 1px #ededed; }
-    .navbar-default .navbar-toggle {
-      background-color: #ffffff;
-      border: none;
-      width: 25px;
-      height: 20px; }
-      .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-        background-color: #ffffff; }
-  .navbar-brand {
+  .navbar .main-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
+    justify-content: end;
+    grid-column-gap: 16px; }
+  .navbar .main-menu {
     margin: auto;
-    width: 160px;
-    padding: 15px 0;
-    height: auto;
-    float: none; }
-    .navbar-brand img {
-      width: 100%;
-      height: auto; }
-
-.main-list {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: -webkit-max-content;
-  grid-auto-columns: max-content;
-  justify-content: end;
-  grid-column-gap: 16px; }
-
-.main-menu {
-  margin: auto;
-  width: 100%; }
-  .main-menu .main-item {
-    border-bottom: solid 1px #e7e7e7;
-    background-color: #ffffff;
-    display: block; }
-    @media (min-width: 768px) {
-      .main-menu .main-item {
-        position: relative;
-        display: inline-block;
-        border: none; } }
-    .main-menu .main-item:last-child {
-      border-right: none; }
-    .main-menu .main-item:hover {
-      background-color: #ffffff; }
-      .main-menu .main-item:hover .main-link {
-        color: #000000; }
-    .main-menu .main-item.active {
-      color: #ffffff; }
-    .main-menu .main-item .sub-list {
-      display: none;
-      background-color: #000000;
-      text-align: left;
-      position: absolute;
-      z-index: 999;
-      width: 195px;
-      transition: 0.4s all ease; }
-    .main-menu .main-item:hover .sub-list {
-      display: block; }
-  .main-menu .main-link {
-    display: block;
-    color: #000000;
-    line-height: 35px;
-    position: relative;
-    font-size: 12px;
-    text-transform: uppercase; }
-    @media (min-width: 768px) {
-      .main-menu .main-link {
-        line-height: 71px; } }
-  .main-menu .sub-list {
-    padding: 0px;
-    margin: 0px;
-    transition: 0.4s all ease; }
-    .main-menu .sub-list-link {
-      color: #ffffff;
-      text-shadow: none;
-      line-height: 35px;
-      display: block;
-      padding: 0px 10px;
-      text-transform: uppercase; }
-  .main-menu .children {
-    display: none;
-    left: 195px;
-    position: absolute;
-    top: 0px;
-    width: 180px;
-    padding: 0px;
-    background-color: #000000; }
-  .main-menu .list-item:hover {
-    background-color: #ffffff;
-    border-bottom: solid 1px; }
-  .main-menu .sub-list-item {
-    position: relative;
-    border-bottom: 1px solid #383838;
-    display: block;
-    margin: 0px;
-    color: #ffffff; }
-    .main-menu .sub-list-item:last-child {
-      border-bottom: none; }
-    .main-menu .sub-list-item:hover {
-      background-color: #ffffff; }
-      .main-menu .sub-list-item:hover > .sub-list-link {
-        color: #000000; }
-      .main-menu .sub-list-item:hover .children {
-        display: block; }
-  .main-menu .plus {
-    display: grid; }
-    @media (min-width: 768px) {
-      .main-menu .plus {
-        display: none; } }
-  .main-menu .sub-list,
-  .main-menu .children {
-    border-top: solid 1px #e7e7e7;
-    display: none !important; }
-  .main-menu .sub-list.active,
-  .main-menu .children.active {
-    display: block !important;
-    position: static;
     width: 100%; }
-  .main-menu .list-item,
-  .main-menu .list-item:hover {
-    border-bottom: solid 1px #e7e7e7;
-    background-color: #ececec; }
-  .main-menu .sub-list-item {
-    background-color: #ececec;
+    .navbar .main-menu .main-list {
+      margin: 0;
+      padding: 0; }
+    .navbar .main-menu .main-item {
+      position: relative;
+      border-bottom: solid 1px #e7e7e7;
+      background-color: #ffffff;
+      display: block;
+      border-bottom: solid 1px #e7e7e7;
+      background-color: #ffffff;
+      display: block; }
+      @media (min-width: 768px) {
+        .navbar .main-menu .main-item {
+          position: relative;
+          display: inline-block;
+          border: none; } }
+      .navbar .main-menu .main-item:last-child {
+        border-right: none; }
+      .navbar .main-menu .main-item:hover {
+        background-color: #ffffff; }
+        .navbar .main-menu .main-item:hover .main-link {
+          color: #000000; }
+        .navbar .main-menu .main-item:hover .sub-list {
+          display: block; }
+      .navbar .main-menu .main-item.active {
+        color: #ffffff; }
+      .navbar .main-menu .main-item .sub-list {
+        display: none;
+        background-color: #000000;
+        text-align: left;
+        position: absolute;
+        z-index: 999;
+        width: 195px;
+        transition: 0.4s all ease; }
+    .navbar .main-menu .main-link {
+      position: relative;
+      font-size: 12px;
+      display: block;
+      color: #000000;
+      line-height: 35px;
+      position: relative;
+      font-size: 12px;
+      text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .navbar .main-menu .main-link {
+          line-height: 71px; } }
+    .navbar .main-menu .sub-list {
+      padding: 0;
+      margin: 0;
+      transition: 0.4s all ease; }
+      .navbar .main-menu .sub-list-item {
+        position: relative;
+        display: block;
+        margin: 0;
+        color: #ffffff;
+        background-color: #ececec;
+        border-bottom: solid 1px #e7e7e7; }
+        .navbar .main-menu .sub-list-item:last-child {
+          border-bottom: none; }
+        .navbar .main-menu .sub-list-item:hover {
+          background-color: #ffffff; }
+          .navbar .main-menu .sub-list-item:hover > .sub-list-link {
+            color: #000000; }
+          .navbar .main-menu .sub-list-item:hover .children {
+            display: block; }
+        .navbar .main-menu .sub-list-item.active .plus {
+          background-color: #e0e0e0; }
+      .navbar .main-menu .sub-list-link {
+        color: #ffffff;
+        text-shadow: none;
+        line-height: 35px;
+        display: block;
+        padding: 0px 10px;
+        text-transform: uppercase; }
+    .navbar .main-menu .children {
+      display: none;
+      left: 195px;
+      position: absolute;
+      top: 0px;
+      width: 180px;
+      padding: 0px;
+      background-color: #000000; }
+    .navbar .main-menu .list-item:hover {
+      background-color: #ffffff;
+      border-bottom: solid 1px; }
+    .navbar .main-menu .plus {
+      display: grid; }
+      @media (min-width: 768px) {
+        .navbar .main-menu .plus {
+          display: none; } }
+    .navbar .main-menu .sub-list,
+    .navbar .main-menu .children {
+      border-top: solid 1px #e7e7e7;
+      display: none; }
+    .navbar .main-menu .sub-list.active,
+    .navbar .main-menu .children.active {
+      display: block;
+      position: static;
+      width: 100%; }
+    .navbar .main-menu .list-item,
+    .navbar .main-menu .list-item:hover {
+      border-bottom: solid 1px #e7e7e7;
+      background-color: #ececec; }
+    .navbar .main-menu .main-link.active .plus:after,
+    .navbar .main-menu .sub-list-item.active .plus:after {
+      content: none; }
+  .navbar .children.active .f-item {
+    background-color: #e0e0e0;
     border-bottom: solid 1px #e7e7e7; }
-  .main-menu .sub-list-item.active .plus {
-    background-color: #e0e0e0; }
-  .main-menu .main-link.active .plus:after,
-  .main-menu .sub-list-item.active .plus:after {
-    content: none; }
-  .main-menu .sub-list-link {
-    font-size: 12px;
-    color: #000000;
-    padding: 0px 0px 0px 40px;
-    text-transform: uppercase;
-    position: relative; }
-  .main-menu .children .sub-list-link {
-    padding: 0px 0px 0px 50px; }
-
-.children.active .f-item {
-  background-color: #e0e0e0;
-  border-bottom: solid 1px #e7e7e7; }
+  .navbar .children .sub-list-link {
+    padding: 0 0 0 50px; }
 
 .doc-footer {
   background: url("../images/wood-texture.png") repeat #1f1f1f;

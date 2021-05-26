@@ -60,37 +60,9 @@
     aria-labelledby="myModalLabel"><?php echo alertDialog(0); ?></div>
   <?php include("search-tool.php"); ?>
 </footer>
-<script src="<?php echo get_site_url(); ?>/assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-jQuery(function($) {
-  $(".regular").slick({
-    dots: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrow: false,
-    autoplay: true,
-    responsive: [{
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
-</script>
 
 <?php if (is_singular('san-pham')) { ?>
-<script src="/common/js/lightgallery.js"></script>
+<script src="<?php echo get_site_url(); ?>/assets/js/lightgallery.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
   $('#lightgallery').lightGallery();
@@ -98,9 +70,9 @@ $(document).ready(function() {
 </script>
 
 <?php } ?>
-<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/owlcarousel/owl.carousel.js"></script>
+<!-- <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/owlcarousel/owl.carousel.js"></script> -->
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
-<script src="<?php echo get_site_url(); ?>/assets/js/main.js?04112020"></script>
+<script src="<?php echo get_site_url(); ?>/assets/js/main.js?26052021"></script>
 <?php wp_footer(); ?>
 </body>
 
