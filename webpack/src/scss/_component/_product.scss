@@ -2,6 +2,18 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
+.prods {
+	display: grid;
+	&-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-row-gap: 32px;
+		grid-column-gap: 16px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
 .pro-thumb {
 	display: block;
 	position: relative;

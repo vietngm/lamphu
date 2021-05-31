@@ -1,120 +1,92 @@
 @charset "utf-8";
+
 // --------------------------------------------------
 // KV
 // --------------------------------------------------
-#sliderview {
-	background-color: #ffffff;
-}
-
-.key-visual-news {
-	background-color: nth($color-array, 5);
-	padding: 15px 0px;
-	color: #fff;
-	font-size: 16px;
-	position: relative;
-	overflow: hidden;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: 15px;
-	@media (min-width: $screen-sm-min) {
-		padding: 30px 0px;
-		font-size: 30px;
-		margin-bottom: 30px;
-	}
-	&:before {
-		content: "";
-		display: inline-block;
-		height: 0;
-		width: 0;
-		border-image: none;
-		position: absolute;
-		left: 0;
-		top: -250px;
-		border-right: 1920px solid #e1e1e1;
-		border-top: 465px solid transparent;
-		z-index: 0;
-	}
-	span {
+.key {
+	&-visual {
 		position: relative;
+		overflow: hidden;
+		// @media (min-width: $screen-md-min) {
+		//   margin-top: -80px;
+		// }
+		figure {
+			margin: 0;
+		}
+		.owl-theme .owl-dots {
+			position: absolute;
+			bottom: 16px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&-text {
+		text-transform: uppercase;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		text-align: left;
+		margin: 0;
+		transform: translate(-20%, -50%);
 		z-index: 1;
-		text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-		color: $color-main;
-		font-weight: normal;
+
+		a {
+			color: $color-white;
+			font-size: 18px;
+			margin-right: 16px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				color: $color-black;
+			}
+		}
+	}
+
+	&-slogan {
+		color: $color-white;
+		line-height: normal;
+		font-size: 12px;
+		font-weight: bold;
+		&.vi {
+			@media (min-width: $screen-md-min) {
+				font-size: 18px;
+			}
+		}
+
+		&.en {
+			@media (min-width: $screen-md-min) {
+				font-size: 25px;
+			}
+		}
 	}
 }
 
-.slider-shadow {
-	margin-bottom: 15px;
-}
+.ml12 {
+	font-weight: bold;
+	font-size: 1em;
+	text-transform: uppercase;
 
-.jssorb21 {
-	position: absolute;
-}
+	@media (min-width: $screen-md-min) {
+		font-size: 3.5em;
+	}
 
-.jssorb21 div,
-.jssorb21 div:hover,
-.jssorb21 .av {
-	position: absolute;
-	width: 19px;
-	height: 19px;
-	text-align: center;
-	line-height: 19px;
-	color: white;
-	font-size: 12px;
-	background: url(../images/controls/b21.png) no-repeat;
-	overflow: hidden;
-	cursor: pointer;
-}
+	@media (min-width: $screen-md-min) {
+		&.vi {
+			letter-spacing: 0.33em;
+		}
 
-.jssorb21 div {
-	background-position: -5px -5px;
-}
+		&.en {
+			letter-spacing: 0.33em;
+		}
+	}
 
-.jssorb21 div:hover,
-.jssorb21 .av:hover {
-	background-position: -35px -5px;
-}
-
-.jssorb21 .av {
-	background-position: -65px -5px;
-}
-
-.jssorb21 .dn,
-.jssorb21 .dn:hover {
-	background-position: -95px -5px;
-}
-
-.jssora21l,
-.jssora21r {
-	display: block;
-	position: absolute;
-	width: 70px;
-	height: 80px;
-	cursor: pointer;
-	background: #b5142c url(../images/controls/a21.png) center center no-repeat;
-	overflow: hidden;
-}
-
-.jssora21l {
-	background-position: 5px -20px;
-}
-
-.jssora21r {
-	background-position: -55px -20px;
-}
-
-.jssora21l:hover {
-	background-position: 5px -20px;
-}
-
-.jssora21r:hover {
-	background-position: -55px -20px;
-}
-
-.jssora21l.jssora21ldn {
-	background-position: 5px -20px;
-}
-
-.jssora21r.jssora21rdn {
-	background-position: -55px -20px;
+	.letter {
+		display: inline-block;
+		line-height: 1em;
+		color: $color-white;
+	}
 }

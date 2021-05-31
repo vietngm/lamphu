@@ -25,6 +25,7 @@ global $mobile_browser; ?>
               <?php echo get_the_title(3); ?>
             </a>
           </li>
+          <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="#" class="main-link js-main-link">
               <?php if ($mobile_browser > 0) { ?>
@@ -46,7 +47,7 @@ global $mobile_browser; ?>
                 ?>
             </ul>
           </li>
-
+          <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">
               <?php if ($mobile_browser > 0) { ?>
@@ -55,6 +56,7 @@ global $mobile_browser; ?>
               <?php echo __('Tin tức', 'theme'); ?>
             </a>
           </li>
+          <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="main-link">
               <?php if ($mobile_browser > 0) { ?>
@@ -63,6 +65,7 @@ global $mobile_browser; ?>
               <?php echo __('Tài liệu', 'theme'); ?>
             </a>
           </li>
+          <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="main-link">
               <?php if ($mobile_browser > 0) { ?>

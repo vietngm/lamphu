@@ -6,7 +6,8 @@
 .doc-footer {
   background: url("../images/wood-texture.png") repeat #1f1f1f;
 
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0;
+  margin-top: 64px;
   @media (min-width: $screen-sm-min) {
     padding: 40px 0 40px 0;
   }

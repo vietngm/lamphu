@@ -4,15 +4,22 @@
   <div align="center">
     <?php get_sidebar("banner"); ?>
   </div>
-  <div class="wrap-content">
-    <?php get_sidebar('top-danh-muc'); ?>
-  </div>
-  <?php get_sidebar('du-an'); ?>
-  <div class="wrap-content">
-    <?php get_sidebar('san-pham'); ?>
-  </div>
-
-  <?php get_sidebar('gioi-thieu'); ?>
+  <section class="cate">
+    <div class="wrap-content">
+      <?php get_sidebar('top-danh-muc'); ?>
+    </div>
+  </section>
+  <section>
+    <?php get_sidebar('gioi-thieu'); ?>
+  </section>
+  <section class="prods">
+    <div class="wrap-content">
+      <?php get_sidebar('san-pham'); ?>
+    </div>
+  </section>
+  <section>
+    <?php get_sidebar('gioi-thieu'); ?>
+  </section>
   <section class="partner">
     <div class="wrap-content">
       <?php get_template_part('content', 'partner'); ?>

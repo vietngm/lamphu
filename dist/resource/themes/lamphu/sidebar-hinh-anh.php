@@ -1,8 +1,9 @@
 <div align="center" class="slick">
-  <!--  <h2 class="heading">--><?php //echo get_the_title(4); ?><!--</h2>-->
+  <!--  <h2 class="heading">--><?php //echo get_the_title(4); ?>
+  <!--</h2>-->
   <div class="regular">
-      <?php
-      $arg = array('post_type' => 'hinh-anh', 'orderby' => 'date', 'order' => 'desc', 'posts_per_page' => -1);
+    <?php
+      $arg = array('post_type' => 'san-pham', 'orderby' => 'date', 'order' => 'desc', 'posts_per_page' => -1);
       $the_query = new WP_Query($arg);
       while ($the_query->have_posts()) : $the_query->the_post();
           $_list = mcpGallery($post->ID);
@@ -14,10 +15,10 @@
                   $order = $_key->order;
                   $image_full = wp_get_attachment_image_src($o, 'featured_medium');
                   ?>
-                <div><img src="<?php echo $image_full[0]; ?>" alt="Hinh anh"></div>
-              <?php }
+    <div><img src="<?php echo $image_full[0]; ?>" alt="Hinh anh"></div>
+    <?php }
           } ?>
-      <?php endwhile;
+    <?php endwhile;
       wp_reset_query(); ?>
   </div>
 </div>

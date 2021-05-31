@@ -1,12 +1,11 @@
 <?php global $lienhe; ?>
-<?php get_sidebar('hinh-anh'); ?>
 <footer class="doc-footer">
   <div>
     <div class="wrap-content">
       <div class="row gutter-10 gutter-md-30-md">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
           <div class="logo-footer">
-            <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" alt="">
+            <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?31052021" alt="">
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -68,11 +67,9 @@ $(document).ready(function() {
   $('#lightgallery').lightGallery();
 });
 </script>
-
 <?php } ?>
-<!-- <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/owlcarousel/owl.carousel.js"></script> -->
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
-<script src="<?php echo get_site_url(); ?>/assets/js/main.js?26052021"></script>
+<script src="<?php echo get_site_url(); ?>/assets/js/main.js?31052021"></script>
 <?php wp_footer(); ?>
 </body>
 

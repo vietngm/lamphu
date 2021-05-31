@@ -166,9 +166,9 @@ function export_slideshow($gal, $url, $w, $h, $title)
                 $img = wp_get_attachment_image_src($o, 'slideshow_large');
                 ?>
 <div class="item">
-    <figure>
-        <img class="owl-lazy" data-src="<?php echo $img[0]; ?>" alt="In an Le ngoc" title="In an Le Ngoc">
-    </figure>
+  <figure>
+    <img class="owl-lazy" data-src="<?php echo $img[0]; ?>" alt="Lam Phu" title="Lam Phu">
+  </figure>
 </div>
 <?php
             }
@@ -183,35 +183,35 @@ function script_slideshow()
     ?>
 <script>
 jQuery(document).ready(function($) {
-    $('.loop').owlCarousel({
-        center: false,
+  $('.loop').owlCarousel({
+    center: false,
+    items: 1,
+    loop: true,
+    lazyLoad: true,
+    nav: false,
+    dots: true,
+    responsiveClass: true,
+    responsiveRefreshRate: true,
+    autoplay: true,
+    responsive: {
+      768: {
         items: 1,
-        loop: true,
-        lazyLoad: true,
-        nav: false,
-        dots: true,
-        responsiveClass: true,
-        responsiveRefreshRate: true,
-        autoplay: true,
-        responsive: {
-            768: {
-                items: 1,
-                margin: 0
-            },
-            960: {
-                items: 1,
-                margin: 0
-            },
-            1200: {
-                items: 1,
-                margin: 0
-            },
-            1920: {
-                items: 1,
-                margin: 0
-            }
-        }
-    });
+        margin: 0
+      },
+      960: {
+        items: 1,
+        margin: 0
+      },
+      1200: {
+        items: 1,
+        margin: 0
+      },
+      1920: {
+        items: 1,
+        margin: 0
+      }
+    }
+  });
 });
 </script>
 

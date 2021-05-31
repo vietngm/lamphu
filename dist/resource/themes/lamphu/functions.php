@@ -2,7 +2,9 @@
 @session_start();ob_start();
 add_action('wp_head','pluginname_ajaxurl');
 function pluginname_ajaxurl() {?>
-<script type="text/javascript">var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';</script>
+<script type="text/javascript">
+var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+</script>
 <?php
 }
 if ( ! function_exists( 'theme_setup' ) ) :
@@ -105,12 +107,12 @@ function get_list_post($taxonomy,$posttype,$slug){
 	while ( $the_query->have_posts() ):$the_query->the_post();
 ?>
 <li class="sub-list-item">
-	<a href="<?php echo get_permalink($post->ID); ?>" class="sub-list-link">
-		<?php if($mobile_browser > 0){ ?>
-		<span class="arrow left"></span>
-		<?php } ?>
-		<?php the_title() ?>
-	</a>
+  <a href="<?php echo get_permalink($post->ID); ?>" class="sub-list-link">
+    <?php if($mobile_browser > 0){ ?>
+    <span class="arrow left"></span>
+    <?php } ?>
+    <?php the_title() ?>
+  </a>
 </li>
 <?php
 endwhile; wp_reset_query();
@@ -156,7 +158,7 @@ function new_wp_title( $title, $sep ) {
 		$title = "$title $sep $site_description";
 
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'Kronoswiss Viet nam' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'May cat day Edm' ), max( $paged, $page ) );
 
 	return $title;
 }
@@ -180,6 +182,8 @@ function get_term_top_most_parent($term_id, $taxonomy){
 }
 /*-----------------------------------------------------------------------*/
 add_filter( 'wp_title', 'new_wp_title', 10, 2 );
+/*-----------------------------------------------------------------------*/
+include('admin-themes/login.php');
 /*-----------------------------------------------------------------------*/
 include('admin-themes/image-size.php');
 /*-----------------------------------------------------------------------*/

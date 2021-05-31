@@ -9,7 +9,7 @@ module.exports = {
     filename: "js/[name].js",
   },
   // devServer: {
-  //   contentBase: path.join(__dirname, '/lengoc/dist/'),
+  //   contentBase: path.join(__dirname, '/lamphu/dist/'),
   //   compress: true,
   //   port: 3000
   // },
@@ -65,7 +65,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: "http://lamphu:8888",
       port: 3000,
-      // server: { baseDir: ['/lengoc/dist/'] },
+      // server: { baseDir: ['/lamphu/dist/'] },
       proxy: "http://lamphu:8888",
       // open: true,
     }, {

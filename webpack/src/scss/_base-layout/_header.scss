@@ -12,6 +12,9 @@
 			color: $color-blue;
 		}
 	}
+	&-top {
+		border-bottom: solid 1px nth($color-array, 6);
+	}
 }
 .top-switch {
 	display: grid;
@@ -19,7 +22,7 @@
 	justify-content: end;
 }
 .hotline {
-	font-size: 0px;
+	font-size: 0;
 	text-align: left;
 	.tel {
 		display: inline-block;
@@ -29,8 +32,8 @@
 	.address {
 		color: $color-black;
 		font-size: 16px;
-		line-height: 30px;
-		padding: 0px 10px;
+		line-height: 48px;
+		padding: 0 16px;
 		@media (min-width: $screen-sm-min) {
 			font-size: 14px;
 			border-left: solid 1px nth($color-array, 6);
@@ -58,16 +61,11 @@
 	text-align: center;
 	border-left: solid 1px nth($color-array, 6);
 	.fab {
-		line-height: 30px;
+		line-height: 48px;
 		color: nth($color-array, 6);
 		font-size: 16px;
-		padding: 0 10px;
+		padding: 0 16px;
 	}
-	// &:last-child {
-	// 	@media (min-width: $screen-sm-min) {
-	// 		border-right: solid 1px nth($color-array, 6);
-	// 	}
-	// }
 }
 
 .language-chooser {
@@ -84,9 +82,9 @@
 	li {
 		list-style: none;
 		text-align: center;
-		line-height: 30px;
+		line-height: 48px;
 		border-left: solid 1px nth($color-array, 6);
-		padding: 0 10px;
+		padding: 0 16px;
 
 		&:last-child {
 			@media (min-width: $screen-sm-min) {

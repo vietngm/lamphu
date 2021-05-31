@@ -7,6 +7,8 @@
 	border-radius: 0;
 	border: none;
 	display: block;
+	background-color: white;
+	position: relative;
 	@media (min-width: $screen-sm-min) {
 		display: block;
 	}
@@ -14,7 +16,7 @@
 	&-header {
 		display: table;
 		float: none;
-		padding: 16px 0;
+		padding: 8px 0;
 		width: 100%;
 		@media (min-width: $screen-sm-min) {
 			display: table-cell;
@@ -36,6 +38,7 @@
 	.wrap-content {
 		display: block;
 		padding: 0;
+		position: static;
 		@media (min-width: $screen-sm-min) {
 			display: table;
 		}
@@ -48,7 +51,7 @@
 		padding: 5px 15px;
 		@media (min-width: $screen-sm-min) {
 			display: inline-block;
-			width: 66px;
+			width: 96px;
 			padding: 0;
 		}
 
@@ -66,6 +69,7 @@
 		grid-auto-columns: max-content;
 		justify-content: end;
 		grid-column-gap: 16px;
+		align-items: center;
 	}
 
 	.main-menu {
@@ -76,7 +80,7 @@
 			padding: 0;
 		}
 		.main-item {
-			position: relative;
+			position: static;
 			border-bottom: solid 1px #e7e7e7;
 			background-color: $color-white;
 			display: block;
@@ -84,7 +88,7 @@
 			background-color: $color-white;
 			display: block;
 			@media (min-width: $screen-sm-min) {
-				position: relative;
+				position: static;
 				display: inline-block;
 				border: none;
 			}
@@ -96,7 +100,7 @@
 			&:hover {
 				background-color: $color-white;
 				.main-link {
-					color: $color-black;
+					color: $color-green;
 				}
 				.sub-list {
 					display: block;
@@ -106,23 +110,34 @@
 				color: $color-white;
 			}
 			.sub-list {
-				display: none;
+				display: grid;
 				background-color: $color-black;
 				text-align: left;
 				position: absolute;
 				z-index: 999;
-				width: 195px;
+				width: 100%;
 				transition: (0.4s all ease);
+				left: 0;
+				right: 0;
+				grid-template-columns: repeat(4, 1fr);
 			}
 		}
+		.main-dev {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			background-color: nth($color-array, 5);
+			height: 32px;
+			width: 1px;
+		}
+
 		.main-link {
 			position: relative;
-			font-size: 12px;
 			display: block;
 			color: $color-black;
 			line-height: 35px;
 			position: relative;
-			font-size: 12px;
+			font-size: 14px;
 			text-transform: uppercase;
 			@media (min-width: $screen-sm-min) {
 				line-height: 71px;
@@ -156,11 +171,11 @@
 				}
 			}
 			&-link {
-				color: $color-white;
+				color: $color-black;
 				text-shadow: none;
 				line-height: 35px;
 				display: block;
-				padding: 0px 10px;
+				padding: 0 12px;
 				text-transform: uppercase;
 			}
 		}

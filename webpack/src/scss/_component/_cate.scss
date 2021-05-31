@@ -1,0 +1,67 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.cate {
+	display: grid;
+
+	&-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-row-gap: 32px;
+		grid-column-gap: 16px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&-link {
+		display: grid;
+		justify-items: center;
+		grid-row-gap: 16px;
+		&:hover {
+			.cate-name {
+				color: $color-green;
+			}
+		}
+	}
+	&-item {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		text-align: center;
+		align-items: center;
+	}
+	&-img {
+		display: grid;
+		height: 200px;
+		align-items: center;
+		justify-content: center;
+	}
+	&-name {
+		width: 100%;
+		margin: auto;
+		font-size: 12px;
+		color: $color-main;
+		text-transform: uppercase;
+		line-height: normal;
+		@media (min-width: $screen-sm-min) {
+			font-size: 14px;
+		}
+	}
+	&-desc {
+		padding: 0 16px 16px 10;
+		@media (min-width: $screen-sm-min) {
+			padding: 15px 25px 25px 25px;
+		}
+
+		p {
+			margin: 0;
+			overflow: hidden;
+			color: $color-white;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+	}
+}

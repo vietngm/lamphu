@@ -3,19 +3,19 @@
 // ○○○
 // --------------------------------------------------
 .heading {
-  color: $color-black;
+  color: $color-green;
   text-align: center;
   font-size: 18px;
-  padding: 15px 0px 5px 0px;
+  padding: 15px 0 5px 0;
   text-align: center;
   line-height: normal;
   font-weight: normal;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
   text-transform: uppercase;
-  @media(min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
     font-size: 26px;
-    padding: 30px 0px 15px 0px;
+    padding: 30px 0 15px 0;
   }
   &-sub {
     color: nth($color-array, 4);
@@ -24,19 +24,19 @@
     line-height: normal;
     margin-bottom: 15px;
     text-align: center;
-    @media(min-width: $screen-sm-min) {
+    @media (min-width: $screen-sm-min) {
       font-size: 20px;
       margin-bottom: 15px;
     }
   }
-  &-detail{
+  &-detail {
     color: nth($color-array, 4);
     font-size: 18px;
     text-transform: uppercase;
     line-height: normal;
     margin-bottom: 10px;
     text-align: left;
-    @media(min-width: $screen-sm-min) {
+    @media (min-width: $screen-sm-min) {
       font-size: 20px;
       margin-bottom: 10px;
       margin-top: 0px;
@@ -50,7 +50,7 @@
   padding: 15px;
   font-weight: bold;
   margin-top: 15px;
-  @media(min-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
     margin-top: 0px;
   }
 }

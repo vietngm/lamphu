@@ -18,5 +18,3 @@ if(is_singular()){
 	if($taxSlug!=''){is_banner($arrBanner,$taxSlug,$max_w,$max_h);/*is single of Tax*/}
 	else{is_banner($arrBanner,$slug,$max_w,$max_h);/*is single of  Post*/}
 }}}?>
-<img src="<?php echo get_site_url(); ?>/assets/images/shadow.png" width="1000" height="34" class="img-responsive"
-  alt="Lâm Phú">
