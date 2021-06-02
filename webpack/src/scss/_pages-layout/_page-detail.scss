@@ -9,20 +9,23 @@
 	.cat-list {
 		margin-top: 30px;
 	}
-	.news-body {
-		img {
-			width: 100%;
-			height: auto;
-			margin-top: 15px;
-		}
-	}
 	.news {
 		margin-bottom: 15px;
+		&-body {
+			img {
+				width: 100%;
+				height: auto;
+				margin-top: 15px;
+			}
+		}
 	}
-	.detail-title {
+	.article-title {
 		h2 {
 			margin-top: 0px;
 			line-height: normal;
 		}
+	}
+	.article-detail {
+		display: grid;
 	}
 }

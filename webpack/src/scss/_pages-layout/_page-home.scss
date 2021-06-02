@@ -29,10 +29,6 @@ form {
 	margin-bottom: 15px;
 }
 
-hr {
-	border-top: dotted 1px #c8c8c8;
-}
-
 .f-search {
 	position: absolute;
 	right: 60px;
@@ -56,13 +52,6 @@ hr {
 	margin-top: 15px;
 	@media (min-width: $screen-sm-min) {
 		margin-top: 25px;
-	}
-}
-
-.panel-dai-ly-page {
-	.panel-heading {
-		text-transform: uppercase;
-		font-weight: bold;
 	}
 }
 

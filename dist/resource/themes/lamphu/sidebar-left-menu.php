@@ -47,16 +47,7 @@ $terms = get_terms($taxonomy, array(
             }
             ?>
     </ul>
-    <?php } ?>
-    <?php
+    <?php }
       }
-      ?>
-    <?php if (get_query_var("danh-muc-khach-hang") || is_page('dai-ly')){ ?>
-  <li class="list-item">
-    <a href="<?php echo get_permalink(get_page_by_path('dai-ly')); ?>" class="list-link">
-      <?php echo __('Khách hàng đại lý', 'theme'); ?>
-      <span class="arrow right"></span>
-    </a>
-  </li>
-  <?php } ?>
+    ?>
 </ul>

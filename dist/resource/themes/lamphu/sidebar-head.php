@@ -1,6 +1,4 @@
-<?php global $q_config;
-$lang = $q_config['language'];
-global $lienhe; ?>
+<?php global $lienhe; ?>
 <header class="header">
   <div class="header-top">
     <div class="wrap-content">

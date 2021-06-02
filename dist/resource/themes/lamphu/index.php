@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
 <main>
-  <div align="center">
+  <section>
     <?php get_sidebar("banner"); ?>
-  </div>
+  </section>
   <section class="cate">
     <div class="wrap-content">
       <?php get_sidebar('top-danh-muc'); ?>

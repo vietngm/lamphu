@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
-<main class="is-detail">
+<main class="is-news">
   <div class="key-visual key-visual-news">
     <span>LÂM PHÚ | NEWS</span>
   </div>
@@ -8,7 +8,7 @@
     <div class="wrap-content">
       <div class="row gutter-10 gutter-md-30-md">
         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-          <div class="detail-title">
+          <div class="article-title">
             <h2><?php the_title(); ?></h2>
           </div>
           <?php
@@ -21,7 +21,7 @@
             </div>
           </div>
           <?php endwhile; ?>
-          <h3 class="heading-sub">Các Tin Tức Khác</h3>
+          <h3 class="heading-sub">Các tin tức khác</h3>
           <div class="row gutter-10 gutter-md-30-md">
             <?php
                 $arg = array(
