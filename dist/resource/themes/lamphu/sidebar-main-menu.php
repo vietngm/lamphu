@@ -26,7 +26,7 @@ global $mobile_browser; ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item">
+          <li class="main-item main-item-over">
             <a href="#" class="main-link js-main-link">
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
@@ -34,8 +34,9 @@ global $mobile_browser; ?>
               <?php echo get_the_title(32); ?>
               <span class="plus"></span>
             </a>
-            <ul class="sub-list">
-              <?php
+            <div class="sub-wrap">
+              <ul class="sub-list">
+                <?php
                 $taxonomy = 'danh-muc';
                 $terms = get_terms($taxonomy, array(
                     'hide_empty' => 0,
@@ -45,7 +46,8 @@ global $mobile_browser; ?>
                 ));
                 include('nav-sub-main.php');
                 ?>
-            </ul>
+              </ul>
+            </div>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item">
