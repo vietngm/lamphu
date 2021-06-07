@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
 <main class="is-news">
-  <div align="center">
+  <section>
     <?php get_sidebar("banner"); ?>
-  </div>
+  </section>
   <section class="news">
     <?php get_sidebar("top-tin-tuc"); ?>
   </section>

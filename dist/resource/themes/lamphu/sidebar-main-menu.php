@@ -26,7 +26,7 @@ global $mobile_browser; ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item main-item-over">
+          <li class="main-item">
             <a href="#" class="main-link js-main-link">
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
@@ -50,9 +50,11 @@ global $mobile_browser; ?>
             </div>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item"><a class="main-link">Khach hang</a></li>
+          <li class="main-item"><a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"
+              class="main-link">Đối tác</a></li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item"><a class="main-link">Chat luong</a></li>
+          <li class="main-item"><a href="<?php echo get_permalink(get_page_by_path('chat-luong')); ?>"
+              class="main-link">Chất lượng</a></li>
           <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">

@@ -2,13 +2,6 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.is-about {
+.is-partner {
 	display: grid;
-	.article-about {
-		display: grid;
-		grid-row-gap: 16px;
-	}
-	.heading-detail {
-		border-bottom: solid 1px $color-main;
-	}
 }

@@ -7,9 +7,9 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
 <main class="is-product">
-  <div align="center">
+  <section>
     <?php get_sidebar("banner"); ?>
-  </div>
+  </section>
   <div class="wrap-content">
     <div class="row gutter-10 gutter-md-30-md">
       <div class="col-lg-3 col-md-3 col-sm-3 pc-view">
@@ -23,7 +23,7 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
                 while (have_posts()) : the_post();
                     $image_full = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     ?>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" align="center">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="pro-thumb" id="lightgallery">
                 <div
                   data-responsive="<?php echo $image_full; ?> 375, <?php echo $image_full; ?> 480, i<?php echo $image_full; ?> 800"
@@ -37,7 +37,7 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
               <h2 class="pro-title"><?php the_title(); ?></h2>
               <span class="pro-sku">Ma SP: <?php echo $sku; ?></span>
               <p><?php the_content(); ?></p>
-              <div align="center" class="like-button">
+              <div class="like-button">
                 <?php include('content-like.php'); ?>
               </div>
             </div>
@@ -45,7 +45,7 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
                 wp_reset_query(); ?>
           </div>
         </article>
-        <div align="center">
+        <div>
           <h3 class="heading-sub">SẢN PHẨM LIÊN QUAN</h3>
         </div>
         <section>
@@ -54,7 +54,7 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
       </div>
       <div class="sp-view col-xs-12">
         <?php include("sidebar-left-menu.php"); ?>
-        <?php include('sidebar-support.php'); ?>
+        <?php include('content-support.php'); ?>
       </div>
     </div>
   </div>

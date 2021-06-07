@@ -11,13 +11,13 @@
 		padding: 10px 15px;
 		color: $color-white;
 		font-size: 14px;
-		margin: 0px;
+		margin: 0;
 		@media (min-width: $screen-md-min) {
 			font-size: 14px;
 		}
 	}
 	&-list {
-		padding: 0px;
+		padding: 0;
 		list-style: none;
 	}
 	&-item {
@@ -48,7 +48,7 @@
 }
 .list-cat {
 	margin-bottom: 15px;
-	margin-top: 0px;
+	margin-top: 0;
 	&-title {
 		background-color: $color-main;
 		padding: 10px 15px;
@@ -57,12 +57,12 @@
 		margin: 15px 0px 0px;
 		@media (min-width: $screen-md-min) {
 			font-size: 14px;
-			margin: 0px;
+			margin: 0;
 		}
 	}
 	.sub-list-cat {
 		display: none;
-		padding: 0px;
+		padding: 0;
 	}
 	.list-item {
 		list-style: none;
@@ -80,27 +80,13 @@
 		font: bold 12px/32px Arial, sans-serif;
 		text-transform: uppercase;
 	}
-}
-
-.list-cat .list-link.active .plus:after {
-	content: none;
-}
-
-.list-cat .list-link.sub-list-link {
-	background-color: #e6e6e6;
-	border-bottom: 1px solid #d8d8d8;
-}
-
-.list-cat .list-link:hover,
-.list-link:focus {
-	color: #b5142c;
-}
-
-.list-cat .list-link em {
-	position: absolute;
-	top: 6px;
-	left: 0;
-	margin-left: 11px;
-	color: #a6a6a6;
-	font: normal 10px/32px Arial, sans-serif;
+	.list-link.active {
+		.plus:after {
+			content: none;
+		}
+		&.sub-list-link {
+			background-color: #e6e6e6;
+			border-bottom: 1px solid #d8d8d8;
+		}
+	}
 }
