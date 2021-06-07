@@ -5,14 +5,16 @@
   <section>
     <?php get_sidebar("banner"); ?>
   </section>
-  <section>
+  <section class='article-about'>
     <div class="wrap-content">
-      <div class="article-about">
+      <div class="article-detail">
         <h2 class="heading-detail"><?php the_title(); ?></h2>
-        <?php get_page_by_id(2); ?>
-        <?php if ($mobile_browser == 0) { ?>
-        <?php include('content-support.php'); ?>
-        <?php } ?>
+        <div>
+          <?php get_page_by_id(3); ?>
+          <?php if ($mobile_browser == 0) { ?>
+          <?php include('content-support.php'); ?>
+          <?php } ?>
+        </div>
       </div>
       <?php if ($mobile_browser > 0) { ?>
       <?php include("sidebar-left-menu.php"); ?>

@@ -17,7 +17,11 @@ global $mobile_browser; ?>
     <div class="navbar-wrap" id="navbar-wrap">
       <div class="main-menu">
         <ul class="main-list">
-          <li class="main-item">
+          <li class="main-item home">
+            <a href="<?php echo home_url();?>" class="main-link">Trang chủ</a>
+          </li>
+          <li class="main-dev"><span></span></li>
+          <li class="main-item <?php echo get_post(3)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>" class="main-link">
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
@@ -26,7 +30,7 @@ global $mobile_browser; ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item">
+          <li class="main-item <?php echo get_post(32)->post_name?>">
             <a href="#" class="main-link js-main-link">
               <?php if ($mobile_browser > 0) { ?>
               <span class="arrow left"></span>
@@ -48,6 +52,7 @@ global $mobile_browser; ?>
                 ?>
               </ul>
             </div>
+            <div class='main-over'></div>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item"><a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"

@@ -27,6 +27,7 @@
     .owl-item > div {
       display: grid;
       align-items: center;
+      border: solid 1px nth($color-array, 6);
     }
     img {
       -webkit-filter: grayscale(100%);

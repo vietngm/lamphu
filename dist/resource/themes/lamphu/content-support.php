@@ -10,7 +10,7 @@
     ?>
     <li class="support-item">
       <?php if ($mobile_browser == 0) { ?>
-      <img src="/assets/images/supportfemale.png" />
+      <img src="/assets/images/support.png" width="48" />
       <span><?php echo $l[0];?></span>
       <?php } ?>
       <?php if ($mobile_browser > 0) { ?>
