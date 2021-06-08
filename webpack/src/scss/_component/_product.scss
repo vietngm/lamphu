@@ -9,9 +9,22 @@
 		padding: 0;
 		margin: 0;
 		display: grid;
-		grid-row-gap: 32px;
-		grid-column-gap: 16px;
+		grid-row-gap: 64px;
+		grid-column-gap: 24px;
 		grid-template-columns: repeat(4, 1fr);
+	}
+	&-item {
+		&:hover {
+			a {
+				color: $color-green;
+			}
+		}
+	}
+	&-link {
+		display: grid;
+		height: 100%;
+		border-radius: 12px;
+		overflow: hidden;
 	}
 }
 .pro-thumb {

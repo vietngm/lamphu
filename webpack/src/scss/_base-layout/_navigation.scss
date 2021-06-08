@@ -46,12 +46,12 @@
 
 	&-logo {
 		display: table-cell;
-		width: 86px;
+		width: 66px;
 		vertical-align: middle;
 		padding: 5px 15px;
 		@media (min-width: $screen-sm-min) {
 			display: inline-block;
-			width: 96px;
+			width: 76px;
 			padding: 0;
 		}
 
@@ -104,9 +104,16 @@
 				.sub-wrap {
 					display: grid;
 				}
+				.main-over {
+					opacity: 1;
+					z-index: 2;
+				}
 			}
 			&.active {
-				color: $color-white;
+				color: $color-green;
+				.main-link {
+					color: $color-green;
+				}
 			}
 			.sub-wrap {
 				display: none;
@@ -121,19 +128,6 @@
 				border-top: solid 1px #e7e7e7;
 				padding-top: 16px;
 				padding-bottom: 16px;
-				&:after {
-					content: "";
-					background-color: rgba(0, 0, 0, 0.2);
-					position: absolute;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					top: 92px;
-					z-index: 1;
-					height: 100vh;
-					opacity: 1;
-					transition: all 0.4s;
-				}
 			}
 			.sub-list {
 				padding: 0;
@@ -191,9 +185,22 @@
 			position: relative;
 			font-size: 14px;
 			text-transform: uppercase;
+			font-weight: bold;
 			@media (min-width: $screen-sm-min) {
 				line-height: 71px;
 			}
+		}
+
+		.main-over {
+			background-color: rgba(0, 0, 0, 0.6);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 92px;
+			z-index: -1;
+			height: 100vh;
+			opacity: 0;
 		}
 
 		.children {

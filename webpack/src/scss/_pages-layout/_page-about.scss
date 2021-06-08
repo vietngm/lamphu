@@ -6,9 +6,16 @@
 	display: grid;
 	.article-about {
 		display: grid;
+		margin-top: 32px;
+	}
+
+	.article-detail {
+		display: grid;
 		grid-row-gap: 16px;
+		text-align: justify;
 	}
 	.heading-detail {
-		border-bottom: solid 1px $color-main;
+		border-bottom: solid 1px $color-green;
+		padding-bottom: 4px;
 	}
 }

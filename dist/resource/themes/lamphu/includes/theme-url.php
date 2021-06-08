@@ -42,10 +42,14 @@ function getSlugCustomPosttype(){
 function activeMenu(){
 	$class = getSlugCustomPosttype();
 	?>
-	<script>jQuery(function($){$('.<?php echo $class;?>').addClass('active');})</script>
-    <?php
+<script>
+jQuery(function($) {
+  $('.<?php echo $class;?>').addClass('active');
+})
+</script>
+<?php
 }    
-// add_action('wp_footer','activeMenu');
+add_action('wp_footer','activeMenu');
 /*-----------------------------------------------------------------------*/
 add_action('init', 'change_page_permalink', -1);
 function change_page_permalink() {
