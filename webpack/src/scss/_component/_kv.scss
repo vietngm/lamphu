@@ -4,6 +4,12 @@
 // KV
 // --------------------------------------------------
 .key {
+	&-shadow {
+		display: grid;
+		img {
+			margin: auto;
+		}
+	}
 	&-visual {
 		position: relative;
 		overflow: hidden;

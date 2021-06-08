@@ -10,7 +10,8 @@ $arg = array(
     'status' => array('publish', 'private')
 );
 $the_query = new WP_Query($arg); while ($the_query->have_posts()) : $the_query->the_post(); ?>
-  <div clas="partner-item"><?php the_post_thumbnail('featured_medium', array('class' => 'img-responsive')); ?></div>
+  <div clas="owl-partner-item"><?php the_post_thumbnail('featured_medium', array('class' => 'img-responsive')); ?>
+  </div>
   <?php endwhile;
     wp_reset_query(); ?>
 </div>

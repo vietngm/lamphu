@@ -48,5 +48,10 @@ break;
         case 2:
             ?>
   </div>
+
+  <div class='key-shadow'>
+    <img src='/assets/images/shadow.png' alt='shadow' />
+  </div>
+
 </div>
 <?php break;}}?>

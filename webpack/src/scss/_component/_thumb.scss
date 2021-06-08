@@ -52,14 +52,12 @@
 
 .caption {
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 	text-transform: uppercase;
 	@media (min-width: $screen-sm-min) {
-		margin-bottom: 30px;
+		margin-bottom: 0;
 	}
 	a {
-		margin-top: 10px;
-		margin-bottom: 5px;
 		display: block;
 		&:hover {
 			color: $color-green;

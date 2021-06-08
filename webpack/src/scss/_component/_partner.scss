@@ -4,37 +4,35 @@
 // ○○○
 // --------------------------------------------------
 .owl-partner {
-	display: grid;
-	align-items: center;
-	margin-top: 32px;
+  display: grid;
+  align-items: center;
+  // margin-top: 32px;
 
-	@media (min-width: $screen-md-min) {
-		margin-top: 64px;
-	}
+  @media (min-width: $screen-md-min) {
+    // margin-top: 64px;
+  }
 
-	.wrap-content {
-		overflow: hidden;
-	}
-
-	&-list {
-		display: grid;
-
-		.owl-item {
-			display: grid;
-			height: 100%;
-			align-items: center;
-		}
-		.owl-item > div {
-			display: grid;
-			align-items: center;
-			border: solid 1px;
-		}
-		img {
-			-webkit-filter: grayscale(100%);
-			filter: grayscale(100%);
-			opacity: 0.5;
-			height: 82px;
-			object-fit: contain;
-		}
-	}
+  .wrap-content {
+    overflow: hidden;
+  }
+  .owl-item {
+    display: grid;
+    height: 100%;
+    align-items: center;
+    img {
+      // -webkit-filter: grayscale(100%);
+      // filter: grayscale(100%);
+      // opacity: 0.5;
+      height: 82px;
+      object-fit: contain;
+    }
+  }
+  .owl-item > div {
+    display: grid;
+    align-items: center;
+    border: solid 1px nth($color-array, 6);
+  }
+  &-list {
+    display: grid;
+  }
 }

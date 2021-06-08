@@ -9,16 +9,16 @@
       <?php get_sidebar('top-danh-muc'); ?>
     </div>
   </section>
-  <section>
+  <section class="about">
     <?php get_sidebar('gioi-thieu'); ?>
   </section>
   <section class="prods">
     <div class="wrap-content">
       <?php get_sidebar('san-pham'); ?>
     </div>
-  </section>
-  <section>
-    <?php get_sidebar('gioi-thieu'); ?>
+    <div class='prods-shadow'>
+      <img src='/assets/images/shadow2.png' alt='shadow' />
+    </div>
   </section>
   <section class="partner">
     <div class="wrap-content">
