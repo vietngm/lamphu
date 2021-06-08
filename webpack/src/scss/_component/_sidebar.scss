@@ -46,6 +46,7 @@
 		}
 	}
 }
+
 .list-cat {
 	margin-bottom: 15px;
 	margin-top: 0;
@@ -79,14 +80,14 @@
 		padding: 5px 10px 5px 15px;
 		font: bold 12px/32px Arial, sans-serif;
 		text-transform: uppercase;
-	}
-	.list-link.active {
-		.plus:after {
-			content: none;
-		}
-		&.sub-list-link {
-			background-color: #e6e6e6;
-			border-bottom: 1px solid #d8d8d8;
+		&.active {
+			.plus:after {
+				content: none;
+			}
+			&.sub-list-link {
+				background-color: #e6e6e6;
+				border-bottom: 1px solid #d8d8d8;
+			}
 		}
 	}
 }

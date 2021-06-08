@@ -36,9 +36,6 @@
               <a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>">Đối tác</a>
             </li>
             <li class="footer-item">
-              <a href="<?php echo get_permalink(get_page_by_path('chat-luong')); ?>">Chất lượng</a>
-            </li>
-            <li class="footer-item">
               <a
                 href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>"><?php echo __('Liên hệ', 'theme'); ?></a>
             </li>
