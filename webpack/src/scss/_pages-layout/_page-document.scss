@@ -4,4 +4,21 @@
 // --------------------------------------------------
 .is-document {
 	display: grid;
+	.doc-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 16px;
+	}
+	.doc-link {
+		display: grid;
+		grid-row-gap: 16px;
+		span {
+			color: $color-black;
+		}
+		&:hover {
+			span {
+				color: $color-green;
+			}
+		}
+	}
 }

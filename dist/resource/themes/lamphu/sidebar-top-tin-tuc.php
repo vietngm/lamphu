@@ -1,20 +1,20 @@
 <div class="wrap-content">
   <div class="row gutter-10 gutter-md-30-md">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
-      <h2 class="heading"><span>Recent News</span></h2>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h2 class="heading"><span>Lam Phu News</span></h2>
     </div>
     <?php
       $arg = array(
           'post_type' => 'tin-tuc',
           'orderby' => 'date',
           'order' => 'asc',
-          'posts_per_page' => 2,
+          'posts_per_page' => 3,
           'status' => array('publish', 'private'),
       );
       $the_query = new WP_Query($arg);
       while ($the_query->have_posts()): $the_query->the_post();
           ?>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" align="center">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
       <div class="thumb">
         <a href="<?php echo get_permalink($post->ID); ?>" class="link">

@@ -1,4 +1,4 @@
-<div class="partner-list owl-carousel owl-theme">
+<div class="owl-partner owl-carousel owl-theme">
   <?php
 $arg = array(
     'post_type' => 'doi-tac',

@@ -10,7 +10,7 @@
   <section class="news-relate">
     <div class="wrap-content">
       <div class="row gutter-10 gutter-md-30-md">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <h2 class="heading-sub">Các Tin Tức Khác</h2>
         </div>
       </div>

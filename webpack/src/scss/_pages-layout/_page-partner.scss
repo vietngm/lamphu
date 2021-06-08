@@ -4,4 +4,9 @@
 // --------------------------------------------------
 .is-partner {
 	display: grid;
+	.partner-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 16px;
+	}
 }
