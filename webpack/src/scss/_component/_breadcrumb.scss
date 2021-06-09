@@ -2,5 +2,25 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.breadcrumb{
+.breadcrumb {
+	display: grid;
+	grid-auto-flow: column;
+	width: fit-content;
+	grid-column-gap: 16px;
+	list-style: none;
+	background-color: nth($color-array, 5);
+	padding: 16px;
+	border-radius: 6px;
+	border: solid 1px nth($color-array, 6);
+	&-div {
+		color: nth($color-array, 6);
+	}
+	&-item {
+		&:last-child {
+			text-transform: lowercase;
+		}
+	}
+	&-link {
+		color: $color-black;
+	}
 }

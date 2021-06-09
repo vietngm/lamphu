@@ -38,9 +38,13 @@
           <?php endwhile;wp_reset_query();?>
         </ul>
       </div>
-      <?php if ($mobile_browser > 0) { 
+      <?php
+      if ($mobile_browser > 0) {
+        echo '<div class="side">';
         include("sidebar-left-menu.php");
-        include('sidebar-support.php'); }
+        include('sidebar-support.php');
+        echo '</div>';
+      }
       ?>
     </div>
   </article>

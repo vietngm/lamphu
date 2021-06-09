@@ -68,7 +68,7 @@
 	.list-link {
 		color: #797979;
 		background-color: #ededed;
-		border-bottom: 1px solid #d8d8d8;
+		border-bottom: 1px solid nth($color-array, 6);
 		display: block;
 		position: relative;
 		padding: 0 16px;
@@ -80,7 +80,7 @@
 			}
 			&.sub-list-link {
 				background-color: #e6e6e6;
-				border-bottom: 1px solid #d8d8d8;
+				border-bottom: 1px solid nth($color-array, 6);
 			}
 		}
 	}
@@ -89,4 +89,9 @@
 .sub-list-cat {
 	display: none;
 	padding: 0;
+}
+
+.side {
+	display: grid;
+	margin-top: 32px;
 }

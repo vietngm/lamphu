@@ -1,5 +1,5 @@
 <?php
-global $lienhe;
+global $lienhe,$mobile_browser;
 $tax = 'danh-muc';
 $terms = wp_get_post_terms($post->ID, $tax, array("fields" => "all"));
 $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
@@ -10,6 +10,13 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
   <section class='key'><?php get_sidebar("banner"); ?></section>
   <section class='detail'>
     <div class="wrap-content">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<?php echo home_url();?>" class="breadcrumb-link">Home</a></li>
+        <li class="breadcrumb-div"><span>/</span></li>
+        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><?php echo $terms->name;?></a></li>
+        <li class="breadcrumb-div"><span>/</span></li>
+        <li class="breadcrumb-item"><span><?php the_title();?></span></li>
+      </ul>
       <div class="prods-detail">
         <div class="prods-info">
           <?php
@@ -32,12 +39,14 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
             <?php include("content-related.php"); ?>
           </div>
         </div>
-        <?php if ($mobile_browser == 0) { ?>
-        <div class="prods-side">
-          <?php get_sidebar("left-menu"); ?>
-          <?php get_sidebar('support'); ?>
-        </div>
-        <?php } ?>
+        <?php
+        if ($mobile_browser > 0) {
+          echo '<div class="side">';
+          include("sidebar-left-menu.php");
+          include('sidebar-support.php');
+          echo '</div>';
+        }
+      ?>
       </div>
       <?php if ($mobile_browser > 0) { 
         include("sidebar-left-menu.php");
