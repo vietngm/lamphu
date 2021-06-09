@@ -5672,12 +5672,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   grid-gap: 16px; }
   @media (min-width: 768px) {
     .footer-contact {
-      grid-template-columns: auto 1fr 180px; } }
+      grid-template-columns: auto 1fr; } }
 
 .footer-company {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: auto 1fr; }
+
+.footer-block {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr auto; }
 
 .footer-list {
   padding: 0px;
@@ -5942,8 +5947,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .is-product .prods-detail {
   display: grid;
-  grid-template-columns: 1fr 250px;
-  grid-column-gap: 16px; }
+  grid-gap: 16px; }
+  @media (min-width: 768px) {
+    .is-product .prods-detail {
+      grid-template-columns: 1fr 250px; } }
 
 .is-product .prods-info {
   display: grid;

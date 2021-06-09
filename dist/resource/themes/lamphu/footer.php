@@ -15,38 +15,40 @@
           </ul>
         </div>
       </div>
-      <div class="footer-menu">
-        <span class='footer-name'>Lâm Phú</span>
-        <ul class="footer-list">
-          <li class="footer-item">
-            <a href="<?php echo home_url(); ?>"><?php echo __('Trang chủ', 'theme'); ?></a>
-          </li>
-          <li class="footer-item">
-            <a
-              href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>"><?php echo __('Giới thiệu', 'theme'); ?></a>
-          </li>
-          <li class="footer-item">
-            <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>">Tài liệu</a>
-          </li>
-          <li class="footer-item">
-            <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>">Tin tức</a>
-          </li>
-          <li class="footer-item">
-            <a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>">Đối tác</a>
-          </li>
-          <li class="footer-item">
-            <a
-              href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>"><?php echo __('Liên hệ', 'theme'); ?></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <span class='footer-name'>Find Us</span>
-        <div class="socials">
-          <a class="socials-footer" href="<?php echo $lienhe['facebook']; ?>" target="_blank">
-            <i class="fab fa-facebook-f"></i></a>
-          <a class="socials-footer" href="<?php echo $lienhe['twitter']; ?>" target="_blank">
-            <i class="fab fa-twitter"></i></a>
+      <div class="fotter-block">
+        <div class="footer-menu">
+          <span class='footer-name'>Lâm Phú</span>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a href="<?php echo home_url(); ?>"><?php echo __('Trang chủ', 'theme'); ?></a>
+            </li>
+            <li class="footer-item">
+              <a
+                href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>"><?php echo __('Giới thiệu', 'theme'); ?></a>
+            </li>
+            <li class="footer-item">
+              <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>">Tài liệu</a>
+            </li>
+            <li class="footer-item">
+              <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>">Tin tức</a>
+            </li>
+            <li class="footer-item">
+              <a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>">Đối tác</a>
+            </li>
+            <li class="footer-item">
+              <a
+                href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>"><?php echo __('Liên hệ', 'theme'); ?></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <span class='footer-name'>Find Us</span>
+          <div class="socials">
+            <a class="socials-footer" href="<?php echo $lienhe['facebook']; ?>" target="_blank">
+              <i class="fab fa-facebook-f"></i></a>
+            <a class="socials-footer" href="<?php echo $lienhe['twitter']; ?>" target="_blank">
+              <i class="fab fa-twitter"></i></a>
+          </div>
         </div>
       </div>
     </div>

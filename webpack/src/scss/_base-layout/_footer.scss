@@ -18,13 +18,20 @@
 	display: grid;
 	grid-gap: 16px;
 	@media (min-width: $screen-sm-min) {
-		grid-template-columns: auto 1fr 180px;
+		grid-template-columns: auto 1fr;
 	}
 }
+
 .footer-company {
 	display: grid;
 	grid-gap: 16px;
 	grid-template-columns: auto 1fr;
+}
+
+.footer-block {
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: 1fr auto;
 }
 
 .footer-list {

@@ -32,14 +32,17 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
             <?php include("content-related.php"); ?>
           </div>
         </div>
+        <?php if ($mobile_browser == 0) { ?>
         <div class="prods-side">
           <?php get_sidebar("left-menu"); ?>
           <?php get_sidebar('support'); ?>
         </div>
+        <?php } ?>
       </div>
       <?php if ($mobile_browser > 0) { 
         include("sidebar-left-menu.php");
-        include('sidebar-support.php'); }
+        include('sidebar-support.php');
+      }
       ?>
     </div>
   </section>
