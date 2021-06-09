@@ -1,4 +1,4 @@
-<a href="<?php echo get_permalink($post->ID); ?>" class='prods-link'>
+<a href="<?php echo get_permalink($post->ID); ?>" class='prods-square'>
   <?php if (has_post_thumbnail()) { ?>
   <?php the_post_thumbnail('full', array('class' => 'img-responsive img-view')); ?>
   <?php } else { ?>
@@ -7,6 +7,8 @@
   <?php } ?>
 </a>
 
-<div class="caption">
-  <a href="<?php echo get_permalink($post->ID); ?>"><?php the_title(); ?></a>
+<div class="prods-title">
+  <a href="<?php echo get_permalink($post->ID); ?>" class="prods-link">
+    <?php the_title(); ?>
+  </a>
 </div>

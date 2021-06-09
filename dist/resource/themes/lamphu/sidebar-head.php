@@ -1,11 +1,15 @@
-<?php global $lienhe; ?>
+<?php global $lienhe, $mobile_browser; ?>
 <header class="header">
   <div class="header-top">
     <div class="wrap-content">
       <div class="row gutter-10 gutter-md-30-md">
         <div class="col-lg-7 col-md-7 col-sm-8 col-xs-5">
           <div class="hotline">
+            <?php if($mobile_browser==0){ ?>
             <a href="tel:<?php echo $lienhe['hotline']; ?>" class="tel"><?php echo $lienhe['hotline']; ?></a>
+            <?php } else{ ?>
+            <a href="tel:<?php echo $lienhe['mobile']; ?>" class="tel"><?php echo $lienhe['mobile']; ?></a>
+            <?php } ?>
             <span class="time"><?php echo $lienhe['thoigian'];?></span>
           </div>
         </div>

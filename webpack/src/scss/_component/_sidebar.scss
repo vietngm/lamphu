@@ -48,22 +48,18 @@
 }
 
 .list-cat {
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 	margin-top: 0;
 	&-title {
 		background-color: $color-main;
-		padding: 10px 15px;
+		padding: 10px 16px;
 		color: $color-white;
 		font-size: 14px;
-		margin: 15px 0px 0px;
+		margin: 16px 0 0;
 		@media (min-width: $screen-md-min) {
 			font-size: 14px;
 			margin: 0;
 		}
-	}
-	.sub-list-cat {
-		display: none;
-		padding: 0;
 	}
 	.list-item {
 		list-style: none;
@@ -72,13 +68,11 @@
 
 	.list-link {
 		color: #797979;
-		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
 		background-color: #ededed;
 		border-bottom: 1px solid #d8d8d8;
 		display: block;
 		position: relative;
-		padding: 5px 10px 5px 15px;
-		font: bold 12px/32px Arial, sans-serif;
+		padding: 0 10px 0 16px;
 		text-transform: uppercase;
 		&.active {
 			.plus:after {
@@ -90,4 +84,9 @@
 			}
 		}
 	}
+}
+
+.sub-list-cat {
+	display: none;
+	padding: 0;
 }

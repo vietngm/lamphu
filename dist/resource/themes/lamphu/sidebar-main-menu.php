@@ -4,7 +4,7 @@ global $mobile_browser; ?>
   <div class="wrap-content">
     <div class="navbar-header">
       <a class="navbar-logo" href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?15012019" alt="May cat day">
+        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?09062021" alt="May cat day">
       </a>
       <div class="wrap-hamburger">
         <div class="hamburger">
@@ -23,20 +23,16 @@ global $mobile_browser; ?>
           <li class="main-dev"><span></span></li>
           <li class="main-item <?php echo get_post(3)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
               <?php echo get_the_title(3); ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item <?php echo get_post(32)->post_name?>">
             <a href="#" class="main-link js-main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
               <?php echo get_the_title(32); ?>
+              <?php if ($mobile_browser > 0) { ?>
               <span class="plus"></span>
+              <?php } ?>
             </a>
             <div class="sub-wrap">
               <ul class="sub-list">
@@ -60,27 +56,18 @@ global $mobile_browser; ?>
           <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
               <?php echo __('Tin tức', 'theme'); ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
               <?php echo __('Tài liệu', 'theme'); ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item">
             <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="main-link">
-              <?php if ($mobile_browser > 0) { ?>
-              <span class="arrow left"></span>
-              <?php } ?>
               <?php echo __('Liên hệ', 'theme'); ?>
             </a>
           </li>

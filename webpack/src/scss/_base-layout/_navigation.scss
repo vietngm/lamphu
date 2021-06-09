@@ -45,10 +45,10 @@
 	}
 
 	&-logo {
-		display: table-cell;
+		display: inline-block;
 		width: 66px;
 		vertical-align: middle;
-		padding: 5px 15px;
+		padding: 0;
 		@media (min-width: $screen-sm-min) {
 			display: inline-block;
 			width: 76px;
@@ -61,23 +61,20 @@
 		}
 	}
 
-	.main-list {
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: max-content;
-		justify-content: end;
-		grid-column-gap: 16px;
-		align-items: center;
-	}
-
 	.main-menu {
 		margin: auto;
 		width: 100%;
 		.main-list {
 			margin: 0;
 			padding: 0;
+			display: grid;
+			grid-column-gap: 16px;
+			align-items: center;
+			@media (min-width: $screen-sm-min) {
+				grid-auto-flow: column;
+				grid-auto-columns: max-content;
+				justify-content: end;
+			}
 		}
 		.main-item {
 			position: static;
@@ -136,8 +133,10 @@
 				width: 100%;
 				max-width: 1170px;
 				transition: (0.4s all ease);
-				grid-template-columns: repeat(3, 1fr);
-				grid-column-gap: 16px;
+				@media (min-width: $screen-sm-min) {
+					grid-template-columns: repeat(3, 1fr);
+					grid-column-gap: 16px;
+				}
 				&-item {
 					position: relative;
 					display: block;
@@ -168,6 +167,7 @@
 				}
 			}
 		}
+
 		.main-dev {
 			list-style: none;
 			padding: 0;
