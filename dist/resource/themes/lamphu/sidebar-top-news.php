@@ -14,9 +14,13 @@
   <div class="news-item">
     <a href="<?php echo get_permalink($post->ID); ?>" class="news-link">
       <?php if (has_post_thumbnail()) { ?>
-      <?php the_post_thumbnail('featured_news', array('class' => 'img-responsive')); ?>
+      <div class='news-thumb'>
+        <?php the_post_thumbnail('featured_news', array('class' => 'img-responsive')); ?>
+      </div>
       <?php } else { ?>
-      <img src="/assets/images/noimg64.png" width="64" height="64" alt="<?php echo $post->post_title; ?>">
+      <div class='news-noimage'>
+        <img src="/assets/images/noimg64.png" width="64" height="64" alt="<?php echo $post->post_title; ?>">
+      </div>
       <?php } ?>
     </a>
     <div class="news-caption">

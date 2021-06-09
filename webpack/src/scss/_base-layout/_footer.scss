@@ -4,76 +4,72 @@
 // --------------------------------------------------
 
 .doc-footer {
-  background: url("../images/wood-texture.png") repeat #1f1f1f;
-
-  padding: 20px 0 20px 0;
-  margin-top: 64px;
-  @media (min-width: $screen-sm-min) {
-    padding: 40px 0 40px 0;
-  }
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: $color-white;
-  address {
-    text-align: left;
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.32);
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: 0;
-      text-align: right;
-    }
-  }
-  h3 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-white;
-    line-height: normal;
-    font-weight: bold;
-    font-size: 16px;
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      margin-top: 0;
-      text-align: left;
-    }
-  }
+	background: url("../images/wood-texture.png") repeat #1f1f1f;
+	padding: 20px 0 20px 0;
+	margin-top: 64px;
+	@media (min-width: $screen-sm-min) {
+		padding: 40px 0 40px 0;
+	}
+	position: relative;
+	width: 100%;
+	color: $color-white;
+}
+.footer-contact {
+	display: grid;
+	grid-gap: 16px;
+	@media (min-width: $screen-sm-min) {
+		grid-template-columns: 86px 1fr 240px;
+	}
 }
 
 .footer-list {
-  padding: 0px;
-  list-style: none;
-  text-align: center;
-  @media (min-width: $screen-sm-min) {
-    text-align: left;
-  }
-  .diachi {
-    line-height: 26px;
-  }
-  li a {
-    color: $color-white;
-    line-height: 24px;
-  }
-  .mobile {
-    margin-bottom: 15px;
-  }
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+	@media (min-width: $screen-sm-min) {
+		text-align: left;
+	}
+	.diachi {
+		line-height: 26px;
+	}
+	li a {
+		color: $color-white;
+		line-height: 24px;
+	}
+	.mobile {
+		margin-bottom: 15px;
+	}
 }
 
-.logo-footer {
-  margin-bottom: 0;
-  text-align: center;
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 15px;
-  }
-  img {
-    width: 66px;
-    height: auto;
-    object-fit: contain;
-    @media (min-width: $screen-sm-min) {
-      width: 86px;
-    }
-  }
+.footer-name {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color-white;
+	line-height: normal;
+	font-weight: bold;
+	font-size: 16px;
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+		margin-top: 0;
+		text-align: left;
+	}
+}
+
+.footer-logo {
+	margin-bottom: 0;
+	text-align: center;
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 15px;
+	}
+	img {
+		width: 66px;
+		height: auto;
+		object-fit: contain;
+		@media (min-width: $screen-sm-min) {
+			width: 86px;
+		}
+	}
 }

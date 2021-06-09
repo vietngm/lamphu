@@ -22,6 +22,15 @@
 	&-link {
 		display: grid;
 	}
+	&-thumb {
+		display: grid;
+	}
+	&-noimage {
+		display: grid;
+		border: solid 1px nth($color-array, 6);
+		align-items: center;
+		justify-content: center;
+	}
 	&-title {
 		display: grid;
 		font-size: 18px;
