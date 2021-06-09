@@ -3,9 +3,7 @@
 // ○○○
 // --------------------------------------------------
 .breadcrumb {
-	display: grid;
-	grid-auto-flow: column;
-	width: fit-content;
+	display: flex;
 	grid-column-gap: 16px;
 	list-style: none;
 	background-color: nth($color-array, 5);

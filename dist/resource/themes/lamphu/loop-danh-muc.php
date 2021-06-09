@@ -1,6 +1,6 @@
 <a class="cate-link" href="<?php echo get_term_link($term->slug, $tax); ?>">
   <?php if ($thumbUrl) { ?>
-  <div class="cate-img">
+  <div class="cate-square">
     <img src="<?php echo $thumbUrl[0]; ?>" class="img-responsive" width="100%" />
   </div>
   <?php } else { ?>

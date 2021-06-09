@@ -17,15 +17,18 @@
 .footer-contact {
 	display: grid;
 	grid-gap: 16px;
+	margin: auto;
+	width: fit-content;
 	@media (min-width: $screen-sm-min) {
 		grid-template-columns: auto 1fr;
+		grid-gap: 48px;
 	}
 }
 
 .footer-company {
 	display: grid;
 	grid-gap: 16px;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 86px 1fr;
 }
 
 .footer-block {
@@ -34,16 +37,16 @@
 	grid-template-columns: 1fr 1fr;
 	@media (min-width: $screen-sm-min) {
 		grid-template-columns: 1fr auto;
+		grid-gap: 48px;
+		width: fit-content;
 	}
 }
 
 .footer-list {
-	padding: 0px;
+	padding: 0;
+	margin: 0;
 	list-style: none;
 	text-align: left;
-	@media (min-width: $screen-sm-min) {
-		text-align: left;
-	}
 	.diachi {
 		line-height: 26px;
 	}
@@ -57,8 +60,6 @@
 }
 
 .footer-name {
-	margin-top: 15px;
-	margin-bottom: 5px;
 	text-align: left;
 	text-transform: uppercase;
 	color: $color-white;
@@ -66,9 +67,6 @@
 	font-weight: bold;
 	font-size: 16px;
 	@media (min-width: $screen-sm-min) {
-		margin-bottom: 15px;
-		padding-bottom: 5px;
-		margin-top: 0;
 		text-align: left;
 	}
 }
@@ -86,5 +84,16 @@
 		@media (min-width: $screen-sm-min) {
 			width: 86px;
 		}
+	}
+}
+.footer-social,
+.footer-menu {
+	display: grid;
+	grid-gap: 24px;
+	height: fit-content;
+}
+.footer-link {
+	&:hover {
+		color: #ff7200;
 	}
 }
