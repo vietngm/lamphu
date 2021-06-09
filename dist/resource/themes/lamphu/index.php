@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
-<main>
-  <section>
+<main class="is-home">
+  <section class='key'>
     <?php get_sidebar("banner"); ?>
   </section>
   <section class="cate">

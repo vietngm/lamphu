@@ -1,13 +1,13 @@
 <?php global $mobile_browser; ?>
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
-<main class="is-news">
-  <div class="key-visual key-visual-news">
+<main class="is-news news-detail">
+  <section class="key key-news">
     <span>LÂM PHÚ | NEWS</span>
-  </div>
+  </section>
   <article>
     <div class="wrap-content">
-      <div class="news-detail">
+      <div class="news-content">
         <h2 class='heading'><?php the_title(); ?></h2>
         <?php while (have_posts()): the_post();?>
         <div class="news-body">
@@ -20,21 +20,21 @@
           <?php } ?>
         </div>
         <?php endwhile; ?>
-        <h3 class="heading-sub">Các tin tức khác</h3>
-        <ul class="related-list">
+        <h3 class="heading-sub">Các tin khác</h3>
+        <ul class="relate-list">
           <?php
 $arg = array(
-'post_type' => 'post',
-'orderby' => 'date',
-'order' => 'asc',
-'offset' => 2,
-'posts_per_page' => -1,
-'status' => array('publish', 'private'),
+  'post_type' => 'tin-tuc',
+  'orderby' => 'date',
+  'order' => 'asc',
+  'offset' => 2,
+  'posts_per_page' => -1,
+  'status' => array('publish', 'private'),
 );
 $the_query = new WP_Query($arg);
 while ($the_query->have_posts()): $the_query->the_post();
 ?>
-          <li class="related-item">
+          <li class="relate-item">
             <?php get_template_part('loop', 'tin-tuc'); ?>
           </li>
           <?php

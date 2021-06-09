@@ -1,4 +1,4 @@
-<a href="<?php echo get_permalink($post->ID);?>" class="related-thumb">
+<a href="<?php echo get_permalink($post->ID);?>" class="relate-thumb">
   <?php if(has_post_thumbnail()){?>
   <?php the_post_thumbnail('thumbnail',array('class'=>'img-responsive'));?>
   <?php }else{?>
@@ -6,7 +6,7 @@
   <?php }?>
 </a>
 
-<div class="related-body">
-  <a href="<?php echo get_permalink($post->ID);?>" class="related-link"><?php the_title();?></a>
+<div class="relate-body">
+  <a href="<?php echo get_permalink($post->ID);?>" class="relate-link"><?php the_title();?></a>
   <p><?php echo getExcerptLimit(100,$post->ID);?></p>
 </div>

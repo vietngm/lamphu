@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
 <main class="is-about">
-  <section>
+  <section class='key'>
     <?php get_sidebar("banner"); ?>
   </section>
   <section class='article-about'>

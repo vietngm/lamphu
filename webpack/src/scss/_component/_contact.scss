@@ -2,7 +2,10 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-.panel,
-.panel-heading {
-  border-radius: 0px;
+.contact {
+	display: grid;
+	grid-auto-flow: column;
+	&-item {
+		display: grid;
+	}
 }

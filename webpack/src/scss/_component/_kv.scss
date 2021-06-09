@@ -4,6 +4,7 @@
 // KV
 // --------------------------------------------------
 .key {
+	display: grid;
 	&-shadow {
 		display: grid;
 		img {
@@ -13,9 +14,6 @@
 	&-visual {
 		position: relative;
 		overflow: hidden;
-		// @media (min-width: $screen-md-min) {
-		//   margin-top: -80px;
-		// }
 		figure {
 			margin: 0;
 		}
@@ -68,6 +66,8 @@
 				font-size: 25px;
 			}
 		}
+	}
+	&-news {
 	}
 }
 

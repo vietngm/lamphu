@@ -7,15 +7,12 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
 <?php get_header(); ?>
 <?php get_sidebar('head'); ?>
 <main class="is-product">
-  <section>
+  <section class='key'>
     <?php get_sidebar("banner"); ?>
   </section>
   <div class="wrap-content">
     <div class="row gutter-10 gutter-md-30-md">
-      <div class="col-lg-3 col-md-3 col-sm-3 pc-view">
-        <?php get_sidebar("left-menu"); ?>
-        <?php get_sidebar('support'); ?>
-      </div>
+
       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
         <article class="detail-body">
           <div class="row gutter-10 gutter-md-30-md">
@@ -51,6 +48,10 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
         <section>
           <?php include("content-related.php"); ?>
         </section>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 pc-view">
+        <?php get_sidebar("left-menu"); ?>
+        <?php get_sidebar('support'); ?>
       </div>
       <div class="sp-view col-xs-12">
         <?php include("sidebar-left-menu.php"); ?>

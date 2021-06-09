@@ -5,11 +5,41 @@
 .is-news {
 	.news {
 		padding: 0;
+		&-top {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 16px;
+		}
 	}
 	.heading {
 		padding-bottom: 16px;
 	}
 	.news-detail {
 		display: grid;
+	}
+	.news-content {
+		display: grid;
+	}
+	.relate {
+		display: grid;
+
+		&-item {
+			display: grid;
+			grid-template-columns: 50px 1fr;
+			grid-gap: 16px;
+		}
+		&-body {
+			display: grid;
+			grid-gap: 16px;
+			p {
+				text-align: justify;
+			}
+		}
+		&-link {
+			color: $color-black;
+			&:hover {
+				color: $color-green;
+			}
+		}
 	}
 }
