@@ -30,7 +30,7 @@
 .footer-list {
 	padding: 0px;
 	list-style: none;
-	text-align: center;
+	text-align: left;
 	@media (min-width: $screen-sm-min) {
 		text-align: left;
 	}
@@ -49,7 +49,7 @@
 .footer-name {
 	margin-top: 15px;
 	margin-bottom: 5px;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
 	color: $color-white;
 	line-height: normal;

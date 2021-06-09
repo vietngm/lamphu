@@ -15,7 +15,7 @@
 			height: auto;
 		}
 	}
-	.pro-thumb {
+	.prods-thumb {
 		display: block;
 		position: relative;
 		cursor: pointer;
@@ -57,5 +57,20 @@
 	.pro-title {
 		margin-top: 0px;
 		margin-bottom: 0px;
+	}
+	.prods {
+		&-detail {
+			display: grid;
+			grid-template-columns: 1fr 250px;
+			grid-column-gap: 16px;
+		}
+		&-info {
+			display: grid;
+			grid-row-gap: 16px;
+		}
+		&-relate {
+			display: grid;
+			grid-row-gap: 16px;
+		}
 	}
 }

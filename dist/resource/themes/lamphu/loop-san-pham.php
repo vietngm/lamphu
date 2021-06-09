@@ -10,7 +10,6 @@
   </div>
   <?php } ?>
 </a>
-
 <div class="prods-title">
   <a href="<?php echo get_permalink($post->ID); ?>" class="prods-link">
     <?php the_title(); ?>

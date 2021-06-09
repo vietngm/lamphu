@@ -5682,7 +5682,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .footer-list {
   padding: 0px;
   list-style: none;
-  text-align: center; }
+  text-align: left; }
   @media (min-width: 768px) {
     .footer-list {
       text-align: left; } }
@@ -5697,7 +5697,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .footer-name {
   margin-top: 15px;
   margin-bottom: 5px;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   color: #ffffff;
   line-height: normal;
@@ -5903,11 +5903,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     width: 100%;
     height: auto; }
 
-.is-product .pro-thumb {
+.is-product .prods-thumb {
   display: block;
   position: relative;
   cursor: pointer; }
-  .is-product .pro-thumb .overlay {
+  .is-product .prods-thumb .overlay {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -5917,7 +5917,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     transition: 0.4s all ease;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
-    .is-product .pro-thumb .overlay:before {
+    .is-product .prods-thumb .overlay:before {
       content: "";
       background: #000000;
       position: absolute;
@@ -5926,19 +5926,32 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       right: 0px;
       top: 0px;
       bottom: 0px; }
-  .is-product .pro-thumb i {
+  .is-product .prods-thumb i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: #ffffff; }
-  .is-product .pro-thumb:hover .overlay {
+  .is-product .prods-thumb:hover .overlay {
     opacity: 1; }
 
 .is-product .pro-title {
   margin-top: 0px;
   margin-bottom: 0px; }
+
+.is-product .prods-detail {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-column-gap: 16px; }
+
+.is-product .prods-info {
+  display: grid;
+  grid-row-gap: 16px; }
+
+.is-product .prods-relate {
+  display: grid;
+  grid-row-gap: 16px; }
 
 .is-news .heading {
   padding-bottom: 16px; }
