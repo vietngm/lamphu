@@ -2,16 +2,18 @@
 <footer class="doc-footer">
   <div class="wrap-content">
     <div class="footer-contact">
-      <div class="footer-logo">
-        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?31052021" alt="">
-      </div>
       <div class="footer-company">
-        <span class='footer-name'><?php echo $lienhe["tencongty"]; ?></span>
-        <ul class="footer-list">
-          <li class="diachi"><?php echo $lienhe["diachigmap"]; ?></li>
-          <li class="mobile">ĐT: <?php echo $lienhe["mobile"]; ?> - Hotline: <?php echo $lienhe["hotline"]; ?></li>
-          <li class="email">Email: <?php echo $lienhe["mail"]; ?></li>
-        </ul>
+        <div class="footer-logo">
+          <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?31052021" alt="">
+        </div>
+        <div class='footer-info'>
+          <span class='footer-name'><?php echo $lienhe["tencongty"]; ?></span>
+          <ul class="footer-list">
+            <li class="diachi"><?php echo $lienhe["diachigmap"]; ?></li>
+            <li class="mobile">ĐT: <?php echo $lienhe["mobile"]; ?> - Hotline: <?php echo $lienhe["hotline"]; ?></li>
+            <li class="email">Email: <?php echo $lienhe["mail"]; ?></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-menu">
         <span class='footer-name'>Lâm Phú</span>
