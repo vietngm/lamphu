@@ -3,7 +3,7 @@
 <main class="is-contact">
   <div class="map">
     <div id="map-canvas"></div>
-    <img src="/assets/images/shadow.png" width="1000" height="34" class="img-responsive" alt="Máy cắt dây EDM">
+    <div class='map-shadow'><img src="/assets/images/shadow.png" class="img-responsive" alt="Máy cắt dây EDM"></div>
   </div>
   <form data-toggle="validator" role="form" id="contactForm">
     <div class="wrap-content">

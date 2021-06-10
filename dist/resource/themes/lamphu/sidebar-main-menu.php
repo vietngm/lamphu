@@ -21,13 +21,17 @@ global $mobile_browser; ?>
             <a href="<?php echo home_url();?>" class="main-link">
               <?php echo __('Trang chủ', 'theme'); ?></a>
           </li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(3)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>" class="main-link">
               <?php echo get_the_title(3); ?>
             </a>
           </li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(32)->post_name?>">
             <a href="#" class="main-link js-main-link">
               <?php echo get_the_title(32); ?>
@@ -53,23 +57,31 @@ global $mobile_browser; ?>
             <div class='main-over'></div>
             <?php } ?>
           </li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(2163)->post_name?>"><a
               href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"
               class="main-link"><?php echo get_the_title(2163); ?></a></li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(33)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">
               <?php echo get_the_title(33); ?>
             </a>
           </li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(848)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="main-link">
               <?php echo get_the_title(848); ?>
             </a>
           </li>
+          <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>
+          <?php } ?>
           <li class="main-item <?php echo get_post(2)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="main-link">
               <?php echo get_the_title(2); ?>

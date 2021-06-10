@@ -10,7 +10,7 @@
           <span class='footer-name'><?php echo $lienhe["tencongty"]; ?></span>
           <ul class="footer-list">
             <li class="diachi"><?php echo $lienhe["diachigmap"]; ?></li>
-            <li class="mobile">ĐT: <?php echo $lienhe["mobile"]; ?> - Hotline: <?php echo $lienhe["hotline"]; ?></li>
+            <li class="mobile">Hotline: <?php echo $lienhe["hotline"]; ?></li>
             <li class="email">Email: <?php echo $lienhe["mail"]; ?></li>
           </ul>
           <?php if ($mobile_browser > 0) {include("content-footer.php");}?>
@@ -25,15 +25,6 @@
     aria-labelledby="myModalLabel"><?php echo alertDialog(0); ?></div>
 
 </footer>
-
-<?php if (is_singular('san-pham')) { ?>
-<script src="<?php echo get_site_url(); ?>/assets/js/lightgallery.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#lightgallery').lightGallery();
-});
-</script>
-<?php } ?>
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
 <script src="<?php echo get_site_url(); ?>/assets/js/main.js?31052021"></script>
 <?php wp_footer(); ?>

@@ -34,10 +34,16 @@
 	}
 	&-square {
 		display: grid;
-		height: 220px;
+		height: 160px;
+		@media (min-width: $screen-sm-min) {
+			height: 220px;
+		}
 		overflow: hidden;
 		.prods-thumb {
-			height: 220px;
+			height: 160px;
+			@media (min-width: $screen-sm-min) {
+				height: 220px;
+			}
 		}
 	}
 	&-title {

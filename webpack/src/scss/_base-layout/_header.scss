@@ -4,8 +4,9 @@
 // --------------------------------------------------
 .header {
 	background-color: nth($color-array, 5);
-	address {
-		font-style: normal;
+	.wrap-content {
+		display: grid;
+		grid-auto-flow: column;
 	}
 	.fa {
 		&:hover {
@@ -27,27 +28,13 @@
 	.tel {
 		display: inline-block;
 	}
-	.tel,
-	.time,
-	.address {
+	.tel {
 		color: $color-black;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 48px;
-		padding: 0 16px;
 		@media (min-width: $screen-sm-min) {
-			font-size: 14px;
+			padding: 0 16px;
 			border-left: solid 1px nth($color-array, 6);
-		}
-		&:last-child {
-			border-right: solid 1px nth($color-array, 6);
-		}
-	}
-	.time,
-	.address {
-		margin: 0px;
-		display: none;
-		@media (min-width: $screen-sm-min) {
-			display: inline-block;
 		}
 	}
 }

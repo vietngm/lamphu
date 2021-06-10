@@ -13,7 +13,8 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
       <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?php echo home_url();?>" class="breadcrumb-link">Home</a></li>
         <li class="breadcrumb-div"><span>/</span></li>
-        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><?php echo $terms->name;?></a></li>
+        <li class="breadcrumb-item"><a href="<?php echo get_term_link($terms->slug, $tax); ?>"
+            class="breadcrumb-link"><?php echo $terms->name;?></a></li>
         <li class="breadcrumb-div"><span>/</span></li>
         <li class="breadcrumb-item"><span><?php the_title();?></span></li>
       </ul>

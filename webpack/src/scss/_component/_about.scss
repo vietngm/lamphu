@@ -3,10 +3,11 @@
 // ○○○
 // --------------------------------------------------
 .about {
-  background-image: url(/common/images/floral-bg-parallax.jpg);
+  background-image: url(/assets/images/bg-parallax.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+  background-size: cover;
   margin-top: 50px;
   p {
     margin-bottom: 0px;
@@ -18,7 +19,7 @@
     color: $color-white;
     padding-top: 20px;
     padding-bottom: 40px;
-    @media(min-width: $screen-sm-min) {
+    @media (min-width: $screen-sm-min) {
       padding-top: 30px;
       padding-bottom: 60px;
     }

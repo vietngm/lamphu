@@ -9,6 +9,7 @@ $thong_tin = array(
 array('name' => 'Tên Công Ty','id' => $prefix . 'ten-cong-ty','type' => 'text','std' => 'Tên Công Ty'),
 array('name' => 'VPGD','id' => $prefix . 'van-phong-giao-dich','type' => 'text','std' => 'Văn phòng giao dịch'),
 array('name' => 'ĐT bàn','id' => $prefix . 'dt-ban','type' => 'text','std' => 'Điện thoại bàn'),
+array('name' => 'ĐT Hỗ trợ','id' => $prefix . 'dt-hotro','type' => 'textarea','std' => 'Điện thoại hỗ trợ'),
 array('name' => 'Fax','id' => $prefix . 'fax','type' => 'text','std' => 'Fax'),
 array('name' => 'Hotline','id' => $prefix . 'hotline','type' => 'text','std' => 'Mobile Number'),
 array('name' => 'Mail','id' => $prefix . 'mail','type' => 'text','std' => 'Địa chỉ mail'),
@@ -123,6 +124,7 @@ $lienhe["facebook"]=get_post_meta($post_id ,'facebook',true);
 $lienhe["website"]=get_post_meta($post_id ,'website',true);
 $lienhe["toado"]=get_post_meta($post_id ,'toa-do',true);
 $lienhe["diachigmap"]=get_post_meta($post_id ,'dia-chi-gmap',true);
+$lienhe["dthotro"]=get_post_meta($post_id ,'dt-hotro',true);
 
 return $lienhe;
 }

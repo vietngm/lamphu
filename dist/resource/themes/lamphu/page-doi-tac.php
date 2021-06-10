@@ -7,7 +7,7 @@
   </section>
   <section class='partner'>
     <div class="wrap-content">
-      <h2 class="heading-detail"><?php the_title(); ?></h2>
+      <h2 class="heading"><?php the_title(); ?></h2>
       <ul class="partner-list">
         <?php
 				$arg = array(

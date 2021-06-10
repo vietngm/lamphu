@@ -4,7 +4,7 @@
 // --------------------------------------------------
 
 .doc-footer {
-	background: url("../images/wood-texture.png") repeat #1f1f1f;
+	background: url("/assets/images/pattern.jpg") repeat #1f1f1f;
 	padding: 26px 0 26px 0;
 	margin-top: 32px;
 	@media (min-width: $screen-sm-min) {
@@ -93,9 +93,9 @@
 .footer-menu {
 	display: grid;
 	grid-gap: 16px;
+	height: fit-content;
 	@media (min-width: $screen-sm-min) {
 		grid-gap: 24px;
-		height: fit-content;
 	}
 }
 .footer-link {

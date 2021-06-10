@@ -5,7 +5,23 @@
 .contact {
 	display: grid;
 	grid-auto-flow: column;
+	width: fit-content;
+	grid-gap: 16px;
+	list-style: none;
+	padding: 0;
+	margin: 32px 0 0;
 	&-item {
 		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 16px;
+		.fas {
+			color: $color-orange;
+		}
+		a {
+			color: $color-black;
+		}
+		&.contact-name {
+			font-weight: bold;
+		}
 	}
 }

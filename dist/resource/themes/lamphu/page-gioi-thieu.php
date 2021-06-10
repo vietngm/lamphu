@@ -10,7 +10,9 @@
       <h2 class="heading-detail"><?php the_title(); ?></h2>
       <div class="article-detail">
         <div>
+          <?php while (have_posts()): the_post();?>
           <?php the_content(); ?>
+          <?php endwhile; ?>
           <?php if ($mobile_browser == 0) { ?>
           <?php include('content-support.php'); ?>
           <?php } ?>
@@ -23,6 +25,12 @@
         echo '</div>';
       }
       ?>
+    </div>
+  </section>
+  <section class="partner">
+    <div class="wrap-content">
+      <h2 class="heading">Đối tác</h2>
+      <?php get_template_part('content', 'partner'); ?>
     </div>
   </section>
 </main>

@@ -7,7 +7,7 @@
   </section>
   <section class='doc'>
     <div class="wrap-content">
-      <h2 class="heading-detail"><?php the_title(); ?></h2>
+      <h2 class="heading"><?php the_title(); ?></h2>
       <ul class="doc-list">
         <?php
 				$arg = array(
@@ -38,6 +38,12 @@
         echo '</div>';
       }
       ?>
+    </div>
+  </section>
+  <section class="partner">
+    <div class="wrap-content">
+      <h2 class="heading">Đối tác</h2>
+      <?php get_template_part('content', 'partner'); ?>
     </div>
   </section>
 </main>

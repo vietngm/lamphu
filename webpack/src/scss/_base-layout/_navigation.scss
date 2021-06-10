@@ -114,7 +114,10 @@
 			.sub-wrap {
 				display: none;
 				background-color: white;
-				position: absolute;
+				position: static;
+				@media (min-width: $screen-sm-min) {
+					position: absolute;
+				}
 				z-index: 999;
 				width: 100%;
 				transition: (0.4s all ease);
@@ -122,11 +125,18 @@
 				right: 0;
 				justify-content: center;
 				border-top: solid 1px #e7e7e7;
-				padding-top: 16px;
-				padding-bottom: 16px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+				@media (min-width: $screen-sm-min) {
+					padding-top: 16px;
+					padding-bottom: 16px;
+				}
 			}
 			.sub-list {
-				padding: 16px 0;
+				padding: 0;
+				@media (min-width: $screen-sm-min) {
+					padding: 16px 0;
+				}
 				margin: 0;
 				display: grid;
 				width: 100%;
@@ -184,7 +194,7 @@
 			position: relative;
 			display: grid;
 			color: $color-black;
-			// line-height: 35px;
+			line-height: 35px;
 			position: relative;
 			font-size: 14px;
 			text-transform: uppercase;
@@ -228,6 +238,7 @@
 
 		.plus {
 			display: grid;
+			background-color: white;
 			@media (min-width: $screen-sm-min) {
 				display: none;
 			}

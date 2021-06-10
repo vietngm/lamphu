@@ -1,5 +1,6 @@
 <?php global $lienhe; ?>
 <ul class="contact">
+  <li class="contact-item contact-name">Liên hệ:</li>
   <?php
       $listContact = explode(';',$lienhe['dthotro']);
       foreach($listContact as $list){$l = explode(':',$list);

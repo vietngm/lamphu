@@ -13,7 +13,7 @@ get_sidebar('head');
   </section>
   <section class="prods">
     <div class="wrap-content">
-      <h3 class="heading-detail"><?php echo $name; ?></h3>
+      <h3 class="heading"><?php echo $name; ?></h3>
       <ul class="prods-list">
         <?php
 				$query = array(
@@ -44,6 +44,12 @@ get_sidebar('head');
         echo '</div>';
       }
       ?>
+    </div>
+  </section>
+  <section class="partner">
+    <div class="wrap-content">
+      <h2 class="heading">Đối tác</h2>
+      <?php get_template_part('content', 'partner'); ?>
     </div>
   </section>
 </main>

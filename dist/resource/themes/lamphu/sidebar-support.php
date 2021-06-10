@@ -8,7 +8,7 @@
         $l = explode(':',$list);
     ?>
     <li class="support-item">
-      <img src="/assets/images/supportfemale.png" />
+      <img src="/assets/images/support.png" width='32' />
       <span><?php echo $l[0];?></span>
       <a href="tel:<?php echo $l[1];?>"><?php echo $l[1];?></a>
     </li>
