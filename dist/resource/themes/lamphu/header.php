@@ -8,7 +8,7 @@ global $mobile_browser, $tablet_browser; ?>
 <head>
   <?php get_sidebar('title-page'); ?>
   <link media="all" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" rel="stylesheet" />
-  <link href="<?php echo get_site_url(); ?>/assets/css/common.css?09062021" rel="stylesheet">
+  <link href="<?php echo get_site_url(); ?>/assets/css/common.css?10062021" rel="stylesheet">
   <link href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png" rel="shortcut icon"
     type="image/x-icon">
   <link rel="apple-touch-icon" href="<?php echo get_site_url(); ?>/assets/images/apple-touch.png">

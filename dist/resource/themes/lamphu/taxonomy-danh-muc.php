@@ -8,7 +8,7 @@ get_header();
 get_sidebar('head');
 ?>
 <main class="is-product">
-  <section>
+  <section class='key'>
     <?php get_sidebar("banner"); ?>
   </section>
   <section class="prods">

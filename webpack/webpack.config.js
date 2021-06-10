@@ -64,10 +64,10 @@ module.exports = {
 	plugins: [
 		new BrowserSyncPlugin(
 			{
-				host: "http://192.168.2.97:8888",
+				host: "http://192.168.2.161:8888",
 				port: 3000,
 				// server: { baseDir: ['/lamphu/dist/'] },
-				proxy: "http://192.168.2.97:8888",
+				proxy: "http://192.168.2.161:8888",
 				// open: true,
 			},
 			{

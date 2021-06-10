@@ -30,7 +30,9 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
               <img src="<?php echo $image_full; ?>" class="img-responsive">
               <div class="overlay"><i class="fa fa-search"></i></div>
             </div>
-            <?php the_content(); ?>
+            <div class='prods-body'>
+              <?php the_content(); ?>
+            </div>
             <div class="like-button"><?php include('content-like.php'); ?></div>
           </article>
           <?php endwhile;wp_reset_query(); ?>
@@ -40,7 +42,7 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
           </div>
         </div>
         <?php
-        if ($mobile_browser > 0) {
+        if ($mobile_browser == 0) {
           echo '<div class="side">';
           include("sidebar-left-menu.php");
           include('sidebar-support.php');

@@ -35,10 +35,12 @@
 	display: grid;
 	grid-gap: 16px;
 	grid-template-columns: 1fr 1fr;
+	margin-top: 16px;
 	@media (min-width: $screen-sm-min) {
 		grid-template-columns: 1fr auto;
 		grid-gap: 48px;
 		width: fit-content;
+		margin-top: 0;
 	}
 }
 
@@ -89,8 +91,11 @@
 .footer-social,
 .footer-menu {
 	display: grid;
-	grid-gap: 24px;
-	height: fit-content;
+	grid-gap: 16px;
+	@media (min-width: $screen-sm-min) {
+		grid-gap: 24px;
+		height: fit-content;
+	}
 }
 .footer-link {
 	&:hover {

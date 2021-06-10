@@ -4335,10 +4335,10 @@ textarea:focus:-moz-placeholder {
     display: grid;
     height: 280px;
     overflow: hidden; }
-  .news-thumb {
+  .news-square {
     display: grid;
     height: 280px; }
-    .news-thumb img {
+    .news-square img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
@@ -5718,14 +5718,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .footer-block {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px; }
   @media (min-width: 768px) {
     .footer-block {
       grid-template-columns: 1fr auto;
       grid-gap: 48px;
       width: -webkit-fit-content;
       width: -moz-fit-content;
-      width: fit-content; } }
+      width: fit-content;
+      margin-top: 0; } }
 
 .footer-list {
   padding: 0;
@@ -5769,10 +5771,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .footer-social,
 .footer-menu {
   display: grid;
-  grid-gap: 24px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content; }
+  grid-gap: 16px; }
+  @media (min-width: 768px) {
+    .footer-social,
+    .footer-menu {
+      grid-gap: 24px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; } }
 
 .footer-link:hover {
   color: #ff7200; }
@@ -5944,16 +5950,29 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: #f00;
   display: none; }
 
-.is-product .detail-body {
-  margin-top: 10px;
-  margin-bottom: 0px; }
+.is-product .prods-detail {
+  display: grid;
+  grid-gap: 16px;
+  margin-top: 16px; }
   @media (min-width: 768px) {
-    .is-product .detail-body {
-      margin-bottom: 30px;
-      margin-top: 0px; } }
-  .is-product .detail-body img {
-    width: 100%;
-    height: auto; }
+    .is-product .prods-detail {
+      grid-template-columns: 1fr 250px; } }
+
+.is-product .prods-info {
+  display: grid;
+  grid-row-gap: 16px; }
+
+.is-product .prods-relate {
+  display: grid;
+  grid-row-gap: 16px; }
+
+.is-product .prods-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    .is-product .prods-title {
+      font-size: 16px; } }
 
 .is-product .prods-thumb {
   display: block;
@@ -5987,26 +6006,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     color: #ffffff; }
   .is-product .prods-thumb:hover .overlay {
     opacity: 1; }
+  .is-product .prods-thumb .img-responsive {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain; }
 
-.is-product .pro-title {
-  margin-top: 0px;
-  margin-bottom: 0px; }
-
-.is-product .prods-detail {
-  display: grid;
-  grid-gap: 16px;
-  margin-top: 16px; }
-  @media (min-width: 768px) {
-    .is-product .prods-detail {
-      grid-template-columns: 1fr 250px; } }
-
-.is-product .prods-info {
-  display: grid;
-  grid-row-gap: 16px; }
-
-.is-product .prods-relate {
-  display: grid;
-  grid-row-gap: 16px; }
+.is-product .prods-body img {
+  width: 100%;
+  height: auto; }
 
 .is-news .heading {
   padding-bottom: 16px; }
@@ -6019,11 +6027,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .is-news .relate {
   display: grid;
-  margin-top: 32px; }
+  margin-top: 24px; }
+  @media (min-width: 768px) {
+    .is-news .relate {
+      margin-top: 32px; } }
   .is-news .relate-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px; }
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    @media (min-width: 768px) {
+      .is-news .relate-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px; } }
   .is-news .relate-item {
     display: grid;
     grid-template-columns: 86px 1fr;
@@ -6032,6 +6050,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     display: grid; }
     .is-news .relate-body p {
       text-align: justify; }
+  .is-news .relate-image, .is-news .relate-noimage {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .is-news .relate-noimage {
+    border: solid 1px #d8d8d8; }
   .is-news .relate-link {
     color: #000000; }
     .is-news .relate-link:hover {
