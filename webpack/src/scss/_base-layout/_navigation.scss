@@ -79,7 +79,6 @@
 		.main-item {
 			position: static;
 			background-color: $color-white;
-			display: block;
 			border-bottom: solid 1px #e7e7e7;
 			background-color: $color-white;
 			display: block;
@@ -127,21 +126,25 @@
 				padding-bottom: 16px;
 			}
 			.sub-list {
-				padding: 0;
+				padding: 16px 0;
 				margin: 0;
 				display: grid;
 				width: 100%;
 				max-width: 1170px;
 				transition: (0.4s all ease);
+				list-style: none;
 				@media (min-width: $screen-sm-min) {
 					grid-template-columns: repeat(3, 1fr);
 					grid-column-gap: 16px;
+					padding: 0;
 				}
 				&-item {
 					position: relative;
 					display: block;
 					margin: 0;
+					padding: 0;
 					color: $color-white;
+					list-style: none;
 					background-color: white;
 					&:hover {
 						> .sub-list-link {

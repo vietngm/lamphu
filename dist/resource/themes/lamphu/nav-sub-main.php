@@ -11,11 +11,11 @@ foreach($terms as $term){
 	?>
 <li class="list-item sub-list-item">
   <a href="<?php echo get_term_link($term->slug,$taxonomy);?>" class="sub-list-link">
-    <?php if($mobile_browser == 0){ ?>
+    <?php //if($mobile_browser == 0){ ?>
     <i class="fas fa-chevron-right"></i>
-    <?php }if($mobile_browser > 0){ ?>
-    <span class="arrow left"></span>
-    <?php } ?>
+    <?php //}if($mobile_browser > 0){ ?>
+    <!-- <span class="arrow left"></span> -->
+    <?php //} ?>
     <span><?php echo $term->name; ?></span>
   </a>
 </li>

@@ -38,8 +38,10 @@ get_sidebar('head');
 				?>
       </ul>
       <?php if ($mobile_browser > 0) { 
+        echo '<div class="side">';
         include("sidebar-left-menu.php");
         include('sidebar-support.php');
+        echo '</div>';
       }
       ?>
     </div>

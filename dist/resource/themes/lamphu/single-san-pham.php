@@ -51,8 +51,10 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
       ?>
       </div>
       <?php if ($mobile_browser > 0) { 
+        echo '<div class="side">';
         include("sidebar-left-menu.php");
         include('sidebar-support.php');
+        echo '</div>';
       }
       ?>
     </div>

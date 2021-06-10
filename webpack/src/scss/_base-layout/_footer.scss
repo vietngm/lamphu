@@ -5,9 +5,10 @@
 
 .doc-footer {
 	background: url("../images/wood-texture.png") repeat #1f1f1f;
-	padding: 20px 0 20px 0;
-	margin-top: 64px;
+	padding: 26px 0 26px 0;
+	margin-top: 32px;
 	@media (min-width: $screen-sm-min) {
+		margin-top: 64px;
 		padding: 40px 0 40px 0;
 	}
 	position: relative;
@@ -54,10 +55,10 @@
 	}
 	li a {
 		color: $color-white;
-		line-height: 24px;
+		line-height: 26px;
 	}
 	.mobile {
-		margin-bottom: 15px;
+		margin-bottom: 16px;
 	}
 }
 
@@ -99,6 +100,6 @@
 }
 .footer-link {
 	&:hover {
-		color: #ff7200;
+		color: $color-orange;
 	}
 }

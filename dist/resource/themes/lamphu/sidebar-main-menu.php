@@ -18,7 +18,8 @@ global $mobile_browser; ?>
       <div class="main-menu">
         <ul class="main-list">
           <li class="main-item home">
-            <a href="<?php echo home_url();?>" class="main-link">Trang chủ</a>
+            <a href="<?php echo home_url();?>" class="main-link">
+              <?php echo __('Trang chủ', 'theme'); ?></a>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item <?php echo get_post(3)->post_name?>">
@@ -53,24 +54,25 @@ global $mobile_browser; ?>
             <?php } ?>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item"><a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"
-              class="main-link">Đối tác</a></li>
+          <li class="main-item <?php echo get_post(2163)->post_name?>"><a
+              href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"
+              class="main-link"><?php echo get_the_title(2163); ?></a></li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item">
+          <li class="main-item <?php echo get_post(33)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="main-link">
-              <?php echo __('Tin tức', 'theme'); ?>
+              <?php echo get_the_title(33); ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item">
+          <li class="main-item <?php echo get_post(848)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="main-link">
-              <?php echo __('Tài liệu', 'theme'); ?>
+              <?php echo get_the_title(848); ?>
             </a>
           </li>
           <li class="main-dev"><span></span></li>
-          <li class="main-item">
+          <li class="main-item <?php echo get_post(2)->post_name?>">
             <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="main-link">
-              <?php echo __('Liên hệ', 'theme'); ?>
+              <?php echo get_the_title(2); ?>
             </a>
           </li>
         </ul>

@@ -4,6 +4,10 @@
 // --------------------------------------------------
 .is-document {
 	display: grid;
+	.heading-detail {
+		border-bottom: solid 1px $color-green;
+		padding-bottom: 4px;
+	}
 	.doc-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

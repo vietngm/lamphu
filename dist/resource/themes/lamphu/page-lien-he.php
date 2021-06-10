@@ -1,7 +1,7 @@
 <?php get_header();global $lienhe; ?>
 <?php get_sidebar('head'); ?>
-<main>
-  <div class="map" align="center">
+<main class="is-contact">
+  <div class="map">
     <div id="map-canvas"></div>
     <img src="/assets/images/shadow.png" width="1000" height="34" class="img-responsive" alt="Máy cắt dây EDM">
   </div>
@@ -53,8 +53,8 @@
               style="height:186px;"></textarea>
           </div>
         </div>
-        <div class="col-lg-12" align="center">
-          <input type="submit" name="sendmail" value="GỞI MAIL" class="btn btn-default btn-contact">
+        <div class="col-lg-12">
+          <input type="submit" name="sendmail" value="GỞI MAIL" class="btn btn-contact">
         </div>
         <div class="col-lg-12">
           <div class="panel panel-default panel-contact-page">

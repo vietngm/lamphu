@@ -253,14 +253,11 @@ textarea:focus:-moz-placeholder {
       font-size: 14px; } }
   .btn.focus, .btn:focus, .btn:hover {
     text-decoration: none; }
-  .btn-block {
-    width: 90%; }
-    @media (min-width: 992px) {
-      .btn-block {
-        max-width: 200px; } }
+  .btn-contact {
+    background-color: #07ad0c; }
 
 .btn-like {
-  margin: 10px 0px; }
+  margin: 10px 0; }
 
 .bdw-1 {
   border-width: 1px; }
@@ -4214,6 +4211,12 @@ textarea:focus:-moz-placeholder {
     transform: scale(1.1);
     opacity: 0.8; }
 
+.side {
+  margin-top: 16px; }
+  @media (min-width: 992px) {
+    .side {
+      margin-top: 0; } }
+
 .support {
   background-color: #f5f5f7; }
   .support-title {
@@ -5571,7 +5574,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     .navbar .main-menu .main-item {
       position: static;
       background-color: #ffffff;
-      display: block;
       border-bottom: solid 1px #e7e7e7;
       background-color: #ffffff;
       display: block; }
@@ -5609,21 +5611,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
         padding-top: 16px;
         padding-bottom: 16px; }
       .navbar .main-menu .main-item .sub-list {
-        padding: 0;
+        padding: 16px 0;
         margin: 0;
         display: grid;
         width: 100%;
         max-width: 1170px;
-        transition: 0.4s all ease; }
+        transition: 0.4s all ease;
+        list-style: none; }
         @media (min-width: 768px) {
           .navbar .main-menu .main-item .sub-list {
             grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 16px; } }
+            grid-column-gap: 16px;
+            padding: 0; } }
         .navbar .main-menu .main-item .sub-list-item {
           position: relative;
           display: block;
           margin: 0;
+          padding: 0;
           color: #ffffff;
+          list-style: none;
           background-color: white; }
           .navbar .main-menu .main-item .sub-list-item:hover > .sub-list-link {
             color: #07ad0c; }
@@ -5693,13 +5699,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .doc-footer {
   background: url("../images/wood-texture.png") repeat #1f1f1f;
-  padding: 20px 0 20px 0;
-  margin-top: 64px;
+  padding: 26px 0 26px 0;
+  margin-top: 32px;
   position: relative;
   width: 100%;
   color: #ffffff; }
   @media (min-width: 768px) {
     .doc-footer {
+      margin-top: 64px;
       padding: 40px 0 40px 0; } }
 
 .footer-contact {
@@ -5742,9 +5749,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     line-height: 26px; }
   .footer-list li a {
     color: #ffffff;
-    line-height: 24px; }
+    line-height: 26px; }
   .footer-list .mobile {
-    margin-bottom: 15px; }
+    margin-bottom: 16px; }
 
 .footer-name {
   text-align: left;
@@ -6166,10 +6173,23 @@ form {
   .is-partner .partner-item {
     display: grid;
     align-items: center;
-    border: solid 1px #d8d8d8; }
+    border: solid 1px #d8d8d8;
+    width: 100%;
+    height: 100%; }
+    .is-partner .partner-item .img-responsive {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .is-partner .heading-detail {
+    border-bottom: solid 1px #07ad0c;
+    padding-bottom: 4px; }
 
 .is-document {
   display: grid; }
+  .is-document .heading-detail {
+    border-bottom: solid 1px #07ad0c;
+    padding-bottom: 4px; }
   .is-document .doc-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

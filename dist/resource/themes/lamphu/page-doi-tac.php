@@ -6,8 +6,8 @@
     <?php get_sidebar("banner"); ?>
   </section>
   <section class='partner'>
-    <h2 class="heading-detail"><?php the_title(); ?></h2>
     <div class="wrap-content">
+      <h2 class="heading-detail"><?php the_title(); ?></h2>
       <ul class="partner-list">
         <?php
 				$arg = array(
@@ -28,8 +28,10 @@
         <?php endwhile;wp_reset_query(); ?>
       </ul>
       <?php if ($mobile_browser > 0) { 
+        echo '<div class="side">';
         include("sidebar-left-menu.php");
         include('sidebar-support.php');
+        echo '</div>';
       }
       ?>
     </div>

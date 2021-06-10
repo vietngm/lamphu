@@ -2,7 +2,12 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-
+.side {
+	margin-top: 16px;
+	@media (min-width: $screen-md-min) {
+		margin-top: 0;
+	}
+}
 .support {
 	background-color: nth($color-array, 5);
 	&-title {

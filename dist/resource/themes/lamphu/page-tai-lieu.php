@@ -6,8 +6,9 @@
     <?php get_sidebar("banner"); ?>
   </section>
   <section class='doc'>
-    <h2 class="heading-detail"><?php the_title(); ?></h2>
+
     <div class="wrap-content">
+      <h2 class="heading-detail"><?php the_title(); ?></h2>
       <ul class="doc-list">
         <?php
 				$arg = array(
@@ -21,9 +22,10 @@
 				);
 				$the_query = new WP_Query($arg);
 				while ($the_query->have_posts()) : $the_query->the_post();
+        $file = get_post_meta($post->ID,'file-pdf',true);
 				?>
         <li clas="doc-item">
-          <a href='#' class="doc-link">
+          <a href='<?php echo $file;?>' class="doc-link" target="_blank">
             <div class='doc-icon'><i class="far fa-file-pdf"></i></div>
             <span class='doc-title'><?php the_title(); ?></span>
           </a>
@@ -31,8 +33,10 @@
         <?php endwhile;wp_reset_query(); ?>
       </ul>
       <?php if ($mobile_browser > 0) { 
+        echo '<div class="side">';
         include("sidebar-left-menu.php");
         include('sidebar-support.php');
+        echo '</div>';
       }
       ?>
     </div>

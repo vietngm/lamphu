@@ -34,13 +34,11 @@
 	&:hover {
 		text-decoration: none;
 	}
-	&-block {
-		width: 90%;
-		@media (min-width: $screen-md-min) {
-			max-width: 200px;
-		}
+
+	&-contact {
+		background-color: $color-green;
 	}
 }
 .btn-like {
-	margin: 10px 0px;
+	margin: 10px 0;
 }
