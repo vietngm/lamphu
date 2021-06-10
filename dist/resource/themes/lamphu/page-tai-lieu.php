@@ -25,7 +25,7 @@
         <li clas="doc-item">
           <a href='#' class="doc-link">
             <div class='doc-icon'><i class="far fa-file-pdf"></i></div>
-            <span><?php the_title(); ?></span>
+            <span class='doc-title'><?php the_title(); ?></span>
           </a>
         </li>
         <?php endwhile;wp_reset_query(); ?>

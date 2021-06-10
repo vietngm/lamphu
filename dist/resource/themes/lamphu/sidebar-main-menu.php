@@ -48,7 +48,9 @@ global $mobile_browser; ?>
                 ?>
               </ul>
             </div>
+            <?php if ($mobile_browser == 0) { ?>
             <div class='main-over'></div>
+            <?php } ?>
           </li>
           <li class="main-dev"><span></span></li>
           <li class="main-item"><a href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"

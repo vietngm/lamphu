@@ -9,7 +9,7 @@
 	padding: 3px;
 	position: absolute;
 	top: 36%;
-	transform: (rotate(-45deg));
+	transform: rotate(-45deg);
 
 	&.right {
 		right: 16px;
@@ -20,11 +20,11 @@
 }
 
 .up {
-	transform: (rotate(-135deg));
+	transform: rotate(-135deg);
 }
 
 .down {
-	transform: (rotate(45deg));
+	transform: rotate(45deg);
 }
 
 .plus {

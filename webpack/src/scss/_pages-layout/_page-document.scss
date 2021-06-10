@@ -6,17 +6,27 @@
 	display: grid;
 	.doc-list {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 16px;
+		padding: 0;
+		list-style: none;
+		@media (min-width: $screen-sm-min) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.doc-item {
+		display: grid;
+		align-items: center;
+		border: solid 1px nth($color-array, 6);
 	}
 	.doc-link {
 		display: grid;
 		grid-row-gap: 16px;
-		span {
+		.doc-title {
 			color: $color-black;
 		}
 		&:hover {
-			span {
+			.doc-title {
 				color: $color-green;
 			}
 		}

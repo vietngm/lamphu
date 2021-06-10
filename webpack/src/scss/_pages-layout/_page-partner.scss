@@ -6,7 +6,17 @@
 	display: grid;
 	.partner-list {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 16px;
+		padding: 0;
+		list-style: none;
+		@media (min-width: $screen-sm-min) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.partner-item {
+		display: grid;
+		align-items: center;
+		border: solid 1px nth($color-array, 6);
 	}
 }
