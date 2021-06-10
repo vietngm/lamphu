@@ -22,7 +22,7 @@
 				$the_query = new WP_Query($arg);
 				while ($the_query->have_posts()) : $the_query->the_post();
 				?>
-        <li clas="partner-item">
+        <li class="partner-item">
           <?php the_post_thumbnail('featured_medium', array('class' => 'img-responsive')); ?>
         </li>
         <?php endwhile;wp_reset_query(); ?>

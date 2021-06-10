@@ -5991,36 +5991,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .is-product .prods-thumb {
   display: block;
-  position: relative;
-  cursor: pointer; }
-  .is-product .prods-thumb .overlay {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    opacity: 0;
-    transition: 0.4s all ease;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden; }
-    .is-product .prods-thumb .overlay:before {
-      content: "";
-      background: #000000;
-      position: absolute;
-      opacity: 0.3;
-      left: 0px;
-      right: 0px;
-      top: 0px;
-      bottom: 0px; }
-  .is-product .prods-thumb i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: #ffffff; }
-  .is-product .prods-thumb:hover .overlay {
-    opacity: 1; }
+  position: relative; }
   .is-product .prods-thumb .img-responsive {
     width: 100%;
     height: 100%;
@@ -6086,7 +6057,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     grid-row-gap: 16px;
     text-align: justify; }
   .is-about .heading-detail {
-    border-bottom: solid 1px #07ad0c;
+    border-bottom: solid 2px #07ad0c;
     padding-bottom: 4px; }
 
 .banner {
@@ -6175,20 +6146,21 @@ form {
     align-items: center;
     border: solid 1px #d8d8d8;
     width: 100%;
-    height: 100%; }
+    height: 160px;
+    justify-content: center; }
     .is-partner .partner-item .img-responsive {
       width: 100%;
       height: 100%;
       -o-object-fit: contain;
          object-fit: contain; }
   .is-partner .heading-detail {
-    border-bottom: solid 1px #07ad0c;
+    border-bottom: solid 2px #07ad0c;
     padding-bottom: 4px; }
 
 .is-document {
   display: grid; }
   .is-document .heading-detail {
-    border-bottom: solid 1px #07ad0c;
+    border-bottom: solid 2px #07ad0c;
     padding-bottom: 4px; }
   .is-document .doc-list {
     display: grid;
@@ -6202,14 +6174,25 @@ form {
   .is-document .doc-item {
     display: grid;
     align-items: center;
-    border: solid 1px #d8d8d8; }
+    width: 100%;
+    height: 160px;
+    background-color: rgba(181, 20, 44, 0.1);
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; }
   .is-document .doc-link {
     display: grid;
-    grid-row-gap: 16px; }
-    .is-document .doc-link .doc-title {
-      color: #000000; }
+    grid-row-gap: 16px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
     .is-document .doc-link:hover .doc-title {
       color: #07ad0c; }
+  .is-document .doc-icon .far {
+    color: #b5142c;
+    font-size: 32px; }
+  .is-document .doc-title {
+    color: #000000; }
 
 :root {
   --blue: #007bff;

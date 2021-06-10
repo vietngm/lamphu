@@ -28,7 +28,6 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
             <span class="prods-sku">Ma SP: <?php echo $sku; ?></span>
             <div class="prods-thumb">
               <img src="<?php echo $image_full; ?>" class="img-responsive">
-              <div class="overlay"><i class="fa fa-search"></i></div>
             </div>
             <div class='prods-body'>
               <?php the_content(); ?>
