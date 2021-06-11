@@ -3,7 +3,7 @@
 // ○○○
 // --------------------------------------------------
 .arrow {
-	border: solid #ababab;
+	border: solid $color-black;
 	border-width: 0 2px 2px 0;
 	display: grid;
 	padding: 3px;
@@ -31,7 +31,7 @@
 	width: 35px;
 	height: 35px;
 	position: absolute;
-	background-color: #e2e2e2;
+	// background-color: #e2e2e2;
 	right: 0;
 	top: 0;
 
@@ -39,19 +39,19 @@
 	&:after {
 		position: absolute;
 		content: "";
-		background-color: #b5142c;
+		background-color: $color-black;
 	}
 
 	&:before {
-		width: 16px;
-		height: 2px;
+		width: 15px;
+		height: 1px;
 		top: 45%;
 		left: 25%;
 	}
 
 	&:after {
-		width: 2px;
-		height: 16px;
+		width: 1px;
+		height: 15px;
 		left: 45%;
 		top: 25%;
 	}

@@ -9,18 +9,16 @@
     <div class="wrap-content">
       <h2 class="heading-detail"><?php the_title(); ?></h2>
       <div class="article-detail">
-        <div>
-          <?php while (have_posts()): the_post();?>
-          <?php the_content(); ?>
-          <?php endwhile; ?>
-          <?php if ($mobile_browser == 0) { ?>
-          <?php include('content-support.php'); ?>
-          <?php } ?>
-        </div>
+        <?php while (have_posts()): the_post();?>
+        <?php the_content(); ?>
+        <?php endwhile; ?>
+        <?php if ($mobile_browser == 0) { ?>
+        <?php include('content-support.php'); ?>
+        <?php } ?>
       </div>
       <?php if ($mobile_browser > 0) { 
         echo '<div class="side">';
-        include("sidebar-left-menu.php");
+       include("sidebar-left-menu.php");
         include('sidebar-support.php');
         echo '</div>';
       }

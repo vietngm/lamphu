@@ -29,30 +29,9 @@ form {
 	margin-bottom: 15px;
 }
 
-.f-search {
-	position: absolute;
-	right: 60px;
-	top: 26px;
-}
-
-.fa-search:hover {
-	cursor: pointer;
-}
-
 .images {
 	display: block;
 	position: relative;
-}
-
-.collapse {
-	padding: 0px;
-}
-
-.panel-contact-page {
-	margin-top: 15px;
-	@media (min-width: $screen-sm-min) {
-		margin-top: 25px;
-	}
 }
 
 .article-detail {
@@ -70,17 +49,6 @@ form {
 			}
 		}
 	}
-}
-
-.title-sp {
-	margin-bottom: 20px;
-	font-size: 12px;
-	color: #666;
-	display: block;
-}
-
-.description-title {
-	color: #cc1e2a;
 }
 
 .cat-title {
