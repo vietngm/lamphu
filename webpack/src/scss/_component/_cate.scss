@@ -36,24 +36,31 @@
 		display: grid;
 		text-align: center;
 		align-items: center;
+		height: fit-content;
 	}
 	&-square {
 		display: grid;
 		width: 100%;
-		height: 160px;
+		height: 164px;
+		overflow: hidden;
 		@media (min-width: $screen-sm-min) {
-			height: 220px;
+			height: 280px;
 		}
 		align-items: center;
 		justify-content: center;
+		.img-responsive {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	&-noimage {
 		border: solid 1px nth($color-array, 6);
 		display: grid;
 		width: 100%;
-		height: 160px;
+		height: 164px;
 		@media (min-width: $screen-sm-min) {
-			height: 220px;
+			height: 280px;
 		}
 		align-items: center;
 		justify-content: center;
