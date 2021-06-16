@@ -100,10 +100,6 @@
 				.sub-wrap {
 					display: grid;
 				}
-				.main-over {
-					opacity: 1;
-					z-index: 2;
-				}
 			}
 			&.active {
 				color: $color-green;
@@ -205,20 +201,6 @@
 				display: block;
 				line-height: 71px;
 				padding-left: 0;
-			}
-		}
-
-		.main-over {
-			@media (min-width: $screen-sm-min) {
-				background-color: rgba(0, 0, 0, 0.6);
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				top: 92px;
-				z-index: -1;
-				height: 100vh;
-				opacity: 0;
 			}
 		}
 

@@ -53,9 +53,6 @@ global $mobile_browser; ?>
                 ?>
               </ul>
             </div>
-            <?php if ($mobile_browser == 0) { ?>
-            <div class='main-over'></div>
-            <?php } ?>
           </li>
           <?php if ($mobile_browser == 0) { ?>
           <li class="main-dev"><span></span></li>

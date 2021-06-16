@@ -27,6 +27,9 @@
 </footer>
 <script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
 <script src="<?php echo get_site_url(); ?>/assets/js/main.js?31052021"></script>
+<?php if ($mobile_browser == 0) { ?>
+<div class='overlay'></div>
+<?php } ?>
 <?php wp_footer(); ?>
 </body>
 

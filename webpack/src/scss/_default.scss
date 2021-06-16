@@ -27,6 +27,10 @@ body {
 	}
 	&.active {
 		overflow-y: auto;
+		.overlay {
+			opacity: 1;
+			z-index: 2;
+		}
 	}
 }
 
@@ -39,12 +43,27 @@ body {
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
-	transition: (all 0.4s ease);
+	transition: all 0.4s ease;
 	&.active {
 		z-index: 3;
 		background-color: $color-white;
 		visibility: visible;
 		opacity: (1);
+	}
+}
+
+.overlay {
+	@media (min-width: $screen-sm-min) {
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 92px;
+		z-index: -1;
+		height: 100vh;
+		opacity: 0;
+		transition: all 0.2s ease;
 	}
 }
 
@@ -88,20 +107,6 @@ p {
 	font-size: 14px;
 	@media (min-width: $screen-md-min) {
 		font-size: 14px;
-	}
-}
-
-.sp-view {
-	display: block;
-	@media (min-width: $screen-sm-min) {
-		display: none;
-	}
-}
-
-.pc-view {
-	display: none;
-	@media (min-width: $screen-sm-min) {
-		display: block;
 	}
 }
 
