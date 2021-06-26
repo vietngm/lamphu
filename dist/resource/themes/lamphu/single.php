@@ -12,9 +12,9 @@
         <?php while (have_posts()): the_post();?>
         <div class="news-body">
           <?php the_content(); ?>
-          <div class="btn-like"><?php include 'content-like.php'; ?></div>
+          <div class="btn-like"><?php include 'content/like.php'; ?></div>
           <?php if ($mobile_browser == 0) { ?>
-          <?php include('content-support.php'); ?>
+          <?php include 'content/support.php'; ?>
           <?php } ?>
         </div>
         <?php endwhile; ?>
@@ -33,7 +33,7 @@
             while ($the_query->have_posts()): $the_query->the_post();
           ?>
           <li class="relate-item">
-            <?php get_template_part('loop', 'tin-tuc'); ?>
+            <?php include 'loop/tin-tuc.php'; ?>
           </li>
           <?php endwhile;wp_reset_query();?>
         </ul>

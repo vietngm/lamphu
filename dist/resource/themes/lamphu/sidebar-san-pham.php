@@ -12,7 +12,7 @@
     while ($the_query->have_posts()) : $the_query->the_post();
   ?>
   <li class="prods-item">
-    <?php include('loop-san-pham.php'); ?>
+    <?php include 'loop/san-pham.php'; ?>
   </li>
   <?php endwhile;wp_reset_query();?>
 </ul>

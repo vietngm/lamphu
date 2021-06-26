@@ -1,11 +1,15 @@
 <h2 class="heading"><span>Lam Phu News</span></h2>
 <div class="news-top">
   <?php
+  	$number = 3;
+    if($mobile_browser > 0){
+      $number = 2;
+    }
       $arg = array(
         'post_type' => 'tin-tuc',
         'orderby' => 'date',
         'order' => 'asc',
-        'posts_per_page' => 3,
+        'posts_per_page' => $number,
         'status' => array('publish', 'private'),
       );
       $the_query = new WP_Query($arg);

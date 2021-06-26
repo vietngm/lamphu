@@ -26,7 +26,7 @@
 					while ($the_query->have_posts()): $the_query->the_post();
 				?>
         <li class="relate-item">
-          <?php get_template_part('loop', 'tin-tuc'); ?>
+          <?php include 'loop/tin-tuc.php'; ?>
         </li>
         <?php endwhile; wp_reset_query(); ?>
       </ul>

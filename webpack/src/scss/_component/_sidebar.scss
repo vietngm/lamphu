@@ -3,7 +3,7 @@
 // ○○○
 // --------------------------------------------------
 .support {
-	background-color: nth($color-array, 2);
+	background-color: nth($color-array, 1);
 	&-title {
 		background-color: $color-main;
 		padding: 10px 16px;
@@ -23,7 +23,7 @@
 		font-size: 14px;
 		color: $color-main;
 		padding: 10px 16px;
-		border-top: solid 1px nth($color-array, 1);
+		border-top: solid 1px nth($color-array, 2);
 		&:first-child {
 			border: none;
 		}
@@ -66,8 +66,8 @@
 
 	.list-link {
 		color: $color-black;
-		background-color: nth($color-array, 2);
-		border-bottom: 1px solid nth($color-array, 1);
+		background-color: nth($color-array, 1);
+		border-bottom: 1px solid nth($color-array, 2);
 		display: block;
 		position: relative;
 		padding: 0 16px;
@@ -89,6 +89,20 @@
 		}
 		&:hover {
 			color: $color-green;
+		}
+		.arrow-plus,
+		.arrow-go {
+			position: absolute;
+		}
+		.arrow-plus {
+			right: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.arrow-go {
+			right: 24px;
+			top: 50%;
+			transform: (rotate(45deg) translateY(-50%));
 		}
 	}
 }

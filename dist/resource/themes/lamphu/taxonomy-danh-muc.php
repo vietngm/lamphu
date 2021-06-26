@@ -29,7 +29,7 @@ get_sidebar('head');
 				while ($the_query->have_posts()):$the_query->the_post();
 				?>
         <li class="prods-item">
-          <?php include('loop-san-pham.php'); ?>
+          <?php include 'loop/san-pham.php'; ?>
         </li>
         <?php endwhile;?>
         <?php
@@ -49,7 +49,7 @@ get_sidebar('head');
   <section class="partner">
     <div class="wrap-content">
       <h2 class="heading">Đối tác</h2>
-      <?php get_template_part('content', 'partner'); ?>
+      <?php include 'content/partner.php'; ?>
     </div>
   </section>
 </main>

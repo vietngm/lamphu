@@ -1,4 +1,5 @@
-<?php
+<div>
+  <?php
 $taxonomy = 'danh-muc';
 $slug = get_query_var($taxonomy);
 $termName = get_term_by('slug', $slug, $taxonomy);
@@ -9,9 +10,9 @@ $terms = get_terms($taxonomy, array(
     'order' => 'ASC',
 ));
 ?>
-<div class="list-cat-title">DANH MỤC SẢN PHẨM</div>
-<ul class="list-cat">
-  <?php
+  <div class="list-cat-title">DANH MỤC SẢN PHẨM</div>
+  <ul class="list-cat">
+    <?php
     foreach ($terms as $term){
     $args = array(
         "orderby" => "slug",
@@ -22,30 +23,31 @@ $terms = get_terms($taxonomy, array(
     $childs = get_terms($taxonomy, $args);
     $count = count($childs);
     ?>
-  <li class="list-item">
-    <?php if ($count == 0) { ?>
-    <a href="<?php echo get_term_link($term->slug, $taxonomy); ?>" class="list-link">
-      <?php echo $term->name; ?>
-      <span class="arrow arrow-go"></span>
-    </a>
-    <?php } else { ?>
-    <a href="#" class="list-link js-list-link">
-      <?php echo $term->name; ?>
-      <span class="arrow arrow-plus"></span>
-    </a>
-    <ul class="sub-list-cat js-sub-list-cat">
-      <?php
+    <li class="list-item">
+      <?php if ($count == 0) { ?>
+      <a href="<?php echo get_term_link($term->slug, $taxonomy); ?>" class="list-link">
+        <?php echo $term->name; ?>
+        <span class="arrow arrow-go"></span>
+      </a>
+      <?php } else { ?>
+      <a href="#" class="list-link js-list-link">
+        <?php echo $term->name; ?>
+        <span class="arrow arrow-plus"></span>
+      </a>
+      <ul class="sub-list-cat js-sub-list-cat">
+        <?php
             foreach ($childs as $child) {
                 ?>
-      <li class="list-item">
-        <a href="<?php echo get_term_link($child->slug, $taxonomy); ?>" class="list-link sub-list-link">
-          <?php echo $child->name; ?>
-          <span class="arrow arrow-go"></span>
-        </a>
-      </li>
-      <?php } ?>
-    </ul>
-    <?php }
+        <li class="list-item">
+          <a href="<?php echo get_term_link($child->slug, $taxonomy); ?>" class="list-link sub-list-link">
+            <?php echo $child->name; ?>
+            <span class="arrow arrow-go"></span>
+          </a>
+        </li>
+        <?php } ?>
+      </ul>
+      <?php }
       }
     ?>
-</ul>
+  </ul>
+</div>

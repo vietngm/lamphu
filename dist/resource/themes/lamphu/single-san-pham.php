@@ -33,12 +33,12 @@ $terms = get_term_top_most_parent($terms[0]->term_id, $tax);
             <div class='prods-body'>
               <?php the_content(); ?>
             </div>
-            <div class="like-button"><?php include('content-like.php'); ?></div>
+            <div class="like-button"><?php include 'content/like.php'; ?></div>
           </article>
           <?php endwhile;wp_reset_query(); ?>
           <div class='prods-relate'>
             <span class="heading-sub">SẢN PHẨM LIÊN QUAN</span>
-            <?php include("content-related.php"); ?>
+            <?php include "content/relate.php"; ?>
           </div>
         </div>
         <?php

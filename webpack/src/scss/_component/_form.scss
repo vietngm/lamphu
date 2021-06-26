@@ -14,13 +14,11 @@ form {
 	color: $color-white;
 	background-color: $link-color-main;
 	border: 1px solid $link-color-main;
-	border-radius: (0);
 }
 
 .form-control {
 	border: 1px solid $link-color-main;
 	box-shadow: none;
-	border-radius: (0);
 }
 
 .has-error .input-group-addon {
@@ -48,25 +46,21 @@ form {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
 	color: $link-color-main !important;
-	font-weight: bold !important;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
 	color: $link-color-main !important;
-	font-weight: bold !important;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
 	color: $link-color-main !important;
-	font-weight: bold !important;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
 	color: $link-color-main !important;
-	font-weight: bold !important;
 }
 
 input:focus::-webkit-input-placeholder,

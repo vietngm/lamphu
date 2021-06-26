@@ -12,6 +12,6 @@ $the_query = new WP_Query($arg);
 ?>
 <ul class="prods-list">
   <?php while ($the_query->have_posts()) : $the_query->the_post();?>
-  <li class="prods-item"><?php include('loop-san-pham.php'); ?></li>
+  <li class="prods-item"><?php include get_template_directory().'/loop/san-pham.php'; ?></li>
   <?php endwhile;wp_reset_query(); ?>
 </ul>

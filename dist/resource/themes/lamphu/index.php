@@ -23,7 +23,7 @@
   <section class="partner">
     <div class="wrap-content">
       <h2 class="heading">Đối tác</h2>
-      <?php get_template_part('content', 'partner'); ?>
+      <?php include 'content/partner.php'; ?>
     </div>
   </section>
 </main>

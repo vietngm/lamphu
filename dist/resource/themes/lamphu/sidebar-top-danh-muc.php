@@ -16,7 +16,7 @@
         $thumbUrl = wp_get_attachment_image_src($attachID, 'featured_top_cat');
         ?>
   <li class="cate-item">
-    <?php include('loop-danh-muc.php'); ?>
+    <?php include 'loop/danh-muc.php'; ?>
   </li>
   <?php
     }
