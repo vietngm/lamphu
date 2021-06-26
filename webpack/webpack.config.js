@@ -66,9 +66,7 @@ module.exports = {
 			{
 				host: "http://lamphu:8888",
 				port: 3000,
-				// server: { baseDir: ['/lamphu/dist/'] },
 				proxy: "http://lamphu:8888",
-				// open: true,
 			},
 			{
 				reload: true,

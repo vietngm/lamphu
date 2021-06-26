@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 // --------------------------------------------------
 // KV
 // --------------------------------------------------
@@ -51,51 +50,5 @@
 				color: $color-black;
 			}
 		}
-	}
-
-	&-slogan {
-		color: $color-white;
-		line-height: normal;
-		font-size: 12px;
-		font-weight: bold;
-		&.vi {
-			@media (min-width: $screen-md-min) {
-				font-size: 18px;
-			}
-		}
-
-		&.en {
-			@media (min-width: $screen-md-min) {
-				font-size: 25px;
-			}
-		}
-	}
-	&-news {
-	}
-}
-
-.ml12 {
-	font-weight: bold;
-	font-size: 1em;
-	text-transform: uppercase;
-
-	@media (min-width: $screen-md-min) {
-		font-size: 3.5em;
-	}
-
-	@media (min-width: $screen-md-min) {
-		&.vi {
-			letter-spacing: 0.33em;
-		}
-
-		&.en {
-			letter-spacing: 0.33em;
-		}
-	}
-
-	.letter {
-		display: inline-block;
-		line-height: 1em;
-		color: $color-white;
 	}
 }

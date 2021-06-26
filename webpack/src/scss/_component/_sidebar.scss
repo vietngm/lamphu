@@ -2,9 +2,8 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-
 .support {
-	background-color: nth($color-array, 5);
+	background-color: nth($color-array, 2);
 	&-title {
 		background-color: $color-main;
 		padding: 10px 16px;
@@ -24,7 +23,7 @@
 		font-size: 14px;
 		color: $color-main;
 		padding: 10px 16px;
-		border-top: solid 1px nth($color-array, 6);
+		border-top: solid 1px nth($color-array, 1);
 		&:first-child {
 			border: none;
 		}
@@ -33,7 +32,7 @@
 			margin-right: 10px;
 		}
 		a {
-			font-size: 14px;
+			font-size: 16px;
 			color: $link-color-main;
 		}
 		span {
@@ -50,8 +49,6 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	border-left: solid 1px nth($color-array, 6);
-	border-right: solid 1px nth($color-array, 6);
 	&-title {
 		background-color: $color-main;
 		padding: 10px 16px;
@@ -69,8 +66,8 @@
 
 	.list-link {
 		color: $color-black;
-		background-color: white;
-		border-bottom: 1px solid nth($color-array, 6);
+		background-color: nth($color-array, 2);
+		border-bottom: 1px solid nth($color-array, 1);
 		display: block;
 		position: relative;
 		padding: 0 16px;
@@ -86,9 +83,12 @@
 				content: none;
 			}
 			&.sub-list-link {
-				background-color: #e6e6e6;
-				border-bottom: 1px solid nth($color-array, 6);
+				background-color: nth($color-array, 2);
+				border-bottom: 1px solid nth($color-array, 1);
 			}
+		}
+		&:hover {
+			color: $color-green;
 		}
 	}
 }
@@ -99,9 +99,9 @@
 }
 
 .side {
-	margin-top: 16px;
 	display: grid;
 	height: fit-content;
+	grid-row-gap: 16px;
 	@media (min-width: $screen-md-min) {
 		margin-top: 0;
 	}

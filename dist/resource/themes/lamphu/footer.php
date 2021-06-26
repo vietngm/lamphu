@@ -4,7 +4,7 @@
     <div class="footer-contact">
       <div class="footer-company">
         <div class="footer-logo">
-          <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?31052021" alt="">
+          <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?26062021" alt="May cat day edm">
         </div>
         <div class='footer-info'>
           <span class='footer-name'><?php echo $lienhe["tencongty"]; ?></span>
@@ -13,19 +13,19 @@
             <li class="mobile">Hotline: <?php echo $lienhe["hotline"]; ?></li>
             <li class="email">Email: <?php echo $lienhe["mail"]; ?></li>
           </ul>
-          <?php if ($mobile_browser > 0) {include("content-footer.php");}?>
+          <?php if ($mobile_browser > 0) {include "content/footer.php";}?>
         </div>
       </div>
-      <?php if ($mobile_browser == 0) {include("content-footer.php");}?>
+      <?php if ($mobile_browser == 0) {include "content/footer.php";}?>
     </div>
   </div>
 
   <div class="back-top"></div>
-  <div class="modal fade bs-example-modal-sm" id="messageDialog" tabindex="-1" role="dialog"
-    aria-labelledby="myModalLabel"><?php echo alertDialog(0); ?></div>
+  <div class="modal fade" id="messageDialog" tabindex="-1">
+    <?php echo alertDialog(0); ?>
+  </div>
 
 </footer>
-<script type="text/javascript" src="<?php echo get_site_url(); ?>/assets/js/validator.min.js" defer></script>
 <script src="<?php echo get_site_url(); ?>/assets/js/main.js?31052021"></script>
 <?php if ($mobile_browser == 0) { ?>
 <div class='overlay'></div>

@@ -2,54 +2,41 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
+
 .news {
-	padding: 0;
-	&-top {
+	display: grid;
+	position: relative;
+	margin-top: 32px;
+	@media (min-width: $screen-md-min) {
+		margin-top: 64px;
+	}
+	&-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 		display: grid;
-		grid-template-columns: 1fr;
+		align-items: center;
 		grid-gap: 16px;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $screen-md-min) {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 	&-item {
 		display: grid;
-		grid-row-gap: 16px;
-		height: 100%;
-		&:hover {
-			color: $color-green;
-		}
-	}
-	&-link {
-		display: grid;
-		height: 280px;
-		overflow: hidden;
-	}
-	&-square {
-		display: grid;
-		height: 280px;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-	&-noimage {
-		display: grid;
-		border: solid 1px nth($color-array, 6);
 		align-items: center;
-		justify-content: center;
-		height: 280px;
+		background-color: white;
+	}
+
+	&-desc {
+		display: grid;
+		padding: 16px;
+		grid-gap: 12px;
+		p {
+			margin: 0;
+			padding: 0;
+		}
 	}
 	&-title {
-		display: grid;
-		font-size: 18px;
-		color: $color-black;
-	}
-	&-caption {
-		display: grid;
-	}
-	&-excerpt {
-		display: grid;
+		font-weight: bold;
 	}
 }

@@ -1,0 +1,136 @@
+@charset "utf-8";
+// --------------------------------------------------
+// ○○○
+// --------------------------------------------------
+.heading {
+  font-size: 16px;
+  width: fit-content;
+  padding: 0;
+  margin: 24px auto 16px auto;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-green;
+  @media (min-width: $screen-md-min) {
+    margin: 46px auto 16px auto;
+    font-size: 20px;
+  }
+  &-text {
+    font-size: 16px;
+    color: $color-green;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    background-color: $color-white;
+    display: inline-block;
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    @media (min-width: $screen-md-min) {
+      font-size: 20px;
+    }
+  }
+  &-detail {
+    color: $color-green;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0;
+    text-align: left;
+    display: grid;
+    width: fit-content;
+    padding: 16px 0 6px 0;
+    font-weight: bold;
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+      padding: 32px 0 24px 0;
+      margin: 0;
+    }
+  }
+  &-border {
+    border-left: solid 4px $color-green;
+    padding-left: 16px;
+    small {
+      font-size: 14px;
+      color: $color-green;
+    }
+  }
+  &-sub {
+    color: $color-black;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: normal;
+    text-align: center;
+    margin: 24px 0 24px 0;
+    font-weight: bold;
+    display: grid;
+    @media (min-width: $screen-md-min) {
+      margin: 36px 0 24px 0;
+      font-size: 20px;
+    }
+  }
+  &-relate {
+    margin: 24px 0 16px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-column-gap: 16px;
+    font-size: 16px;
+    @media (min-width: $screen-md-min) {
+      font-size: 16px;
+      margin: 38px 0 16px 0;
+    }
+    .more-detail {
+      font-size: 16px;
+      color: $color-green;
+      text-transform: uppercase;
+    }
+  }
+
+  &-news {
+    font-size: 16px;
+    padding: 0;
+    margin: 0 0 16px 0;
+    font-weight: bold;
+    @media (min-width: $screen-md-min) {
+      margin: 0 0 16px 0;
+      font-size: 20px;
+    }
+  }
+}
+
+.em-bar {
+  margin: 0 auto 24px auto;
+  width: 90px;
+  &-bg {
+    height: 5px;
+    width: 90px;
+    background-color: rgba($color-green, 0.2);
+    position: relative;
+    border-radius: 30px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      margin-top: -2.7px;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: $color-green;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-name: move-bg;
+    }
+  }
+}
+
+@keyframes move-bg {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(88px);
+  }
+}

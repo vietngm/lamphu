@@ -6,12 +6,12 @@
 	display: flex;
 	grid-column-gap: 16px;
 	list-style: none;
-	background-color: nth($color-array, 5);
+	background-color: nth($color-array, 1);
 	padding: 16px;
 	border-radius: 6px;
-	border: solid 1px nth($color-array, 6);
+	border: solid 1px nth($color-array, 2);
 	&-div {
-		color: nth($color-array, 6);
+		color: nth($color-array, 2);
 	}
 	&-item {
 		&:last-child {

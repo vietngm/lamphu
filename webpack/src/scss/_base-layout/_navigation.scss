@@ -26,12 +26,19 @@
 	}
 
 	&-wrap {
-		display: none;
+		height: 0;
 		vertical-align: middle;
 		text-align: left;
+		overflow: hidden;
 		@media (min-width: $screen-sm-min) {
+			height: auto;
 			display: table-cell;
 			text-align: right;
+			overflow: visible;
+		}
+		&.open {
+			height: auto;
+			overflow: visible;
 		}
 	}
 
@@ -51,7 +58,7 @@
 		padding: 0;
 		@media (min-width: $screen-sm-min) {
 			display: inline-block;
-			width: 76px;
+			width: 70px;
 			padding: 0;
 		}
 
@@ -79,8 +86,7 @@
 		.main-item {
 			position: static;
 			background-color: $color-white;
-			border-bottom: solid 1px #e7e7e7;
-			background-color: $color-white;
+			border-top: solid 1px nth($color-array, 2);
 			display: block;
 			@media (min-width: $screen-sm-min) {
 				position: static;
@@ -98,7 +104,11 @@
 					color: $color-green;
 				}
 				.sub-wrap {
-					display: grid;
+					@media (min-width: $screen-sm-min) {
+						height: auto;
+						overflow: visible;
+						opacity: 1;
+					}
 				}
 			}
 			&.active {
@@ -108,41 +118,40 @@
 				}
 			}
 			.sub-wrap {
-				display: none;
 				background-color: white;
 				position: static;
-				@media (min-width: $screen-sm-min) {
-					position: absolute;
-				}
+				height: 0;
+				overflow: hidden;
+				transition: all 0.4s ease;
 				z-index: 999;
 				width: 100%;
-				transition: (0.4s all ease);
 				left: 0;
 				right: 0;
-				justify-content: center;
-				border-top: solid 1px #e7e7e7;
-				padding-top: 8px;
-				padding-bottom: 8px;
+				display: grid;
+				opacity: 0;
 				@media (min-width: $screen-sm-min) {
-					padding-top: 16px;
-					padding-bottom: 16px;
+					justify-content: center;
+					border-top: solid 1px nth($color-array, 2);
+					position: absolute;
+				}
+				&.active {
+					height: auto;
+					overflow: visible;
+					opacity: 1;
 				}
 			}
 			.sub-list {
-				padding: 0;
-				@media (min-width: $screen-sm-min) {
-					padding: 16px 0;
-				}
-				margin: 0;
 				display: grid;
 				width: 100%;
 				max-width: 1170px;
-				transition: (0.4s all ease);
+				transition: all 0.4s ease;
 				list-style: none;
+				margin: 0;
+				padding: 0 16px 8px 16px;
 				@media (min-width: $screen-sm-min) {
 					grid-template-columns: repeat(3, 1fr);
 					grid-column-gap: 16px;
-					padding: 0;
+					padding: 24px 0;
 				}
 				&-item {
 					position: relative;
@@ -157,11 +166,6 @@
 							color: $color-green;
 						}
 					}
-					&.active {
-						.plus {
-							background-color: #e0e0e0;
-						}
-					}
 				}
 				&-link {
 					color: $color-black;
@@ -169,6 +173,9 @@
 					display: block;
 					text-align: left;
 					padding: 8px 0;
+					@media (min-width: $screen-sm-min) {
+						padding: 16px 0;
+					}
 					.fas {
 						font-size: 12px;
 						padding-right: 8px;
@@ -181,7 +188,7 @@
 			list-style: none;
 			padding: 0;
 			margin: 0;
-			background-color: nth($color-array, 5);
+			background-color: nth($color-array, 1);
 			height: 32px;
 			width: 1px;
 		}
@@ -196,11 +203,17 @@
 			text-transform: uppercase;
 			font-weight: bold;
 			padding-left: 16px;
+			padding-right: 16px;
 			align-items: center;
 			@media (min-width: $screen-sm-min) {
 				display: block;
 				line-height: 71px;
 				padding-left: 0;
+				padding-right: 0;
+			}
+			.arrow-plus {
+				position: absolute;
+				right: 16px;
 			}
 		}
 

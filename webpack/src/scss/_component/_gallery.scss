@@ -2,7 +2,6 @@
 // --------------------------------------------------
 // ○○○
 // --------------------------------------------------
-
 .gallery {
   padding: 0;
   margin: 0;
@@ -11,10 +10,10 @@
   li {
     display: inline-block;
     width: 50%;
-    @media(min-width: $screen-sm-min) {
+    @media (min-width: $screen-sm-min) {
       width: 25%;
     }
-    img{
+    img {
       width: 100%;
       height: auto;
     }

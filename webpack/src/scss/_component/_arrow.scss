@@ -3,56 +3,58 @@
 // ○○○
 // --------------------------------------------------
 .arrow {
-	border: solid $color-black;
-	border-width: 0 2px 2px 0;
-	display: grid;
-	padding: 3px;
-	position: absolute;
-	top: 36%;
-	transform: rotate(-45deg);
-
-	&.right {
-		right: 16px;
-	}
-	&.left {
-		left: 16px;
-	}
-}
-
-.up {
-	transform: rotate(-135deg);
-}
-
-.down {
-	transform: rotate(45deg);
-}
-
-.plus {
+	transition: all 0.4s ease;
 	width: 35px;
 	height: 35px;
-	position: absolute;
-	// background-color: #e2e2e2;
-	right: 0;
-	top: 0;
+	position: relative;
+	display: grid;
+	align-items: center;
+	justify-content: center;
 
-	&:before,
-	&:after {
-		position: absolute;
-		content: "";
-		background-color: $color-black;
+	&-go {
+		width: 11px;
+		height: 11px;
+		border-right: solid 1px $color-white;
+		border-top: solid 1px $color-white;
+		transform: (rotate(45deg) translate3d(0, 0, 0));
+		left: -2px;
+		position: relative;
 	}
 
-	&:before {
+	&-plus {
 		width: 15px;
-		height: 1px;
-		top: 45%;
-		left: 25%;
-	}
-
-	&:after {
-		width: 1px;
 		height: 15px;
-		left: 45%;
-		top: 25%;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: $color-green;
+			position: absolute;
+			transition: all 0.4s;
+		}
+
+		&:before {
+			height: 1px;
+			width: 15px;
+			top: 7px;
+			left: 0;
+		}
+
+		&:after {
+			height: 15px;
+			width: 1px;
+			left: 7px;
+		}
+
+		&.active {
+			&:before {
+				transform: (rotate(180deg) translate3d(0, 0, 0));
+			}
+
+			&:after {
+				transform: (rotate(90deg) translate3d(0, 0, 0));
+			}
+		}
 	}
 }

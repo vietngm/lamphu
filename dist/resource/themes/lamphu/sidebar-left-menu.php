@@ -26,12 +26,12 @@ $terms = get_terms($taxonomy, array(
     <?php if ($count == 0) { ?>
     <a href="<?php echo get_term_link($term->slug, $taxonomy); ?>" class="list-link">
       <?php echo $term->name; ?>
-      <span class="arrow right"></span>
+      <span class="arrow arrow-go"></span>
     </a>
     <?php } else { ?>
     <a href="#" class="list-link js-list-link">
       <?php echo $term->name; ?>
-      <span class="plus"></span>
+      <span class="arrow arrow-plus"></span>
     </a>
     <ul class="sub-list-cat js-sub-list-cat">
       <?php
@@ -40,12 +40,10 @@ $terms = get_terms($taxonomy, array(
       <li class="list-item">
         <a href="<?php echo get_term_link($child->slug, $taxonomy); ?>" class="list-link sub-list-link">
           <?php echo $child->name; ?>
-          <span class="arrow right"></span>
+          <span class="arrow arrow-go"></span>
         </a>
       </li>
-      <?php
-            }
-            ?>
+      <?php } ?>
     </ul>
     <?php }
       }

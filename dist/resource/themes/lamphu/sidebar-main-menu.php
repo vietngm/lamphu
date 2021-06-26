@@ -4,7 +4,7 @@ global $mobile_browser; ?>
   <div class="wrap-content">
     <div class="navbar-header">
       <a class="navbar-logo" href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?09062021" alt="May cat day">
+        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?26062021" alt="May cat day">
       </a>
       <div class="wrap-hamburger">
         <div class="hamburger">
@@ -36,7 +36,7 @@ global $mobile_browser; ?>
             <a href="#" class="main-link js-main-link">
               <?php echo get_the_title(32); ?>
               <?php if ($mobile_browser > 0) { ?>
-              <span class="plus"></span>
+              <span class="arrow arrow-plus"></span>
               <?php } ?>
             </a>
             <div class="sub-wrap">

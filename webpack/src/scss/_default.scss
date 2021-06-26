@@ -16,8 +16,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	height: 100%;
 	width: 100%;
-	font-size: 14px;
-	font-family: TeXGyreAdventor, Helvetica, sans-serif;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
 	padding: 0px;
 	margin: 0px;
@@ -48,7 +48,7 @@ body {
 		z-index: 3;
 		background-color: $color-white;
 		visibility: visible;
-		opacity: (1);
+		opacity: 1;
 	}
 }
 
@@ -63,14 +63,14 @@ body {
 		z-index: -1;
 		height: 100vh;
 		opacity: 0;
-		transition: all 0.2s ease;
+		transition: all 0.4s ease;
 	}
 }
 
 img {
 	vertical-align: middle;
-	transition: (0.4s all ease);
-	backface-visibility: (hidden);
+	transition: all 0.4s ease;
+	backface-visibility: hidden;
 }
 
 .img-responsive {
@@ -82,7 +82,7 @@ img {
 a {
 	outline: none;
 	text-decoration: none;
-	transition: (all 0.4s ease);
+	transition: all 0.4s ease;
 	&:hover {
 		text-decoration: none;
 	}
@@ -104,14 +104,14 @@ span {
 
 p {
 	line-height: 1.45em;
-	font-size: 14px;
+	font-size: 12px;
 	@media (min-width: $screen-md-min) {
 		font-size: 14px;
 	}
 }
 
 hr {
-	border-top: solid 1px nth($color-array, 5);
+	border-top: solid 1px nth($color-array, 2);
 	border-bottom: none;
 	margin: 15px 0px;
 }
@@ -127,7 +127,7 @@ h3,
 
 h3 {
 	font-size: 14px;
-	color: #000000;
+	color: $color-black;
 }
 
 h3 a {
