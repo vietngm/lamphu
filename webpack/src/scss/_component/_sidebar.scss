@@ -8,7 +8,7 @@
 		background-color: $color-main;
 		padding: 10px 16px;
 		color: $color-white;
-		font-size: 14px;
+		font-size: 12px;
 		margin: 0;
 		@media (min-width: $screen-md-min) {
 			font-size: 14px;
@@ -20,9 +20,12 @@
 		list-style: none;
 	}
 	&-item {
-		font-size: 14px;
+		font-size: 12px;
 		color: $color-main;
 		padding: 10px 16px;
+		@media (min-width: $screen-md-min) {
+			font-size: 14px;
+		}
 		border-top: solid 1px nth($color-array, 2);
 		&:first-child {
 			border: none;
@@ -32,12 +35,12 @@
 			margin-right: 10px;
 		}
 		a {
-			font-size: 16px;
-			color: $link-color-main;
+			font-size: 14px;
+			color: $color-black;
 		}
 		span {
 			display: block;
-			font-size: 14px;
+			font-size: 12px;
 			@media (min-width: $screen-md-min) {
 				font-size: 14px;
 			}
@@ -103,6 +106,8 @@
 			right: 24px;
 			top: 50%;
 			transform: (rotate(45deg) translateY(-50%));
+			border-right: solid 1px $color-black;
+			border-top: solid 1px $color-black;
 		}
 	}
 }
@@ -116,6 +121,7 @@
 	display: grid;
 	height: fit-content;
 	grid-row-gap: 16px;
+	margin-top: 16px;
 	@media (min-width: $screen-md-min) {
 		margin-top: 0;
 	}

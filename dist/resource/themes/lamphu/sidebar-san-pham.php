@@ -1,11 +1,11 @@
-<h2 class="heading">Sản phẩm</h2>
+<h2 class="heading">Sản phẩm nổi bật</h2>
 <ul class="prods-list">
   <?php
       $arg = array(
         'post_type' => 'san-pham',
         'orderby' => 'date',
         'order' => 'desc',
-        'posts_per_page' => 12,
+        'posts_per_page' => 16,
         'status' => array('publish', 'private')
       );
     $the_query = new WP_Query($arg);

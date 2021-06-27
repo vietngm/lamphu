@@ -2,6 +2,11 @@
 <header class="header">
   <div class="header-top">
     <div class="wrap-content">
+      <?php if($mobile_browser==0){ ?>
+      <a class="nav-logo" href="<?php echo home_url(); ?>">
+        <img src="<?php echo get_site_url(); ?>/assets/images/logo.png?26062021" alt="May cat day">
+      </a>
+      <?php } ?>
       <div class="hotline">
         <?php if($mobile_browser==0){ ?>
         <a href="tel:<?php echo $lienhe['hotline']; ?>" class="tel"><?php echo $lienhe['hotline']; ?></a>
@@ -20,5 +25,6 @@
       </div>
     </div>
   </div>
-  <?php include("sidebar-main-menu.php"); ?>
+  <?php include "sidebar-main-menu.php"; ?>
 </header>
+<div class="mask"></div>

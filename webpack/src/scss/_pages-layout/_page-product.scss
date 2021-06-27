@@ -13,7 +13,7 @@
 			grid-gap: 16px;
 			margin-top: 16px;
 			@media (min-width: $screen-sm-min) {
-				grid-template-columns: 1fr 250px;
+				grid-template-columns: 256px 1fr;
 			}
 		}
 		&-info {

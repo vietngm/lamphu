@@ -4,7 +4,8 @@
 // --------------------------------------------------
 
 .doc-footer {
-	background: url("/assets/images/pattern.jpg") repeat #1f1f1f;
+	// background: url("/assets/images/pattern.jpg") repeat $color-main;
+	background-color: $color-main;
 	padding: 26px 0 26px 0;
 	margin-top: 32px;
 	@media (min-width: $screen-sm-min) {

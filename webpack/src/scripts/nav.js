@@ -3,19 +3,18 @@ $(".hamburger").click(function () {
 	if ($(this).hasClass("active")) {
 		$(".mask").toggleClass("active");
 		$("body").toggleClass("active");
-		var navbar = $(".navbar-wrap");
+		var nav = $(".nav-collapse");
 		window.setTimeout(function () {
-			navbar.toggleClass("open");
+			nav.toggleClass("open");
 		}, 300);
 	} else {
-		$(".navbar-wrap").removeClass("open");
+		$(".nav-collapse").removeClass("open");
 		$("body").removeClass("active");
 		var mask = $(".mask");
 		window.setTimeout(function () {
 			mask.removeClass("active");
 		}, 300);
 	}
-
 	return false;
 });
 /*-----------------------------------------------*/
@@ -28,28 +27,29 @@ function isTouchDevice() {
 }
 /*-----------------------------------------------*/
 if (isTouchDevice() === true) {
-	$(".js-main-link").click(function () {
+	$(".js-nav-link").click(function () {
 		$(".sub-wrap").toggleClass("active");
 		$(".arrow").toggleClass("active");
 		return false;
 	});
 }
-if (isTouchDevice() === false) {
-	$(".main-item.san-pham").mouseover(function () {
-		$("body").addClass("active");
-	});
-	$(".main-item.san-pham").mouseout(function () {
-		$("body").removeClass("active");
-	});
-}
-
-
+/*-----------------------------------------------*/
+// if (isTouchDevice() === false) {
+// 	$(".main-item.san-pham").mouseover(function () {
+// 		$("body").addClass("active");
+// 	});
+// 	$(".main-item.san-pham").mouseout(function () {
+// 		$("body").removeClass("active");
+// 	});
+// }
+/*-----------------------------------------------*/
 $('.js-list-link').click(function () {
 	$(this).find('.arrow-plus').toggleClass('active');
 	$_sub_list_cat = $(this).parent('.list-item').find('.sub-list-cat');
 	$_sub_list_cat.slideToggle();
 	return false;
 });
+/*-----------------------------------------------*/
 // $('.js-main-link').click(function () {
 // 	$_this = $(this);
 // 	$_sub_list = $_this.parent('.main-item').find('.sub-list');

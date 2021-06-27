@@ -12,23 +12,23 @@ form {
 
 .input-group-addon {
 	color: $color-white;
-	background-color: $link-color-main;
-	border: 1px solid $link-color-main;
+	background-color: $color-main;
+	border: 1px solid $color-main;
 }
 
 .form-control {
-	border: 1px solid $link-color-main;
+	border: 1px solid $color-main;
 	box-shadow: none;
 }
 
 .has-error .input-group-addon {
 	color: $color-white;
-	background-color: $link-color-main;
-	border-color: $link-color-main;
+	background-color: $color-main;
+	border-color: $color-main;
 }
 
 .has-error .form-control {
-	border-color: $link-color-main;
+	border-color: $color-main;
 	box-shadow: none;
 }
 .has-error {
@@ -37,43 +37,4 @@ form {
 			color: $color-white;
 		}
 	}
-}
-
-.has-error .form-control-feedback {
-	color: $link-color-main;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: $link-color-main !important;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-	color: $link-color-main !important;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: $link-color-main !important;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-	color: $link-color-main !important;
-}
-
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-	color: transparent !important;
-}
-
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-	color: transparent !important;
-}
-
-input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder {
-	color: transparent !important;
 }
