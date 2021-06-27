@@ -21,17 +21,12 @@
         <a href="<?php echo home_url();?>" class="nav-link">
           <?php echo __('Trang chủ', 'theme'); ?></a>
       </li>
-      <?php if ($mobile_browser == 0) { ?>
-      <li class="nav-dev"><span></span></li>
-      <?php } ?>
       <li class="nav-item <?php echo get_post(3)->post_name?>">
         <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>" class="nav-link">
           <?php echo get_the_title(3); ?>
         </a>
       </li>
-      <?php if ($mobile_browser == 0) { ?>
-      <li class="nav-dev"><span></span></li>
-      <?php }if ($mobile_browser > 0) { ?>
+      <?php if ($mobile_browser > 0) { ?>
       <li class="nav-item <?php echo get_post(32)->post_name?>">
         <a href="#" class="nav-link js-nav-link">
           <span><?php echo get_the_title(32); ?></span>
@@ -56,27 +51,20 @@
       </li>
       <?php } ?>
       <li class="nav-item <?php echo get_post(2163)->post_name?>"><a
-          href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>"
-          class="nav-link"><?php echo get_the_title(2163); ?></a></li>
-      <?php if ($mobile_browser == 0) { ?>
-      <li class="nav-dev"><span></span></li>
-      <?php } ?>
+          href="<?php echo get_permalink(get_page_by_path('doi-tac')); ?>" class="nav-link">
+          <?php echo get_the_title(2163); ?>
+        </a>
+      </li>
       <li class="nav-item <?php echo get_post(33)->post_name?>">
         <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')); ?>" class="nav-link">
           <?php echo get_the_title(33); ?>
         </a>
       </li>
-      <?php if ($mobile_browser == 0) { ?>
-      <li class="nav-dev"><span></span></li>
-      <?php } ?>
       <li class="nav-item <?php echo get_post(848)->post_name?>">
         <a href="<?php echo get_permalink(get_page_by_path('tai-lieu')); ?>" class="nav-link">
           <?php echo get_the_title(848); ?>
         </a>
       </li>
-      <?php if ($mobile_browser == 0) { ?>
-      <li class="nav-dev"><span></span></li>
-      <?php } ?>
       <li class="nav-item <?php echo get_post(2)->post_name?>">
         <a href="<?php echo get_permalink(get_page_by_path('lien-he')); ?>" class="nav-link">
           <?php echo get_the_title(2); ?>

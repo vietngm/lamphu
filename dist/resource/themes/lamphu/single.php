@@ -1,10 +1,7 @@
 <?php global $mobile_browser; ?>
 <?php get_header(); ?>
-<?php get_sidebar('head'); ?>
+<?php get_sidebar('top'); ?>
 <main class="is-news news-detail">
-  <section class="key key-news">
-    <span>LÂM PHÚ | NEWS</span>
-  </section>
   <article>
     <div class="wrap-content">
       <div class="news-content">

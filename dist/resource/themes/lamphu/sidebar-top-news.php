@@ -1,3 +1,4 @@
+<?php global $mobile_browser;?>
 <h2 class="heading"><span>Lam Phu News</span></h2>
 <div class="news-top">
   <?php

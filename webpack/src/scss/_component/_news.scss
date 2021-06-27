@@ -10,6 +10,16 @@
 	@media (min-width: $screen-md-min) {
 		margin-top: 64px;
 	}
+	// &-story {
+	// 	display: grid;
+	// 	background-color: nth($color-array, 1);
+	// 	// background-image: url("../images/news-bg.jpg");
+	// 	padding-bottom: 64px;
+	// 	margin-top: 32px;
+	// 	@media (min-width: $screen-md-min) {
+	// 		margin-top: 64px;
+	// 	}
+	// }
 	&-list {
 		list-style: none;
 		margin: 0;

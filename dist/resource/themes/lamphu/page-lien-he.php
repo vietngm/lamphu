@@ -1,5 +1,5 @@
 <?php get_header();global $lienhe; ?>
-<?php get_sidebar('head'); ?>
+<?php get_sidebar('top'); ?>
 <main class="is-contact">
   <div class="map">
     <div id="map-canvas"></div>

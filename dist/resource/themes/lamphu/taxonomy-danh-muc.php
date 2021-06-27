@@ -5,7 +5,7 @@ $slug = get_query_var($tax);
 $term = get_term_by('slug', $slug, $tax);
 $name = $term->name;
 get_header();
-get_sidebar('head');
+get_sidebar('top');
 ?>
 <main class="is-product">
   <section class='key'>

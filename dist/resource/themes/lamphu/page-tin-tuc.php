@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_sidebar('head'); ?>
+<?php get_sidebar('top'); ?>
 <main class="is-news">
   <section class='key'>
     <?php get_sidebar("banner"); ?>

@@ -9,10 +9,17 @@
       <?php } ?>
       <div class="hotline">
         <?php if($mobile_browser==0){ ?>
+        <p><?php echo $lienhe['tencongty']; ?></p>
         <a href="tel:<?php echo $lienhe['hotline']; ?>" class="tel"><?php echo $lienhe['hotline']; ?></a>
         <?php } else{ ?>
         <a href="tel:<?php echo $lienhe['dtban']; ?>" class="tel"><?php echo $lienhe['dtban']; ?></a>
         <?php } ?>
+      </div>
+      <div class="top-mail">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:<?php echo $lienhe['mail']; ?>" class="mail">
+          <?php echo $lienhe['mail']; ?>
+        </a>
       </div>
       <div class="top-switch">
         <div class="fab-top">

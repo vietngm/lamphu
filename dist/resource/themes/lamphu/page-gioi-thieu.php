@@ -1,6 +1,6 @@
 <?php global $mobile_browser; ?>
 <?php get_header(); ?>
-<?php get_sidebar('head'); ?>
+<?php get_sidebar('top'); ?>
 <main class="is-about">
   <section class='key'>
     <?php get_sidebar("banner"); ?>

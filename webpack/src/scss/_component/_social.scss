@@ -25,9 +25,8 @@
 		align-items: center;
 		&:hover {
 			color: $color-white;
-			background-color: $color-red;
-
-			.fa {
+			background-color: $color-orange;
+			.fab {
 				color: $color-white;
 			}
 		}

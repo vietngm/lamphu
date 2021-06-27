@@ -7,16 +7,20 @@
 	z-index: 4;
 	position: relative;
 	transition: all 0.4s ease;
-	// border-bottom: solid 1px nth($color-array, 2);
 	.wrap-content {
 		display: grid;
 		grid-auto-flow: column;
 		grid-template-columns: max-content;
 		align-items: center;
+		@media (min-width: $screen-sm-min) {
+			grid-gap: 16px;
+		}
 	}
 	&-top {
-		border-bottom: solid 1px nth($color-array, 2);
-		box-shadow: 0px 0px 5px rgba($color-black, 0.6);
+		box-shadow: 0 0 5px rgba($color-black, 0.6);
+		@media (min-width: $screen-sm-min) {
+			padding: 8px 0;
+		}
 	}
 }
 .top-switch {
@@ -26,19 +30,27 @@
 }
 .hotline {
 	text-align: left;
-	display: flex;
+	display: grid;
+	border-left: solid 1px nth($color-array, 2);
+	padding-left: 16px;
+	p {
+		margin: 0;
+		font-weight: bold;
+	}
 	.tel {
 		display: inline-block;
-	}
-	.tel,
-	.mail {
-		color: $color-black;
+		color: $color-main;
 		font-size: 14px;
-		line-height: 48px;
-		@media (min-width: $screen-sm-min) {
-			padding: 0 16px;
-			border-left: solid 1px nth($color-array, 2);
-		}
+	}
+}
+.top-mail {
+	display: grid;
+	grid-gap: 4px;
+	border-left: solid 1px nth($color-array, 2);
+	padding-left: 16px;
+	.mail {
+		color: $color-main;
+		font-size: 14px;
 	}
 }
 .fab-top {
@@ -49,7 +61,6 @@
 }
 .fab-link {
 	text-align: center;
-	border-left: solid 1px nth($color-array, 2);
 	transition: all 0.4s ease;
 	.fab {
 		line-height: 48px;
@@ -80,13 +91,13 @@
 		list-style: none;
 		text-align: center;
 		line-height: 48px;
-		border-left: solid 1px nth($color-array, 2);
+		// border-left: solid 1px nth($color-array, 2);
 		padding: 0 16px;
 
-		&:last-child {
-			@media (min-width: $screen-sm-min) {
-				border-right: solid 1px nth($color-array, 2);
-			}
-		}
+		// &:last-child {
+		// 	@media (min-width: $screen-sm-min) {
+		// 		border-right: solid 1px nth($color-array, 2);
+		// 	}
+		// }
 	}
 }
