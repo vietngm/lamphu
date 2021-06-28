@@ -5,7 +5,7 @@
 .is-document {
 	// display: grid;
 	.heading-detail {
-		border-bottom: solid 2px $color-green;
+		border-bottom: solid 2px $color-main;
 		padding-bottom: 4px;
 	}
 	.doc-list {
@@ -34,7 +34,7 @@
 		height: fit-content;
 		&:hover {
 			.doc-title {
-				color: $color-green;
+				color: $color-main;
 			}
 		}
 	}

@@ -4,9 +4,6 @@
 // --------------------------------------------------
 .is-product {
 	display: block;
-	@media (min-width: $screen-sm-min) {
-		margin-top: 16px;
-	}
 	.prods {
 		&-article {
 			display: grid;
@@ -23,6 +20,9 @@
 		&-info {
 			display: grid;
 			grid-row-gap: 16px;
+			@media (min-width: $screen-sm-min) {
+				margin-top: 16px;
+			}
 		}
 		&-relate {
 			display: grid;
@@ -38,7 +38,7 @@
 		}
 		&-thumb {
 			display: block;
-			position: relative;
+			// position: relative;
 			margin: auto;
 			.img-responsive {
 				width: 100%;
@@ -70,5 +70,9 @@
 		@media (min-width: $screen-sm-min) {
 			padding: 8px;
 		}
+	}
+	.nav-cate-list {
+		display: block;
+		position: static;
 	}
 }

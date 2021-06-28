@@ -102,7 +102,7 @@
 			background-color: $color-white;
 		}
 		&.active {
-			color: $color-green;
+			color: $color-main;
 			.nav-link {
 				background-color: $color-white;
 			}
@@ -256,7 +256,7 @@
 		background-color: white;
 		&:hover {
 			> .sub-list-link {
-				color: $color-green;
+				color: $color-main;
 			}
 		}
 	}

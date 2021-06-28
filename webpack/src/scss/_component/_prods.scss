@@ -28,7 +28,7 @@
 		grid-row-gap: 16px;
 		&:hover {
 			a {
-				color: $color-green;
+				color: $color-main;
 			}
 		}
 	}
@@ -54,7 +54,7 @@
 		text-transform: uppercase;
 		color: $color-black;
 		&:hover {
-			color: $color-green;
+			color: $color-main;
 		}
 	}
 	&-shadow {
