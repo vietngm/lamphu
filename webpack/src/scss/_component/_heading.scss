@@ -10,14 +10,14 @@
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  color: $color-green;
+  color: $color-main;
   @media (min-width: $screen-md-min) {
     margin: 26px auto 16px auto;
     font-size: 20px;
   }
   &-text {
     font-size: 16px;
-    color: $color-green;
+    color: $color-main;
     text-transform: uppercase;
     position: relative;
     text-align: center;
@@ -31,7 +31,7 @@
     }
   }
   &-detail {
-    color: $color-green;
+    color: $color-main;
     font-size: 16px;
     text-transform: uppercase;
     line-height: normal;
@@ -48,11 +48,11 @@
     }
   }
   &-border {
-    border-left: solid 4px $color-green;
+    border-left: solid 4px $color-main;
     padding-left: 16px;
     small {
       font-size: 14px;
-      color: $color-green;
+      color: $color-main;
     }
   }
   &-sub {
@@ -83,7 +83,7 @@
     }
     .more-detail {
       font-size: 16px;
-      color: $color-green;
+      color: $color-main;
       text-transform: uppercase;
     }
   }

@@ -30,9 +30,9 @@
 			background-color: white;
 			transition: all 0.4s ease;
 			&:hover {
-				color: $color-green;
+				color: $color-main;
 				.news-title {
-					color: $color-green;
+					color: $color-main;
 				}
 			}
 		}
@@ -49,7 +49,7 @@
 			}
 
 			&:hover {
-				background-color: $color-green;
+				background-color: $color-main;
 				color: $color-white;
 			}
 		}
@@ -163,7 +163,7 @@
 			color: $color-black;
 			font-weight: bold;
 			&:hover {
-				color: $color-green;
+				color: $color-main;
 			}
 		}
 	}

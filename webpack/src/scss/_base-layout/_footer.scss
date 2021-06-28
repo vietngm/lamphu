@@ -4,10 +4,13 @@
 // --------------------------------------------------
 
 .doc-footer {
-	// background: url("/assets/images/pattern.jpg") repeat $color-main;
 	background-color: $color-main;
 	padding: 26px 0 26px 0;
 	margin-top: 32px;
+	background-image: url(/assets/images/footer-bg.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: contain;
 	@media (min-width: $screen-sm-min) {
 		margin-top: 64px;
 		padding: 40px 0 40px 0;

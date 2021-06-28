@@ -10,17 +10,20 @@
       <div class="hotline">
         <?php if($mobile_browser==0){ ?>
         <p><?php echo $lienhe['tencongty']; ?></p>
+        <span><?php echo $lienhe['diachigmap']; ?></span>
         <a href="tel:<?php echo $lienhe['hotline']; ?>" class="tel"><?php echo $lienhe['hotline']; ?></a>
         <?php } else{ ?>
         <a href="tel:<?php echo $lienhe['dtban']; ?>" class="tel"><?php echo $lienhe['dtban']; ?></a>
         <?php } ?>
       </div>
+      <?php if($mobile_browser==0){ ?>
       <div class="top-mail">
         <i class="fas fa-envelope"></i>
         <a href="mailto:<?php echo $lienhe['mail']; ?>" class="mail">
           <?php echo $lienhe['mail']; ?>
         </a>
       </div>
+      <?php } ?>
       <div class="top-switch">
         <div class="fab-top">
           <a class="fab-link" href="<?php echo $lienhe['facebook'];?>" target="_blank">

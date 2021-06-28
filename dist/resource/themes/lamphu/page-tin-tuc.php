@@ -9,6 +9,7 @@
       <?php get_sidebar("top-news"); ?>
     </div>
   </section>
+  <hr>
   <section class="relate">
     <div class="wrap-content">
       <h2 class="heading-sub">Các tin khác</h2>

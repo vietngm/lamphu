@@ -27,6 +27,18 @@
         <span><?php echo $term->name; ?></span>
         <span class="arrow arrow-go"></span>
       </a>
+      <ul class="nav-child">
+        <?php
+            foreach ($childs as $child) {
+                ?>
+        <li class="nav-cate-item">
+          <a href="<?php echo get_term_link($child->slug, $taxonomy); ?>" class="nav-cate-link">
+            <span><?php echo $child->name; ?></span>
+            <span class="arrow arrow-go"></span>
+          </a>
+        </li>
+        <?php } ?>
+      </ul>
       <?php }else{ ?>
       <a href="<?php echo get_term_link($term->slug,$taxonomy);?>" class="nav-cate-link">
         <span><?php echo $term->name; ?></span>
