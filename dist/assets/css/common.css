@@ -526,6 +526,14 @@ form {
         padding-bottom: 60px; } }
   .about .heading {
     color: #ffffff; }
+  .about-desc {
+    width: 100%;
+    margin: auto; }
+    @media (min-width: 768px) {
+      .about-desc {
+        max-width: 800px; } }
+    .about-desc p {
+      text-align: center; }
 
 .wrap-hamburger {
   display: table-cell;
@@ -782,7 +790,7 @@ form {
   margin-top: 16px; }
   @media (min-width: 992px) {
     .side {
-      margin-top: 0; } }
+      margin-top: 16px; } }
 
 .socials {
   display: grid;
@@ -1953,7 +1961,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     color: #000000; }
 
 .header {
-  background-color: white;
+  background-color: #e9faff;
   z-index: 4;
   position: relative;
   transition: all 0.4s ease; }
@@ -2072,7 +2080,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     @media (min-width: 768px) {
       .nav-collapse {
         display: grid;
-        grid-template-columns: 256px 1fr;
+        grid-template-columns: 236px 1fr;
         align-items: center;
         max-width: 1170px;
         opacity: 1;
@@ -2118,11 +2126,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
         display: inline-block;
         border: none; } }
     .nav-item:hover {
-      background-color: #ffffff; }
+      background-color: #e9faff; }
     .nav-item.active {
       color: #01c3ff; }
       .nav-item.active .nav-link {
-        background-color: #ffffff; }
+        background-color: #e9faff; }
   .nav-link {
     position: relative;
     display: grid;
@@ -2147,18 +2155,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       transform: translateY(-50%); }
   .nav-child {
     display: none;
-    left: 256px;
+    left: 236px;
     position: absolute;
     top: -1px;
     width: 100vh;
     padding: 0;
     background-color: #01c3ff;
-    list-style: none; }
+    list-style: none;
+    grid-template-columns: 1fr 1fr; }
   .nav-cate {
     display: grid;
     position: relative;
     cursor: pointer;
-    transition: all 0.4s ease; }
+    transition: all 0.4s ease;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
     .nav-cate:hover .nav-cate-list {
       display: block; }
     .nav-cate-label {
@@ -2179,20 +2191,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       display: none; }
     .nav-cate-item {
       border-top: solid 1px rgba(0, 0, 0, 0.1);
+      border-right: solid 1px rgba(0, 0, 0, 0.1);
       transition: all 0.4s ease;
       position: relative; }
       .nav-cate-item:hover {
         background-color: rgba(0, 0, 0, 0.2); }
         .nav-cate-item:hover > .nav-child {
-          display: block; }
+          display: grid; }
     .nav-cate-link {
       display: grid;
       grid-template-columns: 1fr 11px;
       color: white;
-      padding: 0 16px;
+      padding: 10px 16px;
       align-items: center; }
       .nav-cate-link span {
-        line-height: 35px; }
+        line-height: normal; }
 
 .sub-wrap {
   background-color: white;
@@ -2432,7 +2445,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     grid-gap: 16px; }
     @media (min-width: 768px) {
       .is-product .prods-detail {
-        grid-template-columns: 256px 1fr; } }
+        grid-template-columns: 236px 1fr 236px; } }
   .is-product .prods-info {
     display: grid;
     grid-row-gap: 16px; }
@@ -2459,8 +2472,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
          object-fit: cover; }
       @media (min-width: 768px) {
         .is-product .prods-thumb .img-responsive {
-          width: auto;
-          height: auto;
           -o-object-fit: cover;
              object-fit: cover; } }
   .is-product .prods-body {
@@ -2631,7 +2642,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .is-about .article-detail {
   display: grid;
-  grid-row-gap: 16px;
   text-align: justify; }
 
 .is-about .heading-detail {

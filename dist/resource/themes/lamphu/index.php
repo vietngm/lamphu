@@ -4,12 +4,6 @@
   <section class='key'>
     <?php get_sidebar("banner"); ?>
   </section>
-  <!-- <section class="cate">
-    <div class="wrap-content">
-      <?php //get_sidebar('top-danh-muc'); ?>
-    </div>
-  </section> -->
-
   <section class="prods">
     <div class="wrap-content">
       <?php get_sidebar('san-pham'); ?>

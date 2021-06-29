@@ -15,7 +15,15 @@
   </div>
   <?php } ?>
   <div class="nav-collapse">
-    <?php if($mobile_browser==0){ include "content/nav-categories.php";} ?>
+    <?php
+		if($mobile_browser==0){ ?>
+    <div class="nav-cate">
+      <div class="nav-cate-label">
+        <i class="fas fa-bars"></i>Danh mục sản phẩm
+      </div>
+      <?php include "content/nav-categories.php"; ?>
+    </div>
+    <?php }?>
     <ul class="nav-list">
       <li class="nav-item home">
         <a href="<?php echo home_url();?>" class="nav-link">
@@ -35,17 +43,17 @@
         <div class="sub-wrap">
           <ul class="sub-list">
             <?php
-                $taxonomy = 'danh-muc';
-                $terms = get_terms(
-                  $taxonomy, array(
-                    'hide_empty' => 0,
-                    'parent' => 0,
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC',
-                  )
-                );
-                include('nav-sub-main.php');
-                ?>
+						$taxonomy = 'danh-muc';
+						$terms = get_terms(
+							$taxonomy, array(
+								'hide_empty' => 0,
+								'parent' => 0,
+								'orderby' => 'menu_order',
+								'order' => 'ASC',
+							)
+						);
+						include('nav-sub-main.php');
+						?>
           </ul>
         </div>
       </li>
