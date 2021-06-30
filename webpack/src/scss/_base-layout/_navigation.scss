@@ -5,10 +5,8 @@
 .wrap-nav {
 	display: grid;
 	background-color: $color-white;
-	border-top: solid 1px nth($color-array, 2);
 	@media (min-width: $screen-sm-min) {
 		background-color: rgba($color-main, 0.4);
-		border-top: none;
 	}
 }
 
@@ -99,12 +97,18 @@
 			border: none;
 		}
 		&:hover {
-			background-color: $color-light-blue;
+			@media (min-width: $screen-sm-min) {
+				background-color: $color-light-blue;
+			}
 		}
 		&.active {
 			color: $color-main;
 			.nav-link {
-				background-color: $color-light-blue;
+				color: $color-main;
+				@media (min-width: $screen-sm-min) {
+					color: $color-black;
+					background-color: $color-light-blue;
+				}
 			}
 		}
 	}

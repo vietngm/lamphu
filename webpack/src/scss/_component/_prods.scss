@@ -15,7 +15,7 @@
 		padding: 0;
 		margin: 0;
 		display: grid;
-		grid-gap: 16px;
+		grid-gap: 24px 16px;
 		grid-template-columns: repeat(2, 1fr);
 		@media (min-width: $screen-sm-min) {
 			grid-template-columns: repeat(4, 1fr);
@@ -25,10 +25,13 @@
 	&-item {
 		display: grid;
 		grid-template-rows: auto 1fr;
-		grid-row-gap: 16px;
+		grid-row-gap: 8px;
+		@media (min-width: $screen-sm-min) {
+			grid-row-gap: 16px;
+		}
 		&:hover {
-			a {
-				color: $color-main;
+			.prods-link {
+				color: $color-orange;
 			}
 		}
 	}
@@ -51,10 +54,14 @@
 		word-wrap: break-word;
 	}
 	&-link {
-		text-transform: uppercase;
+		text-transform: lowercase;
 		color: $color-black;
+		font-weight: bold;
+		&::first-letter {
+			text-transform: uppercase;
+		}
 		&:hover {
-			color: $color-main;
+			color: $color-orange;
 		}
 	}
 	&-shadow {

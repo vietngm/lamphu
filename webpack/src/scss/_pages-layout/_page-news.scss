@@ -30,7 +30,6 @@
 			background-color: white;
 			transition: all 0.4s ease;
 			&:hover {
-				color: $color-main;
 				.news-title {
 					color: $color-main;
 				}
@@ -48,10 +47,10 @@
 				font-size: 28px;
 			}
 
-			&:hover {
-				background-color: $color-main;
-				color: $color-white;
-			}
+			// &:hover {
+			// 	background-color: $color-main;
+			// 	color: $color-white;
+			// }
 		}
 		&-thumb {
 			height: 120px;
@@ -78,7 +77,10 @@
 			border: solid 1px nth($color-array, 2);
 			align-items: center;
 			justify-content: center;
-			height: 280px;
+			height: 120px;
+			@media (min-width: $screen-md-min) {
+				height: 280px;
+			}
 		}
 		&-title {
 			display: grid;

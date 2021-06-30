@@ -5,14 +5,14 @@
 .heading {
   font-size: 16px;
   width: fit-content;
-  padding: 0;
-  margin: 24px auto 16px auto;
+  padding: 24px 0 16px 0;
+  margin: auto;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   color: $color-main;
   @media (min-width: $screen-md-min) {
-    margin: 26px auto 16px auto;
+    padding: 26px 0 24px 0;
     font-size: 20px;
   }
   &-text {
@@ -56,21 +56,21 @@
     }
   }
   &-sub {
-    color: $color-black;
+    color: $color-main;
     font-size: 16px;
     text-transform: uppercase;
     line-height: normal;
     text-align: center;
-    margin: 24px 0 24px 0;
+    padding: 24px 0 24px 0;
     font-weight: bold;
     display: grid;
     @media (min-width: $screen-md-min) {
-      margin: 36px 0 24px 0;
+      padding: 36px 0 24px 0;
       font-size: 20px;
     }
   }
   &-relate {
-    margin: 24px 0 16px 0;
+    padding: 24px 0 16px 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@
     font-size: 16px;
     @media (min-width: $screen-md-min) {
       font-size: 16px;
-      margin: 38px 0 16px 0;
+      padding: 38px 0 16px 0;
     }
     .more-detail {
       font-size: 16px;
@@ -91,10 +91,10 @@
   &-news {
     font-size: 16px;
     padding: 0;
-    margin: 0 0 16px 0;
+    padding: 0 0 16px 0;
     font-weight: bold;
     @media (min-width: $screen-md-min) {
-      margin: 0 0 16px 0;
+      padding: 0 0 16px 0;
       font-size: 20px;
     }
   }

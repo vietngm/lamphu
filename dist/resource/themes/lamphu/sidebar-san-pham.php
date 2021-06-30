@@ -3,7 +3,7 @@
   <?php
     $arg = array(
       'post_type' => 'san-pham',
-      'orderby' => 'date',
+      'orderby' => 'rand',
       'order' => 'desc',
       'posts_per_page' => 16,
       'status' => array('publish', 'private')
