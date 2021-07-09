@@ -35,6 +35,15 @@ if(is_tax()){
 <meta property="og:title" content="<?php echo $titlepage; ?>" />
 <?php } ?>
 <meta property="og:description" content="<?php echo $description; ?>" />
+<meta property="og:url" content="<?php echo the_permalink($post->ID); ?>" />
+<meta property="og:type" content="website" />
+<?php
+$featured_img_url = get_the_post_thumbnail_url($post->ID,'featured_large');
+if(is_home()){
+	$featured_img_url = get_site_url().'/assets/images/share/meta/ogimage.png';
+}
+?>
+<meta property="og:image" content="<?php echo $featured_img_url; ?>" />
 <meta name="description" content="<?php echo $description; ?>" />
 <meta name="keywords" content="<?php echo $metakeyword; ?>" />
 <meta name="robots" content="index, follow" />

@@ -4,15 +4,11 @@ Disallow: /wp-admin
 Disallow: /wp-includes
 Disallow: /resource/plugins
 Disallow: /resource/cache
-Disallow: /resource/themes
 Disallow: /feed
 Disallow: /*/feed
 Disallow: /comments 
 Disallow: /author
 Disallow: /archives
-Disallow: /2010/*
-Disallow: /2011/*
-Disallow: /2012/*
 Allow: /tag
 
 Sitemap: http://www.maycatdayedm.com/sitemap.xml
