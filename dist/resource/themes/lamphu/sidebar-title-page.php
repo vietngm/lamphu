@@ -1,4 +1,5 @@
 <meta name="revisit-after" content="7 days" />
+<link rel="canonical" href="<?php echo the_permalink($post->ID); ?>">
 <?php
 $extraFiled = get_option('seo_extra_filed');
 if(is_page() || is_singular()){
@@ -24,7 +25,7 @@ if(is_tax()){
 }
 ?>
 <meta name="MobileOptimized" content="320" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0,shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta charset="UTF-8">
 <?php if($titlepage=='') {?>
@@ -36,7 +37,7 @@ if(is_tax()){
 <?php } ?>
 <meta property="og:description" content="<?php echo $description; ?>" />
 <meta property="og:url" content="<?php echo the_permalink($post->ID); ?>" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="<?php echo (is_singular('san-pham') ? 'product':'website')?>" />
 <?php
 $featured_img_url = get_the_post_thumbnail_url($post->ID,'featured_large');
 if(is_home()){
@@ -48,7 +49,8 @@ if(is_home()){
 <meta name="keywords" content="<?php echo $metakeyword; ?>" />
 <meta name="robots" content="index, follow" />
 <?php echo $extraFiled; ?>
-<link rel="alternate" href="http://www.maycatdayedm.com" hreflang="vi-vn" />
+<link rel="alternate" hreflang="x-default" href="http://www.maycatdayedm.com">
+<link rel="alternate" hreflang="vi" href="http://www.maycatdayedm.com" />
 <link rel="shortcut icon" href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png"
   type="image/x-icon" />
 <link rel="icon" href="<?php echo get_site_url(); ?>/assets/images/share/meta/favicon.png" type="image/x-icon" />

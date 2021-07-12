@@ -27,6 +27,13 @@
 			object-fit: contain;
 		}
 	}
+	.partner-link {
+		display: block;
+		transition: all 0.4s ease;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 	.heading-detail {
 		border-bottom: solid 2px $color-main;
 		padding-bottom: 4px;

@@ -3,7 +3,7 @@
 loco_require_lib('compiled/gettext.php');
 
 /**
- * 
+ * String extraction from source code.
  */
 class Loco_gettext_Extraction {
 
@@ -13,9 +13,9 @@ class Loco_gettext_Extraction {
     private $bundle;
 
     /**
-     * @var LocoPHPExtractor
-     */    
-    private $extractor;
+     * @var LocoExtracted
+     */
+    private $extracted;
 
     /**
      * Extra strings to be pushed into domains
@@ -25,7 +25,7 @@ class Loco_gettext_Extraction {
 
     /**
      * List of files skipped due to memory limit
-     * @var Loco_fs_FileList
+     * @var Loco_fs_FileList|null
      */
     private $skipped;
 
@@ -38,26 +38,25 @@ class Loco_gettext_Extraction {
 
     /**
      * Initialize extractor for a given bundle
+     * @param Loco_package_Bundle
      */
     public function __construct( Loco_package_Bundle $bundle ){
+        loco_check_extension('ctype');
         if( ! loco_check_extension('tokenizer') ){
             throw new Loco_error_Exception('String extraction not available without required extension');
         }
         $this->bundle = $bundle;
-        $this->extractor = loco_wp_extractor();
+        $this->extracted = new LocoExtracted;
+        $this->extracted->setDomain('default');
         $this->extras = array();
-        if( $default = $bundle->getDefaultProject() ){
-            $domain = (string) $default->getDomain();
-            // wildcard stands in for empty text domain
+        $default = $bundle->getDefaultProject();
+        if( $default instanceof Loco_package_Project ){
+            $domain = $default->getDomain()->getName();
+            // wildcard stands in for empty text domain, meaning unspecified or dynamic domains will be included.
+            // note that strings intended to be in "default" domain must specify explicitly, or be included here too.
             if( '*' === $domain ){
                 $domain = '';
-                $this->extractor->setDomain('');
-            }
-            // extract headers from theme PHP files
-            if( $bundle->isTheme() ){
-                $this->extractor->headerize( array (
-                    'Template Name' => 'Name of the template',
-                ), $domain );
+                $this->extracted->setDomain('');
             }
             // pull bundle's default metadata. these are translations that may not be encountered in files
             $extras = array();
@@ -76,8 +75,8 @@ class Loco_gettext_Extraction {
     }
 
 
-
     /**
+     * @param Loco_package_Project
      * @return Loco_gettext_Extraction
      */
     public function addProject( Loco_package_Project $project ){
@@ -89,21 +88,32 @@ class Loco_gettext_Extraction {
         if( function_exists('wp_raise_memory_limit') ){
             wp_raise_memory_limit('loco');
         }
-        /* @var $file Loco_fs_File */
+        /* @var Loco_fs_File $file */
         foreach( $project->findSourceFiles() as $file ){
-            $size = $file->size();
-            $this->maxbytes = max( $this->maxbytes, $size );
-            if( $size > $max ){
-                $list = $this->skipped or $list = ( $this->skipped = new Loco_fs_FileList() );
-                $list->add( $file );
+            $type = $opts->ext2type( $file->extension() );
+            $extr = loco_wp_extractor($type);
+            if( 'js' !== $type ) {
+                // skip large files for PHP, because token_get_all is hungry
+                if( 0 !== $max ){
+                    $size = $file->size();
+                    $this->maxbytes = max( $this->maxbytes, $size );
+                    if( $size > $max ){
+                        $list = $this->skipped or $list = ( $this->skipped = new Loco_fs_FileList() );
+                        $list->add( $file );
+                        continue;
+                    }
+                }
+                // extract headers from theme PHP files in
+                if( $project->getBundle()->isTheme() ){
+                    $extr->headerize( array (
+                        'Template Name' => 'Name of the template',
+                    ), (string) $project->getDomain() );
+                }
             }
-            else {
-                $this->extractor->extractSource( $file->getContents(), $file->getRelativePath($base) );
-            }
+            $this->extracted->extractSource( $extr, $file->getContents(), $file->getRelativePath( $base ) );
         }
         return $this;
     }
-
 
 
     /**
@@ -113,7 +123,7 @@ class Loco_gettext_Extraction {
     public function includeMeta(){
         foreach( $this->extras as $domain => $extras ){
             foreach( $extras as $args ){
-                $this->extractor->pushMeta( $args[0], $args[1], $domain );
+                $this->extracted->pushMeta( $args[0], $args[1], $domain );
             }
         }
         $this->extras = array();
@@ -121,24 +131,44 @@ class Loco_gettext_Extraction {
     }
 
 
+    /**
+     * Add a custom source string constructed from `new Loco_gettext_String(msgid,[msgctxt])`
+     * @param Loco_gettext_String
+     * @param string optional domain, if not current bundle's default
+     * @return Loco_gettext_Extraction
+     */
+    public function addString( Loco_gettext_String $string, $domain = '' ){
+        if( ! $domain ) {
+            $default = $this->bundle->getDefaultProject();
+            $domain = (string) ( $default ? $default->getDomain() :  $this->extracted->getDomain() );
+        }
+        $index = $this->extracted->pushEntry( $string->exportSingular(), $domain );
+        if( $string->hasPlural() ){
+            $this->extracted->pushPlural( $string->exportPlural(), $index );
+        }
+        
+        return $this;
+    }
+
 
     /**
      * Get number of unique strings across all domains extracted (excluding additional metadata)
      * @return array { default: x, myDomain: y }
      */
     public function getDomainCounts(){
-        return $this->extractor->getDomainCounts();
+        return $this->extracted->getDomainCounts();
     }
 
 
     /**
      * Pull extracted data into POT, filtering out any unwanted domains 
+     * @param string
      * @return Loco_gettext_Data
      */
     public function getTemplate( $domain ){
-        $raw = $this->extractor->filter( $domain );
-        $data = new Loco_gettext_Data( $raw );
-        return $data->templatize();
+        do_action('loco_extracted_template', $this, $domain );
+        $data = new Loco_gettext_Data( $this->extracted->filter($domain) );
+        return $data->templatize( $domain );
     }
 
 
@@ -147,7 +177,7 @@ class Loco_gettext_Extraction {
      * @return int
      */
     public function getTotal(){
-        return $this->extractor->getTotal();
+        return $this->extracted->count();
     }
 
 

@@ -31,4 +31,11 @@
 	&-list {
 		display: grid;
 	}
+	&-link {
+		display: block;
+		transition: all 0.4s ease;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }

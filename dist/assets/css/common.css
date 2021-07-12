@@ -1954,6 +1954,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     border: solid 1px #e7e7e7; }
   .owl-partner-list {
     display: grid; }
+  .owl-partner-link {
+    display: block;
+    transition: all 0.4s ease; }
+    .owl-partner-link:hover {
+      opacity: 0.8; }
 
 .breadcrumb {
   display: flex;
@@ -2726,6 +2731,11 @@ form {
       height: 100%;
       -o-object-fit: contain;
          object-fit: contain; }
+  .is-partner .partner-link {
+    display: block;
+    transition: all 0.4s ease; }
+    .is-partner .partner-link:hover {
+      opacity: 0.8; }
   .is-partner .heading-detail {
     border-bottom: solid 2px #01c3ff;
     padding-bottom: 4px; }
